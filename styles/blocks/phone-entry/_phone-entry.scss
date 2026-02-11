@@ -1,0 +1,53 @@
+@use "../../healpers" as *;
+@use "entry-form";
+/* Styles from section phone-entry. (first page)*/
+.phone-entry {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  background-color: var(--color-gray-50);
+  border-radius: var(--border-radius-medium);
+  padding-block: rem(20);
+
+  &__title {
+    font-size: rem(17);
+
+    font-weight: 700;
+
+    line-height: 2.1;
+    margin-bottom: rem(20);
+  }
+
+  &__subtitle {
+    font-size: rem(14);
+    line-height: 1.4;
+    margin-bottom: rem(22);
+
+    :last-child {
+      font-weight: 600;
+    }
+  }
+}
+
+@include mobile-medium-media {
+  .phone-entry {
+    &__title {
+      font-size: rem(16);
+      line-height: 1.876;
+      text-align: center;
+    }
+
+    &__subtitle {
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: rem(20);
+
+      p:not(:last-child) {
+        margin-bottom: rem(16);
+      }
+    }
+  }
+}
+/*  ===============================  */
+/*  ========END phone-entry========  */
+/*  ===============================  */

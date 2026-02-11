@@ -1,0 +1,86 @@
+@use "../healpers" as *;
+/* Global variables */
+:root {
+  --color-accent-50: #fefdfd;
+  --color-accent-200: #f2e5e1;
+  --color-accent-500: #fe4f02;
+  --color-accent-600: #dc4401;
+
+  --color-gray-900: #161312;
+  --color-gray-850: #2b2b31;
+  --color-gray-800: #352f2e;
+  --color-gray-750: #484848;
+  --color-gray-600: #746e6d;
+  --color-gray-700: #66605f;
+  --color-gray-500: #968e8e;
+  --color-gray-450: #a5a5a5;
+  --color-gray-400: #ccc5c5;
+  --color-gray-300: #dadada;
+  --color-gray-200: #e9e5e5;
+  --color-gray-100: #f3eded;
+  --color-gray-75: #f3eded;
+  --color-gray-50: #f8f8f8;
+
+  // --color-gold: #f8981c;
+  // --color-orange: #f97b06;
+  // --color-white-opacity-10: #ffffff34;
+  // --color-white-opacity-35: #ffffffa8;
+  // --color-black-opacity-48: #3332327a;
+  // --color-black-opacity-80: #00000033;
+  --color-red-opcity-15: #3b060526;
+  --color-red-opcity-40: #3b060566;
+  --color-blue: #2c94ea;
+  --color-blue-light: #2cabea;
+  --color-red: #ba1414;
+  --color-green: #139128;
+  --color-green-light: #31ba49;
+
+  // ================ //
+  --color-light: #ffffff;
+  --color-dark: #000000;
+
+  --text-color-light: var(--color-gray-50);
+  --text-color-dark: var(--color-gray-900);
+  --text-color-dark-secondary: var(--color-gray-700);
+  --text-color-dark-medium: var(--color-gray-500);
+
+  --color-accent: var(--color-accent-500);
+  --color-accent-dark: var(--color-accent-600);
+
+  --color-error: var(--color-red);
+  --color-success: var(--color-green);
+
+  --color-border: var(--color-gray-500);
+  --color-border-medium: var(--color-gray-700);
+  --color-border-light: var(--color-gray-350);
+  --color-border-extra-light: var(--color-gray-90);
+  --color-border-active: var(--color-accent);
+
+  --border: #{rem(1)} solid var(--color-border);
+  --border-light: #{rem(1)} solid var(--color-border-light);
+  --border-extra-light: #{rem(0.8)} solid var(--color-border-extra-light);
+
+  --border-radius-extra-small: #{rem(4)};
+  --border-radius-small: #{rem(5)};
+  --border-radius-medium: #{rem(7)};
+  --border-radius: #{rem(10)};
+  --border-radius-big: #{rem(20)};
+
+  --font-family: "Inter", sans-serif;
+  --second-family: "Open Sans", sans-serif;
+
+  --letter-spacing: 0.01em;
+  --letter-spacing-medium: 0.02em;
+  --letter-spacing-big: 0.04em;
+
+  --container-width: #{rem(863)};
+  --container-padding-x: #{rem(20)};
+
+  --button-height-medium: #{rem(40)};
+  --button-height: #{rem(42)};
+  --button-height-big: #{rem(46)};
+
+  --transition-duration: 0.3s;
+}
+/*  ===================================  */
+/*  ===================================  */

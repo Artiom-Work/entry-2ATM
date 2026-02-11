@@ -1,0 +1,79 @@
+@use "../../healpers" as *;
+
+/* Styles for buttons */
+.button {
+  @include flex-center(true);
+
+  font-size: rem(16);
+  line-height: 1.5;
+  letter-spacing: var(--letter-spacing);
+  font-weight: 700;
+  color: var(--text-color-light);
+  background-color: var(--buttonColorBg);
+  border: none;
+  border-radius: var(--border-radius-small);
+  min-height: var(--button-height);
+  padding-block: rem(8);
+  transition-duration: var(--transition-duration) !important;
+  will-change: transform;
+
+  @include hover {
+    filter: brightness(90%);
+  }
+
+  @include active {
+    filter: brightness(90%);
+    scale: 0.97;
+  }
+
+  &--tg {
+    display: flex;
+
+    column-gap: rem(10);
+    font-family: var(--second-family);
+    background-color: var(--color-blue-light);
+  }
+
+  &__icon {
+    @include square(rem(24));
+
+    flex-shrink: 0;
+    stroke: transparent;
+    fill: currentColor;
+  }
+
+  &--accent-bg {
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius);
+  }
+
+  &--medium-h {
+    min-height: var(--button-height-medium);
+  }
+
+  &--big-h {
+    min-height: var(--button-height-big);
+  }
+
+  // &--light {
+  //   font-size: rem(13);
+  //   line-height: 1.69;
+  //   background-color: var(--color-light);
+  //   color: var(--text-color-dark-medium);
+  //   border: rem(1) solid currentColor;
+
+  //   &-accent {
+  //     color: var(--color-accent);
+  //     background-color: var(--color-light);
+  //   }
+  // }
+}
+
+@include mobile-medium-media {
+  .button {
+    width: 100%;
+  }
+}
+
+/*  ===================================  */
+/*  ===================================  */

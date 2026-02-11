@@ -1,0 +1,29 @@
+@use "../../healpers" as *;
+/* Styles for common block logo */
+.logo {
+  width: rem(236);
+  height: rem(50);
+
+  @include hover {
+    filter: opacity(50%);
+  }
+  @include active {
+    filter: opacity(30%);
+    scale: 0.98;
+  }
+
+  &__image {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+@include mobile-medium-media {
+  .logo {
+    width: rem(42);
+    height: rem(43);
+    margin-left: rem(3);
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

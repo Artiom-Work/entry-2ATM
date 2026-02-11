@@ -1,0 +1,16 @@
+// connecting general scss files
+@use "base/normolize";
+@use "base/fonts";
+@use "base/variables";
+@use "base/utils";
+@use "base/globals";
+@use "base/animation";
+
+//common-blocks
+@use "blocks/common-blocks/logo";
+@use "blocks/common-blocks/button";
+@use "blocks/common-blocks/inputs";
+//blocks
+@use "blocks/header/header";
+@use "blocks/fast-entry/fast-entry";
+@use "blocks/phone-entry/phone-entry";

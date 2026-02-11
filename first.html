@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="../../images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="../../images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="../../images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../images/icons/favicon.svg">
+	<meta name="description"
+		content="🛞Запись в сеть 2ATM: шиномонтаж, автомойка, автосервис, развал-схождение, аппаратная раскоксовка двигателя. 16 филиалов в СПб, рейтинг 4,8★. Telegram-бот или по телефону — быстро и без спама.">
+	<title>2ATM | Запись</title>
+	<link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__content container">
+			<a class="logo" href="../index.html" aria-label="Логотип 2ATM">
+				<picture>
+					<source srcset="../images/logo/logo-short.svg" media="(max-width: 575px)" type="image/svg+xml">
+					<source srcset="../images/logo/logo.svg" type="image/svg+xml">
+					<img class="logo__image" src="../images/logo/logo-short.svg" width="42" height="43" alt="Логотип 2ATM">
+				</picture>
+			</a>
+		</div>
+	</header>
+
+	<main class="content">
+		<h1 class="visually-hidden">Запись на услуги 2АТМ</h1>
+
+		<section class="fast-entry" aria-labelledby="fast-entry-title">
+			<h2 class="visually-hidden" id="fast-entry-title">Перейти в Telegram бот 2АТМ</h2>
+
+			<img class="fast-entry__image" src="../images/icons/cute-rodot-phone.webp" width="74" height="74"
+				alt="Счастливый робот с телефоном">
+
+			<div class="fast-entry__text">
+				<p>
+					Удобнее в&nbsp;Telegram: бот сам все оформит, а&nbsp;запись останется у&nbsp;вас в&nbsp;чате
+				</p>
+			</div>
+
+			<a class="fast-entry__button button button--tg button--medium-h" href="#!">
+				<svg class="button__icon" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="./images/icons/sprite-icons.svg#telegram-icon"></use>
+				</svg>
+
+				<span class="hidden-mobile-medium">Записаться через Telegram</span>
+				<span class="visible-mobile-medium">Открыть в&nbsp;Telegram</span>
+			</a>
+		</section>
+
+		<section class="phone-entry" aria-labelledby="phone-entry-title">
+			<h2 class="phone-entry__title" id="phone-entry-title">
+				Или войдите по&nbsp;номеру телефона
+			</h2>
+
+			<div class="phone-entry__subtitle">
+				<p>
+					Укажите номер телефона&nbsp;&mdash; мы&nbsp;используем его только для подтверждения записи и&nbsp;связи
+					с&nbsp;вами, если что-то изменится. Ваши данные не&nbsp;передаются третьим лицам.
+				</p>
+
+				<p>
+					Без спама. Только по&nbsp;делу.
+				</p>
+			</div>
+
+			<form class="entry-form" id="entry-form">
+				<div class="entry-form__field">
+					<!-- 	Здесь наверное нужна маска вместо placeholder , но placeholder так же оставьте пожалуйста на нём держится состояние заполненного поля а к нему стили. То есть нужно чтобы маска появилсь когда value в input будет не пустым -->
+					<input class="entry-form__input input" id="user-phone" type="tel" placeholder="+7 (___) ___-__-__" required
+						disabled>
+					<label class="entry-form__field-label" for="user-phone">Введите номер телефона</label>
+				</div>
+
+				<div class="entry-form__ratio">
+					<div class="entry-form__ratio-text">
+						<p>Выберите способ подтверждения</p>
+					</div>
+
+					<div class="entry-form__ratio-body">
+						<div class="entry-form__ratio-field">
+							<input class="visually-hidden" id="sms-code" type="radio" name="entry-method" value="sms-code" checked>
+							<label class="entry-form__ratio-button" for="sms-code">SMS-код</label>
+						</div>
+
+						<div class="entry-form__ratio-field">
+							<input class="visually-hidden" id="call-code" type="radio" name="entry-method" value="call-code">
+							<label class="entry-form__ratio-button" for="call-code">Звонок с&nbsp;кодом</label>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="entry-form__text">
+					Мы&nbsp;отправим SMS c&nbsp;4-значным кодом подтверждения на&nbsp;ваш номер.
+				</div>
+
+				<button class="entry-form__button button button--accent-bg" data-get-user-code-button type="submit"
+					disabled>Отправить
+					код</button>
+				<button class="entry-form__button button button--accent-bg" type="submit"
+					data-get-user-call-back-button>Позвонить мне</button>
+			</form>
+		</section>
+	</main>
+
+</body>
+
+</html>
+
+
+
+<!-- <div class="header__mobile-menu mobile-menu visible-tablet">
+	<input id="menu-switch" type="checkbox">
+	<label class="mobile-menu__burger" for="menu-switch">
+		<span class="mobile-menu__burger-line"></span>
+		<span class="mobile-menu__burger-line"></span>
+		<span class="mobile-menu__burger-line"></span>
+	</label>
+
+	<div class="mobile-menu__wrapper">
+		<nav class="mobile-menu__box header-top-menu">
+			<ul class="header-top-menu__list">
+				<li>
+					<a class="mobile-menu__link mobile-menu__link--color-accent" href="./services.html">
+						Услуги
+					</a>
+				</li>
+				<li>
+					<a class="mobile-menu__link" href="./addresses.html">
+						Адреса
+					</a>
+				</li>
+				<li>
+					<a class="mobile-menu__link" href="./corporate.html">
+						Корпоративным клиентам
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="#!">
+						Интернет-магазин
+					</a>
+				</li>
+				<li>
+					<a class="mobile-menu__link mobile-menu__link--color-green" href="./offers.html">
+						Спецпредложения
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div> -->

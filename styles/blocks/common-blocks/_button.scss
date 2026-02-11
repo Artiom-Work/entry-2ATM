@@ -9,9 +9,9 @@
   letter-spacing: var(--letter-spacing);
   font-weight: 700;
   color: var(--text-color-light);
-  background-color: var(--buttonColorBg);
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
   border: none;
-  border-radius: var(--border-radius-small);
   min-height: var(--button-height);
   padding-block: rem(8);
   transition-duration: var(--transition-duration) !important;
@@ -32,6 +32,7 @@
     column-gap: rem(10);
     font-family: var(--second-family);
     background-color: var(--color-blue-light);
+    border-radius: var(--border-radius-small);
   }
 
   &__icon {
@@ -42,11 +43,6 @@
     fill: currentColor;
   }
 
-  &--accent-bg {
-    background-color: var(--color-accent);
-    border-radius: var(--border-radius);
-  }
-
   &--medium-h {
     min-height: var(--button-height-medium);
   }
@@ -55,6 +51,12 @@
     min-height: var(--button-height-big);
   }
 
+  &:disabled,
+  .disabled {
+    color: var(--text-color-dark-medium);
+    background-color: var(--color-gray-300);
+    pointer-events: none;
+  }
   // &--light {
   //   font-size: rem(13);
   //   line-height: 1.69;

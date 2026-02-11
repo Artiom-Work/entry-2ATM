@@ -243,6 +243,10 @@ svg * {
   padding-inline: var(--container-padding-x);
 }
 
+.hidden {
+  display: none !important;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -487,9 +491,9 @@ button[aria-label]:not(.promotion__card-link)::before {
   letter-spacing: var(--letter-spacing);
   font-weight: 700;
   color: var(--text-color-light);
-  background-color: var(--buttonColorBg);
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
   border: none;
-  border-radius: var(--border-radius-small);
   min-height: var(--button-height);
   padding-block: 0.5rem;
   transition-duration: var(--transition-duration) !important;
@@ -514,6 +518,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   column-gap: 0.625rem;
   font-family: var(--second-family);
   background-color: var(--color-blue-light);
+  border-radius: var(--border-radius-small);
 }
 .button__icon {
   width: 1.5rem;
@@ -522,15 +527,17 @@ button[aria-label]:not(.promotion__card-link)::before {
   stroke: transparent;
   fill: currentColor;
 }
-.button--accent-bg {
-  background-color: var(--color-accent);
-  border-radius: var(--border-radius);
-}
 .button--medium-h {
   min-height: var(--button-height-medium);
 }
 .button--big-h {
   min-height: var(--button-height-big);
+}
+.button:disabled,
+.button .disabled {
+  color: var(--text-color-dark-medium);
+  background-color: var(--color-gray-300);
+  pointer-events: none;
 }
 
 @media (width <= 35.93625rem) {
@@ -543,6 +550,7 @@ button[aria-label]:not(.promotion__card-link)::before {
 .input {
   --inputBorderColorDefault: var(--color-gray-300);
   --inputBorderColorFocus: var(--color-accent);
+  --verifInputBorderColorFocus: var(--text-color-dark);
   --inputBorderColorError: var(--color-error);
   --inputBorderColorFiled: var(--text-color-dark);
   --inputTextColorPlaceholder: var(--text-color-medium);
@@ -583,6 +591,31 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .input:not(:placeholder-shown):focus {
   box-shadow: 0 0 0 0.0625rem var(--inputBorderColorFocus);
+}
+.input--verification {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  font-family: var(--second-family);
+  border-radius: var(--border-radius-small);
+  text-align: center;
+  min-height: unset;
+  padding: unset;
+}
+.input--verification::placeholder {
+  color: var(--color-light);
+}
+.input--verification:disabled::placeholder {
+  color: var(--inputBgColorDisabled);
+}
+.input--verification:focus {
+  box-shadow: 0 0 0 0.0625rem var(--verifInputBorderColorFocus);
+}
+.input--verification:not(:placeholder-shown) {
+  box-shadow: 0 0 0 0.0625rem var(--inputBorderColorFiled);
+}
+.input--verification:not(:placeholder-shown):focus {
+  box-shadow: 0 0 0 0.0625rem var(--verifInputBorderColorFocus);
 }
 
 /* Styles from block header */
@@ -825,5 +858,103 @@ button[aria-label]:not(.promotion__card-link)::before {
 /*  ===============================  */
 /*  ========END phone-entry========  */
 /*  ===============================  */
+/* Styles from section verification-form.*/
+.verification-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1.25rem;
+}
+.verification-form__group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.625rem;
+}
+.verification-form__text {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--text-color-dark-medium);
+}
+.verification-form__refresh-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-align: center;
+  color: var(--color-accent-600);
+  will-change: transform;
+}
+.verification-form__refresh-button:disabled {
+  pointer-events: none;
+  color: var(--text-color-dark-medium);
+}
+@media (any-hover: hover) {
+  .verification-form__refresh-button:hover {
+    filter: brightness(80%);
+  }
+}
+@media (any-hover: hover) and (any-hover: none) {
+  .verification-form__refresh-button:active {
+    filter: brightness(80%);
+  }
+}
+.verification-form__refresh-button:active {
+  filter: brightness(70%);
+  scale: 0.98;
+}
+.verification-form__button {
+  width: 100%;
+}
+
+@media (width <= 35.93625rem) {
+  .verification-form__button {
+    position: absolute;
+    bottom: 1.875rem;
+    width: calc(100vw - var(--container-padding-x) * 2);
+  }
+}
+/*  =====================================  */
+/*  ========END verification-form========  */
+/*  =====================================  */
+/* Styles from section verification.*/
+.verification {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  background-color: var(--color-gray-50);
+  border-radius: var(--border-radius-medium);
+  padding-block: 1.25rem;
+}
+.verification__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 2;
+  margin-bottom: 1.125rem;
+}
+.verification__subtitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+@media (width <= 35.93625rem) {
+  .verification__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+}
+/*  ================================  */
+/*  ========END verification========  */
+/*  ================================  */
 
 /*# sourceMappingURL=styles.css.map */

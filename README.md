@@ -9,3 +9,5 @@
 ## Список готовых страниц
 
 1. [Страница выбора записи](https://artiom-work.github.io/entry-2ATM/first.html)
+
+2. [Страница выбора записи с блоком верификации с помощью кода](https://artiom-work.github.io/entry-2ATM/check-enty-code.html)

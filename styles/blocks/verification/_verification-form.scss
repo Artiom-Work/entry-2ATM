@@ -1,0 +1,66 @@
+@use "../../healpers" as *;
+/* Styles from section verification-form.*/
+
+.verification-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: rem(20);
+
+  &__group {
+    @include flex-center;
+
+    column-gap: rem(10);
+  }
+
+  &__text {
+    font-size: rem(14);
+
+    line-height: 1.4;
+    text-align: center;
+    color: var(--text-color-dark-medium);
+  }
+
+  &__refresh-button {
+    @include reset-button;
+
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: 1.2;
+    text-decoration: underline;
+    text-align: center;
+    color: var(--color-accent-600);
+    will-change: transform;
+
+    &:disabled {
+      pointer-events: none;
+      color: var(--text-color-dark-medium);
+    }
+
+    @include hover {
+      filter: brightness(80%);
+    }
+
+    @include active {
+      filter: brightness(70%);
+      scale: 0.98;
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
+
+@include mobile-medium-media {
+  .verification-form {
+    &__button {
+      position: absolute;
+      bottom: rem(30);
+      width: calc(100vw - var(--container-padding-x) * 2);
+    }
+  }
+}
+/*  =====================================  */
+/*  ========END verification-form========  */
+/*  =====================================  */

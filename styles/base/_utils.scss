@@ -6,6 +6,10 @@
   padding-inline: var(--container-padding-x);
 }
 
+.hidden {
+  display: none !important;
+}
+
 .visually-hidden {
   @include visually-hidden;
 }

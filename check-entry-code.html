@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
+	<meta name="description"
+		content="🛞Запись в сеть 2ATM: шиномонтаж, автомойка, автосервис, развал-схождение, аппаратная раскоксовка двигателя. 16 филиалов в СПб, рейтинг 4,8★. Telegram-бот или по телефону — быстро и без спама.">
+	<title>2ATM | Проверка кода пользователя</title>
+	<link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__content container">
+			<a class="logo" href="./index.html" aria-label="Логотип 2ATM">
+				<picture>
+					<source srcset="./images/logo/logo-short.svg" media="(max-width: 575px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
+					<img class="logo__image" src="./images/logo/logo-short.svg" width="42" height="43" alt="Логотип 2ATM">
+				</picture>
+			</a>
+		</div>
+	</header>
+
+	<main class="content">
+		<h1 class="visually-hidden">Запись на услуги 2АТМ</h1>
+
+		<section class="fast-entry" aria-labelledby="fast-entry-title">
+			<h2 class="visually-hidden" id="fast-entry-title">Перейти в Telegram бот 2АТМ</h2>
+
+			<img class="fast-entry__image" src="./images/icons/cute-rodot-phone.webp" width="74" height="74"
+				alt="Счастливый робот с телефоном">
+
+			<div class="fast-entry__text">
+				<p>
+					Удобнее в&nbsp;Telegram: бот сам все оформит, а&nbsp;запись останется у&nbsp;вас в&nbsp;чате
+				</p>
+			</div>
+
+			<a class="fast-entry__button button button--tg button--medium-h" href="#!">
+				<svg class="button__icon" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="./images/icons/sprite-icons.svg#telegram-icon"></use>
+				</svg>
+
+				<span class="hidden-mobile-medium">Записаться через Telegram</span>
+				<span class="visible-mobile-medium">Открыть в&nbsp;Telegram</span>
+			</a>
+		</section>
+
+		<section class="verification" aria-labelledby="verification-title">
+			<h2 class="verification__title" id="verification-title">
+				Введите код
+			</h2>
+
+			<div class="verification__subtitle hidden-mobile-medium">
+				<p>
+					Код проверки
+				</p>
+			</div>
+
+			<form class="verification-form" id="verification-form">
+				<div class="verification-form__group">
+					<!-- 	Для всех input нужно добавить автофокус при вводе значения и запретить ввод букв в JS-->
+					<div> <!-- не забудь класс удалить -->
+						<label class="visually-hidden" for="vert-value-1">Первая цифра пароля</label>
+						<input class="input input--verification" id="vert-value-1" type="text" placeholder="0" maxlength="1"
+							name="vert-value-1" autocomplete=" one-time-code" inputmode="numeric" required autofocus>
+					</div>
+
+					<div>
+						<label class="visually-hidden" for="vert-value-2">Вторая цифра пароля</label>
+						<input class="input input--verification" id="vert-value-2" type="text" placeholder="0" maxlength="1"
+							name="vert-value-2" autocomplete="one-time-code" inputmode="numeric" required>
+					</div>
+
+					<div>
+						<label class="visually-hidden" for="vert-value-3">Третья цифра пароля</label>
+						<input class="input input--verification" id="vert-value-3" type="text" placeholder="0" maxlength="1"
+							name="vert-value-3" autocomplete="one-time-code" inputmode="numeric" required>
+					</div>
+
+					<div>
+						<label class="visually-hidden" for="vert-value-4">Четвёртая цифра пароля</label>
+						<input class="input input--verification" id="vert-value-4" type="text" placeholder="0" maxlength="1"
+							name="vert-value-4" autocomplete="one-time-code" inputmode="numeric" required>
+					</div>
+
+					<div>
+						<label class="visually-hidden" for="vert-value-5">Пятая цифра пароля</label>
+						<input class="input input--verification" id="vert-value-5" type="text" placeholder="0" maxlength="1"
+							name="vert-value-5" autocomplete="one-time-code" inputmode="numeric" required>
+					</div>
+				</div>
+
+
+				<div class="verification-form__text">
+					Отправить код снова через
+					<span role="timer" aria-live="off" aria-atomic="true">1:49</span>
+					сек
+				</div>
+
+				<button class="verification-form__refresh-button visually-hidden" type="submit">Отправить код снова</button>
+
+				<button class="verification-form__button button button--big-h " type="submit" disabled>Проверить
+					код</button>
+
+				<a class="verification-form__button button button--big-h visually-hidden" href="./select-service.html">Далее</a>
+			</form>
+		</section>
+	</main>
+
+</body>
+
+</html>

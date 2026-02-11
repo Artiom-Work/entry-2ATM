@@ -3,6 +3,7 @@
 .input {
   --inputBorderColorDefault: var(--color-gray-300);
   --inputBorderColorFocus: var(--color-accent);
+  --verifInputBorderColorFocus: var(--text-color-dark);
   --inputBorderColorError: var(--color-error);
   --inputBorderColorFiled: var(--text-color-dark);
   --inputTextColorPlaceholder: var(--text-color-medium);
@@ -50,6 +51,37 @@
 
     &:focus {
       box-shadow: 0 0 0 rem(1) var(--inputBorderColorFocus);
+    }
+  }
+
+  &--verification {
+    @include square(rem(44));
+
+    flex-shrink: 0;
+    font-family: var(--second-family);
+    border-radius: var(--border-radius-small);
+    text-align: center;
+    min-height: unset;
+    padding: unset;
+
+    &::placeholder {
+      color: var(--color-light);
+    }
+
+    &:disabled::placeholder {
+      color: var(--inputBgColorDisabled);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 rem(1) var(--verifInputBorderColorFocus);
+    }
+
+    &:not(:placeholder-shown) {
+      box-shadow: 0 0 0 rem(1) var(--inputBorderColorFiled);
+
+      &:focus {
+        box-shadow: 0 0 0 rem(1) var(--verifInputBorderColorFocus);
+      }
     }
   }
 }

@@ -52,7 +52,7 @@
   }
 
   &:disabled,
-  .disabled {
+  &.disabled {
     color: var(--text-color-dark-medium);
     background-color: var(--color-gray-300);
     pointer-events: none;

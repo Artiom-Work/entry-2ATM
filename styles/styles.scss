@@ -10,8 +10,10 @@
 @use "blocks/common-blocks/logo";
 @use "blocks/common-blocks/button";
 @use "blocks/common-blocks/inputs";
+@use "blocks/common-blocks/section";
 //blocks
 @use "blocks/header/header";
 @use "blocks/fast-entry/fast-entry";
 @use "blocks/phone-entry/phone-entry";
 @use "blocks/verification/verification";
+@use "blocks/select-svc/select-svc";

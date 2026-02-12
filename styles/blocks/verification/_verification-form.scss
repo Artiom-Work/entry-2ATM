@@ -54,10 +54,12 @@
 
 @include mobile-medium-media {
   .verification-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
     &__button {
-      position: absolute;
-      bottom: rem(30);
-      width: calc(100vw - var(--container-padding-x) * 2);
+      margin-top: auto;
     }
   }
 }

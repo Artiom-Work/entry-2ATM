@@ -1,0 +1,26 @@
+@use "../../healpers" as *;
+/* General styles for all sections */
+.section {
+  background-color: var(--color-gray-50);
+  border-radius: var(--border-radius-medium);
+  padding-block: rem(20);
+
+  &__title {
+    @include fluid-text(18, 16);
+
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: rem(20);
+  }
+}
+
+@include mobile-medium-media {
+  .section {
+    &__title {
+      line-height: 1.4;
+    }
+  }
+}
+/*  ===========================  */
+/*  ========END section========  */
+/*  ===========================  */

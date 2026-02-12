@@ -28,7 +28,7 @@
 		</div>
 	</header>
 
-	<main>
+	<main class="flex-y-container">
 		<h1 class="visually-hidden">Запись на услуги 2АТМ</h1>
 
 		<section class="fast-entry" aria-labelledby="fast-entry-title">
@@ -53,8 +53,8 @@
 			</a>
 		</section>
 
-		<section class="phone-entry" aria-labelledby="phone-entry-title">
-			<h2 class="phone-entry__title" id="phone-entry-title">
+		<section class="phone-entry section" aria-labelledby="phone-entry-title">
+			<h2 class="phone-entry__title section__title" id="phone-entry-title">
 				Или войдите по&nbsp;номеру телефона
 			</h2>
 
@@ -96,123 +96,23 @@
 					</div>
 				</div>
 
-				<div class="entry-form__text">
-					Мы&nbsp;отправим SMS c&nbsp;4-значным кодом подтверждения на&nbsp;ваш номер.
+				<div class="entry-form__text" data-get-user-code-text>
+					Мы&nbsp;отправим SMS c&nbsp;4-значным кодом подтверждения на&nbsp;ваш номер. Если вы&nbsp;пользуетесь нашим
+					Telegram-ботом, код
+					придет прямо туда.
 				</div>
 
-				<button class="entry-form__button button" data-get-user-code-button type="submit" disabled>Отправить
+				<div class="entry-form__text" data-get-user-call-back-text>
+					Мы&nbsp;позвоним вам. Введите последние 4&nbsp;цифры входящего номера
+				</div>
+
+				<button class="entry-form__button button" type="submit" data-get-user-code-button disabled>Отправить
 					код</button>
+
 				<button class="entry-form__button button" type="submit" data-get-user-call-back-button>Позвонить мне</button>
 			</form>
-
-			<!-- Этот блок есть также отдельно на другой странице -->
-			<section class="verification hidden" aria-labelledby="verification-title">
-				<h2 class="verification__title" id="verification-title">
-					Введите код
-				</h2>
-
-				<div class="verification__subtitle hidden-mobile-medium">
-					<p>
-						Код проверки
-					</p>
-				</div>
-
-				<form class="verification-form" id="verification-form">
-					<div class="verification-form__group">
-						<!-- 	Для всех input нужно добавить автофокус при вводе значения и запретить ввод букв в JS-->
-						<div> <!-- не забудь класс удалить -->
-							<label class="visually-hidden" for="vert-value-1">Первая цифра пароля</label>
-							<input class="input input--verification" id="vert-value-1" type="text" placeholder="0" maxlength="1"
-								name="vert-value-1" autocomplete=" one-time-code" inputmode="numeric" required autofocus>
-						</div>
-
-						<div>
-							<label class="visually-hidden" for="vert-value-2">Вторая цифра пароля</label>
-							<input class="input input--verification" id="vert-value-2" type="text" placeholder="0" maxlength="1"
-								name="vert-value-2" autocomplete="one-time-code" inputmode="numeric" required>
-						</div>
-
-						<div>
-							<label class="visually-hidden" for="vert-value-3">Третья цифра пароля</label>
-							<input class="input input--verification" id="vert-value-3" type="text" placeholder="0" maxlength="1"
-								name="vert-value-3" autocomplete="one-time-code" inputmode="numeric" required>
-						</div>
-
-						<div>
-							<label class="visually-hidden" for="vert-value-4">Четвёртая цифра пароля</label>
-							<input class="input input--verification" id="vert-value-4" type="text" placeholder="0" maxlength="1"
-								name="vert-value-4" autocomplete="one-time-code" inputmode="numeric" required>
-						</div>
-
-						<div>
-							<label class="visually-hidden" for="vert-value-5">Пятая цифра пароля</label>
-							<input class="input input--verification" id="vert-value-5" type="text" placeholder="0" maxlength="1"
-								name="vert-value-5" autocomplete="one-time-code" inputmode="numeric" required>
-						</div>
-					</div>
-
-
-					<div class="verification-form__text">
-						Отправить код снова через
-						<span role="timer" aria-live="off" aria-atomic="true">1:49</span>
-						сек
-					</div>
-
-					<button class="verification-form__refresh-button visually-hidden" type="submit">Отправить код снова</button>
-
-					<button class="verification-form__button button button--big-h " type="submit" disabled>Проверить
-						код</button>
-
-					<a class="verification-form__button button button--big-h visually-hidden"
-						href="./select-service.html">Далее</a>
-				</form>
-			</section>
 		</section>
 	</main>
-
 </body>
 
 </html>
-
-
-
-<!-- <div class="header__mobile-menu mobile-menu visible-tablet">
-	<input id="menu-switch" type="checkbox">
-	<label class="mobile-menu__burger" for="menu-switch">
-		<span class="mobile-menu__burger-line"></span>
-		<span class="mobile-menu__burger-line"></span>
-		<span class="mobile-menu__burger-line"></span>
-	</label>
-
-	<div class="mobile-menu__wrapper">
-		<nav class="mobile-menu__box header-top-menu">
-			<ul class="header-top-menu__list">
-				<li>
-					<a class="mobile-menu__link mobile-menu__link--color-accent" href="./services.html">
-						Услуги
-					</a>
-				</li>
-				<li>
-					<a class="mobile-menu__link" href="./addresses.html">
-						Адреса
-					</a>
-				</li>
-				<li>
-					<a class="mobile-menu__link" href="./corporate.html">
-						Корпоративным клиентам
-					</a>
-				</li>
-				<li>
-					<a class="header-top-menu__link" href="#!">
-						Интернет-магазин
-					</a>
-				</li>
-				<li>
-					<a class="mobile-menu__link mobile-menu__link--color-green" href="./offers.html">
-						Спецпредложения
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-</div> -->

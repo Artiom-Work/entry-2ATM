@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
+	<!-- <meta name="description"
+		content=""> -->
+	<title>2ATM | Выбор услуг</title>
+	<link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__content container">
+			<a class="logo" href="./index.html" aria-label="Логотип 2ATM">
+				<picture>
+					<source srcset="./images/logo/logo-short.svg" media="(max-width: 575px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
+					<img class="logo__image" src="./images/logo/logo-short.svg" width="42" height="43" alt="Логотип 2ATM">
+				</picture>
+			</a>
+		</div>
+	</header>
+
+	<main class="page-content container">
+		<h1 class="visually-hidden">Выбор услуг в 2АТМ</h1>
+
+		<div class="page-content__left">
+			<section class="select-svc section" aria-labelledby="select-svc-title">
+				<h2 class="select-svc__title section__title" id="select-svc-title">
+					Выберите тип услуги
+				</h2>
+
+				<form class="select-svc__form" id="select-services">
+					<ul class="select-svc__list">
+						<li class="select-svc__unit">
+							<img class="select-svc__unit-image" src="./images/icons/icon-tire-fitting.webp" width="60" height="60"
+								alt="Колесо" loading="lazy">
+
+							<h3 class="select-svc__unit-name">Шиномонтаж</h3>
+
+							<label class="select-svc__unit-button" for="svc-tire-fitting"></label>
+							<input class="visually-hidden" type="checkbox" id="svc-tire-fitting" name="svc-tire-fitting">
+						</li>
+
+						<li class="select-svc__unit">
+							<img class="select-svc__unit-image" src="./images/icons/icon-car-wash.webp" width="60" height="60"
+								alt="Машина с каплями" loading="lazy">
+
+							<h3 class="select-svc__unit-name">Автомойка</h3>
+
+							<label class="select-svc__unit-button" for="svc-car-wash"></label>
+							<input class="visually-hidden" type="checkbox" id="svc-car-wash" name="svc-car-wash">
+						</li>
+
+						<li class="select-svc__unit">
+							<img class="select-svc__unit-image" src="./images/icons/icon-refill-conditioning.webp" width="60"
+								height="60" alt="Картинка машины со снежинкой" loading="lazy">
+
+							<h3 class="select-svc__unit-name">Заправка кондиционера</h3>
+
+							<label class="select-svc__unit-button" for="svc-refill-conditioning"></label>
+							<input class="visually-hidden" type="checkbox" id="svc-refill-conditioning"
+								name="svc-refill-conditioning">
+						</li>
+
+						<li class="select-svc__unit">
+							<img class="select-svc__unit-image" src="./images/icons/icon-car-repair.webp" width="60" height="60"
+								alt="Шестерёнка" loading="lazy">
+
+							<h3 class="select-svc__unit-name">Автосервис</h3>
+
+							<label class="select-svc__unit-button" for="svc-car-repair"></label>
+							<input class="visually-hidden" type="checkbox" id="svc-car-repair" name="svc-car-repair">
+						</li>
+
+						<li class="select-svc__unit">
+							<img class="select-svc__unit-image" src="./images/icons/icon-wheel-alignment.webp" width="60" height="60"
+								alt="Картинка выровненных колёс" loading="lazy">
+
+							<h3 class="select-svc__unit-name">Развал-схождение</h3>
+
+							<label class="select-svc__unit-button" for="svc-wheel-alignment"></label>
+							<input class="visually-hidden" type="checkbox" id="svc-wheel-alignment" name="svc-wheel-alignment">
+						</li>
+
+						<li class="select-svc__unit">
+							<img class="select-svc__unit-image" src="./images/icons/icon-h-engine.webp" width="60" height="60"
+								alt="Картинка двигателя с каплей H" loading="lazy">
+
+							<h3 class="select-svc__unit-name">Водородная
+								мойка двигателя</h3>
+
+							<label class="select-svc__unit-button" for="svc-engine-cleaning"></label>
+							<input class="visually-hidden" type="checkbox" id="svc-engine-cleaning" name="svc-engine-cleaning">
+						</li>
+					</ul>
+				</form>
+			</section>
+		</div>
+
+		<div class="page-content__right">
+			<section class="user-basket" aria-labelledby="user-basket-title"
+				style="width: 270px; height: 410px; background-color: rgba(255, 0, 0, 0.336);">
+				<h2 class="visually-hidden" id="user-basket-title">
+					Описание выбранных услуг и данные пользователя
+				</h2>
+			</section>
+		</div>
+	</main>
+
+</body>
+
+</html>
+
+
+<!-- <div class="header__mobile-menu mobile-menu visible-tablet">
+	<input id="menu-switch" type="checkbox">
+	<label class="mobile-menu__burger" for="menu-switch">
+		<span class="mobile-menu__burger-line"></span>
+		<span class="mobile-menu__burger-line"></span>
+		<span class="mobile-menu__burger-line"></span>
+	</label>
+
+	<div class="mobile-menu__wrapper">
+		<nav class="mobile-menu__box header-top-menu">
+			<ul class="header-top-menu__list">
+				<li>
+					<a class="mobile-menu__link mobile-menu__link--color-accent" href="./services.html">
+						Услуги
+					</a>
+				</li>
+				<li>
+					<a class="mobile-menu__link" href="./addresses.html">
+						Адреса
+					</a>
+				</li>
+				<li>
+					<a class="mobile-menu__link" href="./corporate.html">
+						Корпоративным клиентам
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="#!">
+						Интернет-магазин
+					</a>
+				</li>
+				<li>
+					<a class="mobile-menu__link mobile-menu__link--color-green" href="./offers.html">
+						Спецпредложения
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div> -->

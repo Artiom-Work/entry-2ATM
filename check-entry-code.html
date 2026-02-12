@@ -28,7 +28,7 @@
 		</div>
 	</header>
 
-	<main class="content">
+	<main class="flex-y-container">
 		<h1 class="visually-hidden">Запись на услуги 2АТМ</h1>
 
 		<section class="fast-entry" aria-labelledby="fast-entry-title">
@@ -64,10 +64,17 @@
 				</p>
 			</div>
 
+			<div class="verification__text">
+				<p>
+					Мы&nbsp;отправим SMS c&nbsp;4-значным кодом подтверждения на&nbsp;ваш номер. Если вы&nbsp;пользуетесь нашим
+					Telegram-ботом, код придет прямо туда.
+				</p>
+			</div>
+
 			<form class="verification-form" id="verification-form">
 				<div class="verification-form__group">
 					<!-- 	Для всех input нужно добавить автофокус при вводе значения и запретить ввод букв в JS-->
-					<div> <!-- не забудь класс удалить -->
+					<div>
 						<label class="visually-hidden" for="vert-value-1">Первая цифра пароля</label>
 						<input class="input input--verification" id="vert-value-1" type="text" placeholder="0" maxlength="1"
 							name="vert-value-1" autocomplete=" one-time-code" inputmode="numeric" required autofocus>
@@ -98,7 +105,6 @@
 					</div>
 				</div>
 
-
 				<div class="verification-form__text">
 					Отправить код снова через
 					<span role="timer" aria-live="off" aria-atomic="true">1:49</span>
@@ -107,10 +113,10 @@
 
 				<button class="verification-form__refresh-button visually-hidden" type="submit">Отправить код снова</button>
 
-				<button class="verification-form__button button button--big-h " type="submit" disabled>Проверить
+				<button class="verification-form__button button button--big-h visually-hidden" type="submit" disabled>Проверить
 					код</button>
 
-				<a class="verification-form__button button button--big-h visually-hidden" href="./select-service.html">Далее</a>
+				<a class="verification-form__button button button--big-h" href="./select-services.html">Далее</a>
 			</form>
 		</section>
 	</main>

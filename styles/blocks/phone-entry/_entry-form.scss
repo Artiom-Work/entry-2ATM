@@ -82,13 +82,15 @@
     }
 
     &:has(input[id="sms-code"]:checked) {
-      & ~ button[data-get-user-code-button] {
+      & ~ button[data-get-user-code-button],
+      & ~ div[data-get-user-code-text] {
         display: block;
       }
     }
 
     &:has(input[id="call-code"]:checked) {
-      & ~ button[data-get-user-call-back-button] {
+      & ~ button[data-get-user-call-back-button],
+      & ~ div[data-get-user-call-back-text] {
         display: block;
       }
     }
@@ -98,6 +100,7 @@
     font-size: rem(14);
     line-height: 1.4;
     color: var(--text-color-dark-secondary);
+    display: none;
   }
 
   &__button {
@@ -116,6 +119,8 @@
 @include mobile-medium-media {
   .entry-form {
     row-gap: rem(10);
+    height: 100%;
+    flex-grow: 1;
 
     &__field {
       margin-bottom: rem(10);
@@ -132,7 +137,11 @@
     }
 
     &__text {
-      margin-bottom: rem(45);
+      margin-bottom: rem(5);
+    }
+
+    &__button {
+      margin-top: auto;
     }
   }
 }

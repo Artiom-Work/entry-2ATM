@@ -6,6 +6,19 @@
   padding-inline: var(--container-padding-x);
 }
 
+.page-content {
+  display: grid;
+  grid-template-columns: minmax(min-content, #{rem(573)}) min-content;
+  gap: rem(20);
+}
+
+.flex-y-container {
+  // Класс для блока main .Для позиционирования элементов на всю высоту страницы
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .hidden {
   display: none !important;
 }

@@ -243,6 +243,18 @@ svg * {
   padding-inline: var(--container-padding-x);
 }
 
+.page-content {
+  display: grid;
+  grid-template-columns: minmax(min-content, 35.8125rem) min-content;
+  gap: 1.25rem;
+}
+
+.flex-y-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .hidden {
   display: none !important;
 }
@@ -332,7 +344,6 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
-  font-family: var(--second-family);
   line-height: 1.27;
   font-weight: 400;
   color: var(--text-color-dark);
@@ -533,8 +544,7 @@ button[aria-label]:not(.promotion__card-link)::before {
 .button--big-h {
   min-height: var(--button-height-big);
 }
-.button:disabled,
-.button .disabled {
+.button:disabled, .button.disabled {
   color: var(--text-color-dark-medium);
   background-color: var(--color-gray-300);
   pointer-events: none;
@@ -618,6 +628,27 @@ button[aria-label]:not(.promotion__card-link)::before {
   box-shadow: 0 0 0 0.0625rem var(--verifInputBorderColorFocus);
 }
 
+/* General styles for all sections */
+.section {
+  background-color: var(--color-gray-50);
+  border-radius: var(--border-radius-medium);
+  padding-block: 1.25rem;
+}
+.section__title {
+  font-size: clamp(1rem, 0.9418604651rem + 0.2325581395vw, 1.125rem);
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+@media (width <= 35.93625rem) {
+  .section__title {
+    line-height: 1.4;
+  }
+}
+/*  ===========================  */
+/*  ========END section========  */
+/*  ===========================  */
 /* Styles from block header */
 .header {
   position: sticky;
@@ -775,16 +806,17 @@ button[aria-label]:not(.promotion__card-link)::before {
   will-change: transform;
   scale: 0.99;
 }
-.entry-form__ratio:has(input[id=sms-code]:checked) ~ button[data-get-user-code-button] {
+.entry-form__ratio:has(input[id=sms-code]:checked) ~ button[data-get-user-code-button], .entry-form__ratio:has(input[id=sms-code]:checked) ~ div[data-get-user-code-text] {
   display: block;
 }
-.entry-form__ratio:has(input[id=call-code]:checked) ~ button[data-get-user-call-back-button] {
+.entry-form__ratio:has(input[id=call-code]:checked) ~ button[data-get-user-call-back-button], .entry-form__ratio:has(input[id=call-code]:checked) ~ div[data-get-user-call-back-text] {
   display: block;
 }
 .entry-form__text {
   font-size: 0.875rem;
   line-height: 1.4;
   color: var(--text-color-dark-secondary);
+  display: none;
 }
 .entry-form__button {
   display: none;
@@ -799,6 +831,8 @@ button[aria-label]:not(.promotion__card-link)::before {
 @media (width <= 35.93625rem) {
   .entry-form {
     row-gap: 0.625rem;
+    height: 100%;
+    flex-grow: 1;
   }
   .entry-form__field {
     margin-bottom: 0.625rem;
@@ -810,7 +844,10 @@ button[aria-label]:not(.promotion__card-link)::before {
     margin-bottom: 0.6875rem;
   }
   .entry-form__text {
-    margin-bottom: 2.8125rem;
+    margin-bottom: 0.3125rem;
+  }
+  .entry-form__button {
+    margin-top: auto;
   }
 }
 /*  ============================== */
@@ -821,15 +858,9 @@ button[aria-label]:not(.promotion__card-link)::before {
   max-width: var(--container-width);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
-  background-color: var(--color-gray-50);
-  border-radius: var(--border-radius-medium);
-  padding-block: 1.25rem;
 }
 .phone-entry__title {
-  font-size: 1.0625rem;
-  font-weight: 700;
-  line-height: 2.1;
-  margin-bottom: 1.25rem;
+  line-height: 1.9;
 }
 .phone-entry__subtitle {
   font-size: 0.875rem;
@@ -841,6 +872,11 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 
 @media (width <= 35.93625rem) {
+  .phone-entry {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
   .phone-entry__title {
     font-size: 1rem;
     line-height: 1.876;
@@ -912,10 +948,13 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 
 @media (width <= 35.93625rem) {
+  .verification-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
   .verification-form__button {
-    position: absolute;
-    bottom: 1.875rem;
-    width: calc(100vw - var(--container-padding-x) * 2);
+    margin-top: auto;
   }
 }
 /*  =====================================  */
@@ -943,18 +982,36 @@ button[aria-label]:not(.promotion__card-link)::before {
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
+.verification__text {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--text-color-dark-secondary);
+  margin-bottom: 1.25rem;
+}
 
 @media (width <= 35.93625rem) {
+  .verification {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
   .verification__title {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.3;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 1.375rem;
+  }
+  .verification__text {
+    line-height: 1.47;
   }
 }
 /*  ================================  */
 /*  ========END verification========  */
 /*  ================================  */
+/* Styles from select-svc.*/
+/*  ==============================  */
+/*  ========END select-svc========  */
+/*  ==============================  */
 
 /*# sourceMappingURL=styles.css.map */

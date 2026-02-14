@@ -280,7 +280,7 @@ svg * {
   overflow: hidden !important;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .hidden-mobile-medium {
     display: none !important;
   }
@@ -310,7 +310,7 @@ svg * {
   }
 }
 
-@media (width > 35.93625rem) {
+@media (width > 40.62375rem) {
   .visible-mobile-medium {
     display: none !important;
   }
@@ -344,7 +344,7 @@ svg * {
   display: none !important;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .page-content {
     grid-template-columns: 1fr;
     flex-grow: 1;
@@ -502,7 +502,7 @@ button[aria-label]::before {
   height: inherit;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .logo {
     width: 2.625rem;
     height: 2.6875rem;
@@ -569,7 +569,7 @@ button[aria-label]::before {
   pointer-events: none;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .button {
     width: 100%;
   }
@@ -665,7 +665,7 @@ button[aria-label]::before {
   margin-bottom: 1.25rem;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .section__title {
     line-height: 1.4;
   }
@@ -777,7 +777,7 @@ button[aria-label]::before {
   padding-block: 0.3125rem;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .header__content {
     padding-block: 0.1875rem;
     padding-inline: 0.625rem;
@@ -825,7 +825,7 @@ button[aria-label]::before {
     max-width: 31.25rem;
   }
 }
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .fast-entry {
     display: flex;
     flex-direction: column;
@@ -937,7 +937,7 @@ button[aria-label]::before {
   pointer-events: none;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .entry-form {
     row-gap: 0.625rem;
     height: 100%;
@@ -980,7 +980,7 @@ button[aria-label]::before {
   font-weight: 600;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .phone-entry {
     display: flex;
     flex-direction: column;
@@ -1056,7 +1056,7 @@ button[aria-label]::before {
   width: 100%;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .verification-form {
     display: flex;
     flex-direction: column;
@@ -1098,7 +1098,7 @@ button[aria-label]::before {
   margin-bottom: 1.25rem;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .verification {
     display: flex;
     flex-direction: column;
@@ -1199,7 +1199,7 @@ button[aria-label]::before {
     font-size: 1rem;
   }
 }
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .select-svc {
     display: flex;
     flex-direction: column;
@@ -1341,7 +1341,7 @@ button[aria-label]::before {
   border-radius: 0.75rem;
   background-color: var(--color-green-light);
 }
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .user-info {
     padding: 0.8125rem 1.25rem 0.625rem;
     row-gap: 0.625rem;
@@ -1435,7 +1435,7 @@ button[aria-label]::before {
   scale: 0.98;
 }
 
-@media (width <= 35.93625rem) {
+@media (width <= 40.62375rem) {
   .user-promocode__input {
     max-width: 100%;
   }

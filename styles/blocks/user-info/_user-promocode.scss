@@ -1,0 +1,95 @@
+@use "../../healpers" as *;
+/* Styles for block user-promocode */
+.user-promocode {
+  display: flex;
+  align-self: center;
+  column-gap: rem(10);
+
+  &__field {
+    color: var(--text-color-dark-medium);
+
+    &--medium-color {
+      .user-promocode__icon {
+        fill: var(--trackMediumIconColor);
+      }
+    }
+
+    &--active-color {
+      color: var(--trackActiveTextColor);
+
+      .user-promocode__icon {
+        fill: var(--trackActiveIconColor);
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+    font-size: rem(13);
+    line-height: 1.2;
+    margin-bottom: rem(4);
+  }
+
+  &__icon {
+    @include square(rem(18));
+
+    fill: var(--trackDefaultIconColor);
+  }
+
+  &__input {
+    font-size: rem(16);
+    line-height: 1.2;
+    max-width: rem(186);
+    width: 100%;
+
+    &::placeholder {
+      color: var(--text-color-dark-medium);
+    }
+  }
+
+  &__button {
+    @include square(rem(34));
+    @include reset-button;
+    @include flex-center(true);
+
+    flex-shrink: 0;
+    align-self: end;
+    color: var(--color-accent);
+    background-color: var(--color-light);
+    box-shadow: 0 0 0 rem(1) currentColor;
+    border-radius: var(--border-radius-extra-small);
+    will-change: transform;
+    transition-duration: var(--transition-duration) !important;
+
+    &-icon {
+      fill: none;
+      stroke: currentColor;
+    }
+
+    @include hover {
+      box-shadow: 0 0 0 rem(1.5) currentColor;
+      filter: brightness(95%);
+    }
+
+    @include active {
+      scale: 0.98;
+    }
+  }
+}
+
+@include mobile-medium-media {
+  .user-promocode {
+    &__input {
+      max-width: 100%;
+    }
+
+    &__field {
+      width: 100%;
+    }
+  }
+}
+/*  ================================= */
+/*  ===END section user-promocode === */
+/*  ================================= */

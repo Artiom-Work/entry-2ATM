@@ -1,0 +1,88 @@
+@use "../../healpers" as *;
+/* Styles for mobile menu. part of header */
+.mobile-menu {
+  --mobileMenuBackgroundColor: var(--color-gray-300);
+
+  z-index: 4;
+
+  &__switcher {
+    position: absolute;
+    z-index: 5;
+    right: rem(12);
+    top: rem(13);
+
+    &-icon,
+    &-icon-close {
+      @include square(rem(24));
+
+      flex-shrink: 0;
+      stroke: var(--text-color-dark);
+      fill: transparent;
+    }
+
+    &-icon-close {
+      display: none;
+    }
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: "";
+    }
+
+    @include hover {
+      svg {
+        stroke: var(--color-accent);
+      }
+    }
+
+    @include active {
+      scale: 0.95;
+    }
+  }
+
+  &__basket-indicator {
+    @include square(rem(5));
+
+    background-color: var(--color-red-bright);
+    position: absolute;
+    border-radius: 100%;
+    right: rem(2);
+    top: rem(1);
+  }
+
+  &__wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    padding: var(--container-padding-x);
+    background-color: var(--mobileMenuBackgroundColor);
+    visibility: hidden;
+    transition-duration: var(--transition-duration);
+    transform: translateY(-100%);
+  }
+}
+
+#menu-switch[type="checkbox"] {
+  display: none;
+
+  &:checked ~ .mobile-menu__switcher > .mobile-menu__switcher-icon-close {
+    display: block;
+  }
+  &:checked ~ .mobile-menu__switcher > .mobile-menu__switcher-icon {
+    display: none;
+  }
+
+  &:checked ~ .mobile-menu__switcher > .mobile-menu__basket-indicator {
+    display: none;
+  }
+  &:checked ~ .mobile-menu__wrapper {
+    visibility: visible;
+    transform: translateY(0%);
+    overflow: hidden; // временно , правльно - нужно  добавить к body в JS
+  }
+}

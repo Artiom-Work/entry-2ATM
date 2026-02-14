@@ -1,0 +1,88 @@
+@use "../../healpers" as *;
+/* Styles for nav block track-list and section svc-track */
+.svc-track {
+  max-width: rem(270);
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.track-list {
+  min-width: rem(230);
+  padding: rem(10) rem(20) rem(20);
+  background-color: var(--color-gray-50);
+
+  &__item {
+    color: var(--trackDefaultTextColor);
+
+    &-head {
+      @include flex-space-between;
+
+      gap: rem(10);
+      will-change: transform;
+    }
+
+    &--medium-color {
+      .track-list__service-icon {
+        fill: var(--trackMediumIconColor);
+      }
+    }
+
+    &--active-color {
+      color: var(--trackActiveTextColor);
+
+      .track-list__service-icon {
+        fill: var(--trackActiveIconColor);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__service {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+
+    &-icon {
+      @include square(rem(18));
+
+      flex-shrink: 0;
+      fill: var(--trackDefaultIconColor);
+    }
+
+    &-name {
+      font-size: rem(13);
+      line-height: 1.2;
+    }
+
+    &-button {
+      @include reset-button;
+      @include flex-center(true);
+      @include square(rem(18));
+
+      flex-shrink: 0;
+      transition-duration: var(--transition-duration) !important;
+
+      @include hover {
+        filter: brightness(70%);
+      }
+
+      @include active {
+        scale: 0.95;
+        filter: brightness(60%);
+      }
+
+      &-icon {
+        @include square(rem(18));
+
+        flex-shrink: 0;
+        fill: var(--text-color-dark-medium);
+      }
+    }
+  }
+}
+/*  ==============================  */
+/*  ========END track-list========  */
+/*  ==============================  */

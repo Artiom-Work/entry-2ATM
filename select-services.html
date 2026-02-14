@@ -26,137 +26,297 @@
 				</picture>
 			</a>
 		</div>
-	</header>
 
-	<main class="page-content container">
-		<h1 class="visually-hidden">Выбор услуг в 2АТМ</h1>
+		<div class="header__mobile-menu mobile-menu visible-mobile-medium">
+			<input id="menu-switch" type="checkbox">
+			<label class="mobile-menu__switcher" for="menu-switch" aria-label="Кнопка для отображения корзины">
+				<svg class="mobile-menu__switcher-icon" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="./images/icons/sprite-icons.svg#basket-icon"></use>
+				</svg>
 
-		<div class="page-content__left">
-			<section class="select-svc section" aria-labelledby="select-svc-title">
-				<h2 class="select-svc__title section__title" id="select-svc-title">
-					Выберите тип услуги
-				</h2>
+				<svg class="mobile-menu__switcher-icon-close" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="./images/icons/sprite-icons.svg#close-icon"></use>
+				</svg>
 
-				<form class="select-svc__form" id="select-services">
-					<ul class="select-svc__list">
-						<li class="select-svc__unit">
-							<img class="select-svc__unit-image" src="./images/icons/icon-tire-fitting.webp" width="60" height="60"
-								alt="Колесо" loading="lazy">
+				<span class="mobile-menu__basket-indicator hidden"></span>
+			</label>
 
-							<h3 class="select-svc__unit-name">Шиномонтаж</h3>
+			<div class="mobile-menu__wrapper">
+				<nav class="mobile-menu__box">
 
-							<label class="select-svc__unit-button" for="svc-tire-fitting"></label>
-							<input class="visually-hidden" type="checkbox" id="svc-tire-fitting" name="svc-tire-fitting">
-						</li>
-
-						<li class="select-svc__unit">
-							<img class="select-svc__unit-image" src="./images/icons/icon-car-wash.webp" width="60" height="60"
-								alt="Машина с каплями" loading="lazy">
-
-							<h3 class="select-svc__unit-name">Автомойка</h3>
-
-							<label class="select-svc__unit-button" for="svc-car-wash"></label>
-							<input class="visually-hidden" type="checkbox" id="svc-car-wash" name="svc-car-wash">
-						</li>
-
-						<li class="select-svc__unit">
-							<img class="select-svc__unit-image" src="./images/icons/icon-refill-conditioning.webp" width="60"
-								height="60" alt="Картинка машины со снежинкой" loading="lazy">
-
-							<h3 class="select-svc__unit-name">Заправка кондиционера</h3>
-
-							<label class="select-svc__unit-button" for="svc-refill-conditioning"></label>
-							<input class="visually-hidden" type="checkbox" id="svc-refill-conditioning"
-								name="svc-refill-conditioning">
-						</li>
-
-						<li class="select-svc__unit">
-							<img class="select-svc__unit-image" src="./images/icons/icon-car-repair.webp" width="60" height="60"
-								alt="Шестерёнка" loading="lazy">
-
-							<h3 class="select-svc__unit-name">Автосервис</h3>
-
-							<label class="select-svc__unit-button" for="svc-car-repair"></label>
-							<input class="visually-hidden" type="checkbox" id="svc-car-repair" name="svc-car-repair">
-						</li>
-
-						<li class="select-svc__unit">
-							<img class="select-svc__unit-image" src="./images/icons/icon-wheel-alignment.webp" width="60" height="60"
-								alt="Картинка выровненных колёс" loading="lazy">
-
-							<h3 class="select-svc__unit-name">Развал-схождение</h3>
-
-							<label class="select-svc__unit-button" for="svc-wheel-alignment"></label>
-							<input class="visually-hidden" type="checkbox" id="svc-wheel-alignment" name="svc-wheel-alignment">
-						</li>
-
-						<li class="select-svc__unit">
-							<img class="select-svc__unit-image" src="./images/icons/icon-h-engine.webp" width="60" height="60"
-								alt="Картинка двигателя с каплей H" loading="lazy">
-
-							<h3 class="select-svc__unit-name">Водородная
-								мойка двигателя</h3>
-
-							<label class="select-svc__unit-button" for="svc-engine-cleaning"></label>
-							<input class="visually-hidden" type="checkbox" id="svc-engine-cleaning" name="svc-engine-cleaning">
-						</li>
-					</ul>
-				</form>
-			</section>
+				</nav>
+			</div>
 		</div>
 
-		<div class="page-content__right">
-			<section class="user-basket" aria-labelledby="user-basket-title"
-				style="width: 270px; height: 410px; background-color: rgba(255, 0, 0, 0.336);">
-				<h2 class="visually-hidden" id="user-basket-title">
-					Описание выбранных услуг и данные пользователя
-				</h2>
-			</section>
+		<div class="user-info visible-mobile-medium">
+			<div class="user-info__head">
+				<div class="user-info__name">
+					<svg class="user-info__icon" width="18" height="18" viewBox="0 0 18 18">
+						<use xlink:href="./images/icons/sprite-icons.svg#user-icon"></use>
+					</svg>
+
+					<div class="user-info__name-text">
+						<span>Ольга</span>
+						<span>+7 999*****67</span>
+					</div>
+				</div>
+
+
+				<span class="user-info__reduct">
+					-10%
+				</span>
+			</div>
+
+			<div class="user-info__body">
+				<form class="user-promocode">
+					<div class="user-promocode__field user-promocode__field--active-color">
+						<label class="user-promocode__label" for="user-promocode">
+							<svg class="user-promocode__icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#cvs-discount-icon"></use>
+							</svg>
+
+							<span>Промокод</span>
+						</label>
+
+						<input class="user-promocode__input input input--small-h" type="text" name="user-promocode"
+							id="user-promocode" placeholder="Введите промокод">
+					</div>
+
+					<button class="user-promocode__button" type="button" aria-label="Кнопка проверки промокода">
+						<svg class="user-promocode__button-icon" width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="./images/icons/sprite-icons.svg#bird-icon"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<main class="flex-y-container">
+		<h1 class="visually-hidden">Выбор услуг в 2АТМ</h1>
+
+		<div class="page-content container">
+			<div class="page-content__left">
+				<section class="select-svc section" aria-labelledby="select-svc-title">
+					<h2 class="select-svc__title section__title" id="select-svc-title">
+						Выберите тип услуги
+					</h2>
+
+					<nav>
+						<ul class="select-svc__list">
+							<li class="select-svc__unit">
+								<a class="select-svc__unit-link" href="#!" aria-label="Ссылка на услуги шиномонтажа">
+									<img class="select-svc__unit-image" src="./images/icons/icon-tire-fitting.webp" width="60" height="60"
+										alt="Колесо" loading="lazy">
+
+									<h3 class="select-svc__unit-name">Шиномонтаж</h3>
+								</a>
+							</li>
+
+							<li class="select-svc__unit">
+								<a class="select-svc__unit-link" href="#!" aria-label="Ссылка на услуги автомойки">
+									<img class="select-svc__unit-image" src="./images/icons/icon-car-wash.webp" width="60" height="60"
+										alt="Машина с каплями" loading="lazy">
+
+									<h3 class="select-svc__unit-name">Автомойка</h3>
+								</a>
+							</li>
+
+							<li class="select-svc__unit">
+								<a class="select-svc__unit-link" href="#!" aria-label="Ссылка на услуги заправки кондиционеров">
+									<img class="select-svc__unit-image" src="./images/icons/icon-refill-conditioning.webp" width="60"
+										height="60" alt="Картинка машины со снежинкой" loading="lazy">
+
+									<h3 class="select-svc__unit-name">Заправка<br class="hidden-tablet">кондиционера</h3>
+								</a>
+							</li>
+
+							<li class="select-svc__unit">
+								<a class="select-svc__unit-link" href="#!" aria-label="Ссылка на услуги автосервиса">
+									<img class="select-svc__unit-image" src="./images/icons/icon-car-repair.webp" width="60" height="60"
+										alt="Шестерёнка" loading="lazy">
+
+									<h3 class="select-svc__unit-name">Автосервис</h3>
+								</a>
+							</li>
+
+							<li class="select-svc__unit">
+								<a class="select-svc__unit-link" href="#!" aria-label="Ссылка на услуги Развал-схождения">
+									<img class="select-svc__unit-image" src="./images/icons/icon-wheel-alignment.webp" width="60"
+										height="60" alt="Картинка выровненных колёс" loading="lazy">
+
+									<h3 class="select-svc__unit-name">Развал-<br class="hidden-tablet">схождение</h3>
+								</a>
+							</li>
+
+							<li class="select-svc__unit">
+								<a class="select-svc__unit-link" href="#!" aria-label="Ссылка на услуги Водородной мойка двигателя">
+									<img class="select-svc__unit-image" src="./images/icons/icon-h-engine.webp" width="60" height="60"
+										alt="Картинка двигателя с каплей H" loading="lazy">
+
+									<h3 class="select-svc__unit-name">Водородная
+										мойка&nbsp;двигателя</h3>
+								</a>
+							</li>
+						</ul>
+					</nav>
+
+					<a class="select-svc__button button button--big-h visible-mobile-medium"
+						href="./select-services.html">Далее</a>
+				</section>
+			</div>
+
+			<div class="page-content__right hidden-mobile-medium">
+				<section class="svc-track" aria-labelledby="svc-track-title">
+					<h2 class="visually-hidden" id="svc-track-title">Путь услуг пользователя в 2АТМ</h2>
+
+					<div class="user-info">
+						<header class="user-info__head">
+							<div class="user-info__name">
+								<svg class="user-info__icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#user-icon"></use>
+								</svg>
+
+								<div class="user-info__name-text">
+									<span>Ольга</span>
+									<span>+7 999*****67</span>
+								</div>
+							</div>
+
+
+							<span class="user-info__reduct">
+								-10%
+							</span>
+						</header>
+
+						<div class="user-info__body">
+							<form class="user-promocode">
+								<div class="user-promocode__field user-promocode__field--active-color">
+									<label class="user-promocode__label" for="user-promocode">
+										<svg class="user-promocode__icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#cvs-discount-icon"></use>
+										</svg>
+
+										<span>Промокод</span>
+									</label>
+
+									<input class="user-promocode__input input input--small-h" type="text" name="user-promocode"
+										id="user-promocode" placeholder="Введите промокод">
+								</div>
+
+								<button class="user-promocode__button" type="button" aria-label="Кнопка проверки промокода">
+									<svg class="user-promocode__button-icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="./images/icons/sprite-icons.svg#bird-icon"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
+
+					<nav class="hidden-mobile-medium">
+						<ul class="track-list">
+							<li class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#cvs-screw-icon"></use>
+										</svg>
+
+										<span class="track-list__service-name">Тип услуги</span>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+
+							<li class="track-list__item">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#cvs-car-icon"></use>
+										</svg>
+
+										<span class="track-list__service-name">Автомобиль</span>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка удаления">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+
+							<li class="track-list__item">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#cvs-wheel-house-icon"></use>
+										</svg>
+
+										<span class="track-list__service-name">Хранение колес</span>
+									</a>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--medium-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#cvs-wheel-icon"></use>
+										</svg>
+
+										<span class="track-list__service-name">Параметры колес</span>
+									</a>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--medium-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#cvs-spanner-icon"></use>
+										</svg>
+
+										<span class="track-list__service-name">Услуги</span>
+									</a>
+								</header>
+							</li>
+
+							<li class="track-list__item">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#cvs-house-icon"></use>
+										</svg>
+
+										<span class="track-list__service-name">Мастерская</span>
+									</a>
+								</header>
+							</li>
+
+							<li class="track-list__item">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#cvs-calendar-icon"></use>
+										</svg>
+
+										<span class="track-list__service-name">Дата и&nbsp;время</span>
+									</a>
+								</header>
+							</li>
+						</ul>
+					</nav>
+				</section>
+			</div>
 		</div>
 	</main>
 
 </body>
 
 </html>
-
-
-<!-- <div class="header__mobile-menu mobile-menu visible-tablet">
-	<input id="menu-switch" type="checkbox">
-	<label class="mobile-menu__burger" for="menu-switch">
-		<span class="mobile-menu__burger-line"></span>
-		<span class="mobile-menu__burger-line"></span>
-		<span class="mobile-menu__burger-line"></span>
-	</label>
-
-	<div class="mobile-menu__wrapper">
-		<nav class="mobile-menu__box header-top-menu">
-			<ul class="header-top-menu__list">
-				<li>
-					<a class="mobile-menu__link mobile-menu__link--color-accent" href="./services.html">
-						Услуги
-					</a>
-				</li>
-				<li>
-					<a class="mobile-menu__link" href="./addresses.html">
-						Адреса
-					</a>
-				</li>
-				<li>
-					<a class="mobile-menu__link" href="./corporate.html">
-						Корпоративным клиентам
-					</a>
-				</li>
-				<li>
-					<a class="header-top-menu__link" href="#!">
-						Интернет-магазин
-					</a>
-				</li>
-				<li>
-					<a class="mobile-menu__link mobile-menu__link--color-green" href="./offers.html">
-						Спецпредложения
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-</div> -->

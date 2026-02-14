@@ -1,4 +1,5 @@
 @use "../../healpers" as *;
+@use "mobile-menu";
 
 /* Styles from block header */
 .header {
@@ -11,6 +12,7 @@
   animation-range: rem(200) rem(300);
 
   background-color: var(--color-light);
+  margin-bottom: fluid(20, 10);
 
   &__content {
     @include flex-space-between;
@@ -19,6 +21,7 @@
     padding-block: rem(5);
   }
 }
+
 @include mobile-medium-media {
   .header {
     &__content {

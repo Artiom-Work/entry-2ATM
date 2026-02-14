@@ -12,6 +12,7 @@
   --inputBgColorDisabled: var(--color-gray-300);
   --inputTextColorError: var(--color-error);
   --inputMinHeight: #{rem(46)};
+  --inputMinHeightSmall: #{rem(34)};
 
   font-size: rem(16);
   line-height: 1.5;
@@ -83,5 +84,10 @@
         box-shadow: 0 0 0 rem(1) var(--verifInputBorderColorFocus);
       }
     }
+  }
+
+  &--small-h {
+    min-height: var(--inputMinHeightSmall);
+    padding: rem(7) rem(12);
   }
 }

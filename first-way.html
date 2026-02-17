@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
+	<!-- <meta name="description"
+		content=""> -->
+	<title>2ATM | Запись на услуги</title>
+	<link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__content container">
+			<a class="logo" href="./index.html" aria-label="Логотип 2ATM">
+				<picture>
+					<source srcset="./images/logo/logo-short.svg" media="(max-width: 699px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
+					<img class="logo__image" src="./images/logo/logo-short.svg" width="42" height="43" alt="Логотип 2ATM">
+				</picture>
+			</a>
+		</div>
+
+		<div class="header__mobile-menu mobile-menu visible-mobile-medium">
+			<input id="menu-switch" type="checkbox">
+			<label class="mobile-menu__switcher" for="menu-switch">
+				<svg class="mobile-menu__switcher-icon" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="./images/icons/sprite-icons.svg#basket-icon"></use>
+				</svg>
+
+				<svg class="mobile-menu__switcher-icon-close" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="./images/icons/sprite-icons.svg#close-icon"></use>
+				</svg>
+
+				<span class="mobile-menu__basket-indicator hidden"></span>
+			</label>
+
+			<div class="mobile-menu__wrapper">
+				<nav class="mobile-menu__box">
+
+				</nav>
+			</div>
+		</div>
+
+		<div class="user-info visible-mobile-medium">
+			<div class="user-info__head">
+				<div class="user-info__name">
+					<svg class="user-info__icon" width="18" height="18" viewBox="0 0 18 18">
+						<use xlink:href="./images/icons/sprite-icons.svg#user-icon"></use>
+					</svg>
+
+					<div class="user-info__name-text">
+						<span>Ольга</span>
+						<span>+7 999*****67</span>
+					</div>
+				</div>
+
+
+				<span class="user-info__reduct">
+					-10%
+				</span>
+			</div>
+
+			<div class="user-info__body">
+				<form class="user-promocode hidden">
+					<div class="user-promocode__field user-promocode__field--active-color">
+						<label class="user-promocode__label" for="user-promocode-1">
+							<svg class="user-promocode__icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
+							</svg>
+
+							<span>Промокод</span>
+						</label>
+
+						<input class="user-promocode__input input input--small-h" type="text" name="user-promocode"
+							id="user-promocode-1" placeholder="Введите промокод">
+					</div>
+
+					<button class="user-promocode__button" type="button" aria-label="Кнопка проверки промокода">
+						<svg class="user-promocode__button-icon" width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="./images/icons/sprite-icons.svg#bird-icon"></use>
+						</svg>
+					</button>
+				</form>
+
+				<div class="track-list__item track-list__item--active-color track-list__item--header">
+					<header class="track-list__item-head">
+						<button class="track-list__service" type="button">
+							<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
+							</svg>
+
+							<div class="track-list__service-description">
+								<span class="track-list__service-name">ХОДОВАЯ</span>
+							</div>
+						</button>
+
+						<button class="track-list__service-button" type="button" aria-label="Кнопка удаления" title="Удалить">
+							<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
+							</svg>
+						</button>
+					</header>
+				</div>
+
+				<div class="fast-action visible-mobile-medium">
+					<ul class="fast-action__list">
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									Шиномонтаж
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									Volkswagen Tiguan
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									Привезем шины по договору <span>№096770</span>
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="flex-y-container">
+		<h1 class="visually-hidden">Запись на услуги в 2АТМ</h1>
+
+		<div class="page-content container">
+			<div class="page-content__left">
+				<section class="user-cars section" aria-labelledby="user-cars-title">
+					<div class="user-cars__heading">
+						<h2 class="user-cars__title" id="user-cars-title">
+							Выберите автомобиль
+						</h2>
+
+						<button class="user-cars__heading-button button button--light-accent button--small-h" type="button">
+							Добавить а/м
+						</button>
+					</div>
+
+					<div>
+						<form class="user-cars__search">
+							<div class="user-cars__search-field">
+								<label class="input-wrapper" for="search-user-car">
+									<input class="user-cars__search-input input" type="search" name="search-user-car" id="search-user-car"
+										placeholder="Введите марку, модель или номер">
+
+									<svg class="input__icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="./images/icons/sprite-icons.svg#search-icon"></use>
+									</svg>
+								</label>
+							</div>
+
+							<button class="user-cars__search-button" type="button" aria-label="Кнопка поиска" title="Искать">
+								<svg class="user-cars__search-button-icon" width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="./images/icons/sprite-icons.svg#list-up-icon"></use>
+								</svg>
+							</button>
+						</form>
+
+						<ul class="user-cars__list">
+							<li class="user-cars__unit">
+								<button class="user-cars__description-button" type="button">
+									<span class="user-cars__unit-name">Volkswagen Taos</span>
+								</button>
+
+								<button class="user-cars__unit-button" type="button" aria-label="Редактировать" title="Редактировать">
+									<svg class="user-cars__unit-icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="./images/icons/sprite-icons.svg#icon-pen-medium"></use>
+									</svg>
+								</button>
+							</li>
+
+							<li class="user-cars__unit user-cars__unit--visible-icon">
+								<button class="user-cars__description-button" type="button">
+									<span class="user-cars__unit-name">Volkswagen Tiguan</span>
+									<span class="user-cars__unit-text">А123АА123</span>
+
+									<svg class="user-cars__unit-sign" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="./images/icons/sprite-icons.svg#wheel-house-icon"></use>
+									</svg>
+								</button>
+
+								<button class="user-cars__unit-button" type="button" aria-label="Редактировать" title="Редактировать">
+									<svg class="user-cars__unit-icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="./images/icons/sprite-icons.svg#icon-pen-medium"></use>
+									</svg>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="user-request section" aria-labelledby="user-request-agreements-title">
+					<form class="user-request__heading" id="request-agreements">
+						<label class="checkbox" for="request-agreements-btn" aria-label="Кнопка для запроса договоров"
+							title="Показать договоры">
+							<input class="visually-hidden" type="checkbox" id="request-agreements-btn" name="request-agreements"
+								checked>
+
+							<svg class="checkbox__icon" width="13" height="10" viewBox="0 0 13 10">
+								<use xlink:href="./images/icons/sprite-icons.svg#checkbox-bird-icon"></use>
+							</svg>
+						</label>
+
+						<h2 class="user-request__title" id="user-request-agreements-title">
+							Мои шины на&nbsp;хранении и&nbsp;их&nbsp;нужно доставить в мастерскую в&nbsp;этот визит
+						</h2>
+					</form>
+
+					<section class="select-document" aria-labelledby="select-document-title">
+						<h2 class="select-document__title" id="select-document-title">
+							Выберите договор:
+						</h2>
+
+						<form class="select-document__form">
+							<article class="select-document__card">
+								<span class="select-document__card-indicator"></span>
+
+								<label class="select-document__card-switcher" for="contract-889787"
+									aria-label="Индикатор выбранного договора">
+									<input class="visually-hidden" type="radio" id="contract-889787" name="selected-contract"
+										value="contract-889787">
+								</label>
+
+								<h3 class="select-document__card-name">
+									<span>Договор <span>№889787</span></span>
+								</h3>
+
+								<div class="select-document__card-buttons visible-tablet">
+									<button class="select-document__card-button button " type="button">
+										Выбрать
+									</button>
+
+									<button class="select-document__card-button button button--light-accent" type="button">
+										Удалить
+									</button>
+								</div>
+
+								<div class="select-document__card-desc">
+									<p class="select-document__card-text">
+										<svg class="select-document__card-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#car-icon"></use>
+										</svg>
+
+										<span>
+											<span>Chery </span>
+											<span>[C328OM198]</span>
+										</span>
+									</p>
+
+									<p class="select-document__card-text">
+										<svg class="select-document__card-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#calendar-icon"></use>
+										</svg>
+
+										<time datetime="2025-10-14">c
+											<span>14.10.2025</span>
+											<span>(7 месяцев)</span>
+										</time>
+									</p>
+
+									<p class="select-document__card-text">
+										<svg class="select-document__card-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#wheel-icon"></use>
+										</svg>
+
+										<span>
+											<span>Cooper</span>&nbsp;&mdash;
+											<span> 235/50 R17 </span>
+											<span>(летняя)</span>
+											<span>4</span>
+											<span>&nbsp;шт</span>
+										</span>
+									</p>
+								</div>
+							</article>
+
+							<article class="select-document__card">
+								<span class="select-document__card-indicator"></span>
+
+								<label class="select-document__card-switcher" for="contract-096753"
+									aria-label="Индикатор выбранного договора">
+									<input class="visually-hidden" type="radio" id="contract-096753" name="selected-contract"
+										value="contract-096753">
+								</label>
+
+								<h3 class="select-document__card-name">
+									<span>Договор <span>№096753</span></span>
+								</h3>
+
+								<div class="select-document__card-buttons visible-tablet">
+									<button class="select-document__card-button button" type="button">
+										Выбрать
+									</button>
+
+									<button class="select-document__card-button button button--light-accent" type="button">
+										Удалить
+									</button>
+								</div>
+
+								<div class="select-document__card-desc">
+									<p class="select-document__card-text">
+										<svg class="select-document__card-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#car-icon"></use>
+										</svg>
+
+										<span>
+											<span>Chery </span>
+											<span>[C328OM198]</span>
+										</span>
+									</p>
+
+									<p class="select-document__card-text">
+										<svg class="select-document__card-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#calendar-icon"></use>
+										</svg>
+
+										<time datetime="2025-10-14">c
+											<span>14.10.2025</span>
+											<span>(7 месяцев)</span>
+										</time>
+									</p>
+
+									<p class="select-document__card-text">
+										<svg class="select-document__card-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#wheel-icon"></use>
+										</svg>
+
+										<span>
+											<span>Cooper</span>&nbsp;&mdash;
+											<span> 235/50 R17 </span>
+											<span>(летняя)</span>
+											<span>4</span>
+											<span>&nbsp;шт</span>
+										</span>
+									</p>
+								</div>
+							</article>
+
+							<div class="select-document__card select-document__card--absent">
+								<span class="select-document__card-indicator"></span>
+
+								<label class="select-document__card-switcher" for="contract-absent"
+									aria-label="Индикатор выбранного договора">
+									<input class="visually-hidden" type="radio" id="contract-absent" name="selected-contract"
+										value="contract-absent">
+								</label>
+
+								<h3 class="select-document__card-name">
+									Договор хранения не&nbsp;найден
+								</h3>
+
+								<div class="select-document__card-note">
+									<p class="hidden-mobile-medium">
+										Мои колеса на хранении, но договора нет в списке
+									</p>
+
+									<p class="visible-mobile-medium">
+										Поставьте галочку, если ваши колеса на хранении, но&nbsp;договора нет в&nbsp;списке
+									</p>
+								</div>
+							</div>
+						</form>
+					</section>
+				</section>
+
+				<section class="user-request section" aria-labelledby="user-request-services-title">
+					<form class="user-request__heading" id="show-services">
+						<label class="checkbox" for="show-services-btn" aria-label="Кнопка для запроса договоров"
+							title="Показать договоры">
+							<input class="visually-hidden" type="checkbox" id="show-services-btn" name="show-services">
+
+							<svg class="checkbox__icon" width="13" height="10" viewBox="0 0 13 10">
+								<use xlink:href="./images/icons/sprite-icons.svg#checkbox-bird-icon"></use>
+							</svg>
+						</label>
+
+						<h2 class="user-request__title" id="user-request-services-title">
+							Добавьте услуги в корзину (необязательно)
+						</h2>
+					</form>
+
+					<div class="user-request__text">
+						<p>
+							Можете пропустить этот шаг и&nbsp;система выделит вам 30&nbsp;минут.
+							<br>
+							Этого времени достаточно для сезонной смены резины или небольшого ремонта.
+						</p>
+
+						<p>
+							Если хотите более точную стоимость&nbsp;&mdash; добавьте услуги в&nbsp;корзину.
+						</p>
+					</div>
+				</section>
+			</div>
+
+			<div class="page-content__right hidden-mobile-medium">
+				<section class="svc-track" aria-labelledby="svc-track-title">
+					<h2 class="visually-hidden" id="svc-track-title">Путь услуг пользователя в 2АТМ</h2>
+
+					<div class="user-info">
+						<header class="user-info__head">
+							<div class="user-info__name">
+								<svg class="user-info__icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#user-icon"></use>
+								</svg>
+
+								<div class="user-info__name-text">
+									<span>Ольга</span>
+									<span>+7 999*****67</span>
+								</div>
+							</div>
+
+
+							<span class="user-info__reduct">
+								-10%
+							</span>
+						</header>
+
+						<div>
+							<form class="user-promocode hidden">
+								<div class="user-promocode__field user-promocode__field--active-color">
+									<label class="user-promocode__label" for="user-promocode">
+										<svg class="user-promocode__icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
+										</svg>
+
+										<span>Промокод</span>
+									</label>
+
+									<input class="user-promocode__input input input--small-h" type="text" name="user-promocode"
+										id="user-promocode" placeholder="Введите промокод">
+								</div>
+
+								<button class="user-promocode__button" type="button" aria-label="Кнопка проверки промокода"
+									title="Проверить">
+									<svg class="user-promocode__button-icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="./images/icons/sprite-icons.svg#bird-icon"></use>
+									</svg>
+								</button>
+							</form>
+
+							<div class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<button class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">ХОДОВАЯ</span>
+										</div>
+									</button>
+
+									<button class="track-list__service-button" type="button" aria-label="Кнопка удаления" title="Удалить">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
+										</svg>
+									</button>
+								</header>
+							</div>
+						</div>
+					</div>
+
+					<nav class="hidden-mobile-medium">
+						<ul class="track-list">
+							<li class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-screw-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Шиномонтаж</span>
+										</div>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования"
+										title="Редактировать">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-car-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Volkswagen Tiguan</span>
+											<span class="track-list__service-text">A123AA123</span>
+										</div>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования"
+										title="Редактировать">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-wheel-house-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Привезем ваши шины по договору <span>№889787</span></span>
+										</div>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования"
+										title="Редактировать">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--medium-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-wheel-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Параметры колес</span>
+										</div>
+									</a>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--medium-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-spanner-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Услуги</span>
+										</div>
+									</a>
+								</header>
+							</li>
+
+							<li class="track-list__item">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-house-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Мастерская</span>
+										</div>
+									</a>
+								</header>
+							</li>
+
+							<li class="track-list__item">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-calendar-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Дата и&nbsp;время</span>
+										</div>
+									</a>
+								</header>
+							</li>
+						</ul>
+					</nav>
+				</section>
+			</div>
+
+			<button class="page-content__button button button--big-h visible-mobile-medium" type="button"
+				disabled>Далее</button>
+		</div>
+	</main>
+
+</body>
+
+</html>

@@ -27,7 +27,7 @@
   // --color-white-opacity-10: #ffffff34;
   // --color-white-opacity-35: #ffffffa8;
   // --color-black-opacity-48: #3332327a;
-  // --color-black-opacity-80: #00000033;
+  --color-black-opacity-80: #00000033;
   --color-red-opcity-15: #3b060526;
   --color-red-opcity-40: #3b060566;
   --color-blue: #2c94ea;
@@ -53,13 +53,15 @@
   --color-error: var(--color-red);
   --color-success: var(--color-green);
 
-  --color-border: var(--color-gray-500);
+  --color-border: var(--color-gray-900);
   --color-border-medium: var(--color-gray-700);
   --color-border-light: var(--color-gray-350);
   --color-border-extra-light: var(--color-gray-90);
   --color-border-active: var(--color-accent);
 
   --border: #{rem(1)} solid var(--color-border);
+  --border-current: #{rem(1)} solid currentColor;
+  --border-accent: #{rem(1)} solid var(--color-accent);
   --border-light: #{rem(1)} solid var(--color-border-light);
   --border-extra-light: #{rem(0.8)} solid var(--color-border-extra-light);
 
@@ -79,6 +81,7 @@
   --container-width: #{rem(863)};
   --container-padding-x: #{rem(20)};
 
+  --button-height-small: #{rem(34)};
   --button-height-medium: #{rem(40)};
   --button-height: #{rem(42)};
   --button-height-big: #{rem(46)};

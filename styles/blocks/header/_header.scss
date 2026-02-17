@@ -9,7 +9,7 @@
   animation-name: scrolling-sticky;
   animation-fill-mode: both;
   animation-timeline: scroll();
-  animation-range: rem(200) rem(300);
+  animation-range: rem(50) rem(150);
 
   background-color: var(--color-light);
   margin-bottom: fluid(20, 10);

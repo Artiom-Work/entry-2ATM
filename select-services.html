@@ -21,7 +21,7 @@
 		<div class="header__content container">
 			<a class="logo" href="./index.html" aria-label="Логотип 2ATM">
 				<picture>
-					<source srcset="./images/logo/logo-short.svg" media="(max-width: 650px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo-short.svg" media="(max-width: 699px)" type="image/svg+xml">
 					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
 					<img class="logo__image" src="./images/logo/logo-short.svg" width="42" height="43" alt="Логотип 2ATM">
 				</picture>
@@ -68,12 +68,12 @@
 				</span>
 			</div>
 
-			<div class="user-info__body">
+			<div>
 				<form class="user-promocode">
 					<div class="user-promocode__field user-promocode__field--active-color">
 						<label class="user-promocode__label" for="user-promocode-1">
 							<svg class="user-promocode__icon" width="18" height="18" viewBox="0 0 18 18">
-								<use xlink:href="./images/icons/sprite-icons.svg#cvs-discount-icon"></use>
+								<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
 							</svg>
 
 							<span>Промокод</span>
@@ -89,6 +89,27 @@
 						</svg>
 					</button>
 				</form>
+
+				<!-- Если пользователь ввёл промокод на блок с полем ввода убирается -->
+				<div class="track-list__item track-list__item--active-color hidden">
+					<header class="track-list__item-head">
+						<button class="track-list__service" type="button">
+							<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
+							</svg>
+
+							<div class="track-list__service-description">
+								<span class="track-list__service-name">ХОДОВАЯ</span>
+							</div>
+						</button>
+
+						<button class="track-list__service-button" type="button" aria-label="Кнопка удаления" title="Удалить">
+							<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
+							</svg>
+						</button>
+					</header>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -195,7 +216,7 @@
 								<div class="user-promocode__field user-promocode__field--active-color">
 									<label class="user-promocode__label" for="user-promocode">
 										<svg class="user-promocode__icon" width="18" height="18" viewBox="0 0 18 18">
-											<use xlink:href="./images/icons/sprite-icons.svg#cvs-discount-icon"></use>
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
 										</svg>
 
 										<span>Промокод</span>
@@ -205,7 +226,8 @@
 										id="user-promocode" placeholder="Введите промокод">
 								</div>
 
-								<button class="user-promocode__button" type="button" aria-label="Кнопка проверки промокода">
+								<button class="user-promocode__button" type="button" aria-label="Кнопка проверки промокода"
+									title="Проверить">
 									<svg class="user-promocode__button-icon" width="24" height="24" viewBox="0 0 24 24">
 										<use xlink:href="./images/icons/sprite-icons.svg#bird-icon"></use>
 									</svg>
@@ -220,13 +242,16 @@
 								<header class="track-list__item-head">
 									<a class="track-list__service" href="#!">
 										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
-											<use xlink:href="./images/icons/sprite-icons.svg#cvs-screw-icon"></use>
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-screw-icon"></use>
 										</svg>
 
-										<span class="track-list__service-name">Тип услуги</span>
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Тип услуги</span>
+										</div>
 									</a>
 
-									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования">
+									<button class="track-list__service-button" type="button" aria-label="Кнопка редактирования"
+										title="Редактировать">
 										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
 											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
 										</svg>
@@ -238,13 +263,15 @@
 								<header class="track-list__item-head">
 									<a class="track-list__service" href="#!">
 										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
-											<use xlink:href="./images/icons/sprite-icons.svg#cvs-car-icon"></use>
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-car-icon"></use>
 										</svg>
 
-										<span class="track-list__service-name">Автомобиль</span>
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Автомобиль</span>
+										</div>
 									</a>
 
-									<button class="track-list__service-button" type="button" aria-label="кнопка удаления">
+									<button class="track-list__service-button" type="button" aria-label="кнопка удаления" title="Удалить">
 										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
 											<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
 										</svg>
@@ -256,10 +283,12 @@
 								<header class="track-list__item-head">
 									<a class="track-list__service" href="#!">
 										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
-											<use xlink:href="./images/icons/sprite-icons.svg#cvs-wheel-house-icon"></use>
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-wheel-house-icon"></use>
 										</svg>
 
-										<span class="track-list__service-name">Хранение колес</span>
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Хранение колес</span>
+										</div>
 									</a>
 								</header>
 							</li>
@@ -268,10 +297,12 @@
 								<header class="track-list__item-head">
 									<a class="track-list__service" href="#!">
 										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
-											<use xlink:href="./images/icons/sprite-icons.svg#cvs-wheel-icon"></use>
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-wheel-icon"></use>
 										</svg>
 
-										<span class="track-list__service-name">Параметры колес</span>
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Параметры колес</span>
+										</div>
 									</a>
 								</header>
 							</li>
@@ -280,10 +311,12 @@
 								<header class="track-list__item-head">
 									<a class="track-list__service" href="#!">
 										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
-											<use xlink:href="./images/icons/sprite-icons.svg#cvs-spanner-icon"></use>
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-spanner-icon"></use>
 										</svg>
 
-										<span class="track-list__service-name">Услуги</span>
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Услуги</span>
+										</div>
 									</a>
 								</header>
 							</li>
@@ -292,10 +325,12 @@
 								<header class="track-list__item-head">
 									<a class="track-list__service" href="#!">
 										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
-											<use xlink:href="./images/icons/sprite-icons.svg#cvs-house-icon"></use>
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-house-icon"></use>
 										</svg>
 
-										<span class="track-list__service-name">Мастерская</span>
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Мастерская</span>
+										</div>
 									</a>
 								</header>
 							</li>
@@ -304,10 +339,12 @@
 								<header class="track-list__item-head">
 									<a class="track-list__service" href="#!">
 										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
-											<use xlink:href="./images/icons/sprite-icons.svg#cvs-calendar-icon"></use>
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-calendar-icon"></use>
 										</svg>
 
-										<span class="track-list__service-name">Дата и&nbsp;время</span>
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Дата и&nbsp;время</span>
+										</div>
 									</a>
 								</header>
 							</li>

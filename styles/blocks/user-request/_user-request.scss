@@ -1,0 +1,58 @@
+@use "../../healpers" as *;
+/* Styles for form-section user-request */
+.user-request {
+  padding-inline: rem(20);
+  margin-bottom: fluid(20, 10);
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(20);
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+  }
+
+  &__title {
+    font-size: rem(18);
+
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  &__text {
+    padding-inline: rem(40) 0;
+    font-size: rem(16);
+    line-height: 1.4;
+    color: var(--text-color-dark-secondary);
+  }
+}
+
+@include tablet-media {
+  .user-request {
+    row-gap: rem(10);
+
+    &__title {
+      font-size: rem(16);
+      line-height: 1.4;
+    }
+
+    &__text {
+      padding-inline: 0;
+      font-size: rem(15);
+    }
+  }
+}
+
+@include mobile-medium-media {
+  .user-request {
+    row-gap: rem(14);
+
+    &__text {
+      font-size: rem(15);
+    }
+  }
+}
+/*  ================================  */
+/*  ========END user-request========  */
+/*  ================================  */

@@ -1,0 +1,204 @@
+@use "../../healpers" as *;
+/* Styles from user-cars  */
+.user-cars {
+  padding-inline: rem(20);
+  max-width: rem(573);
+  margin-bottom: fluid(20, 10);
+
+  &__heading {
+    @include flex-space-between;
+
+    gap: rem(10);
+    margin-bottom: rem(20);
+
+    &-button {
+      padding-inline: rem(20);
+      white-space: nowrap;
+      letter-spacing: var(--letter-spacing);
+    }
+  }
+
+  &__title {
+    @include fluid-text(18, 16);
+
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  /* --------- */
+  &__search {
+    @include flex-space-between;
+
+    gap: rem(10);
+    margin-bottom: rem(4);
+    width: 100%;
+
+    &-field {
+      width: 100%;
+    }
+
+    &-input {
+      &::placeholder {
+        color: var(--color-gray-500);
+      }
+    }
+
+    &-button {
+      @include reset-button;
+      @include square(rem(24));
+
+      flex-shrink: 0;
+      will-change: transform;
+      transition-duration: var(--transition-duration) !important;
+
+      &-icon {
+        @include square(rem(24));
+      }
+
+      @include hover {
+        svg {
+          fill: var(--color-gray-700);
+        }
+      }
+      @include active {
+        scale: 0.95;
+      }
+    }
+  }
+  /* --------- */
+  &__description-button {
+    position: relative;
+    min-height: rem(44);
+    width: 100%;
+    padding-inline: rem(10) rem(44);
+    border-radius: var(--border-radius-small);
+    background-color: var(--color-light);
+    border: none;
+    outline: rem(1) solid transparent;
+    text-align: start;
+    line-height: 1.2;
+    will-change: transform;
+    transition-duration: var(--transition-duration) !important;
+
+    @include hover {
+      outline: var(--border-accent);
+    }
+
+    @include active {
+      outline: var(--border-accent);
+      filter: brightness(97%);
+      scale: 0.99;
+    }
+  }
+
+  &__unit {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+
+    &:not(:last-child) {
+      margin-bottom: rem(4);
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: rem(16);
+    }
+
+    &-text {
+      height: 100%;
+      font-size: rem(11);
+    }
+
+    &-button {
+      @include reset-button;
+      @include square(rem(24));
+      @include flex-center(true);
+
+      will-change: transform;
+      transition-duration: var(--transition-duration) !important;
+
+      @include hover {
+        svg {
+          fill: var(--color-gray-700);
+        }
+      }
+
+      @include active {
+        scale: 0.95;
+      }
+    }
+
+    &-sign {
+      display: none;
+    }
+
+    &-icon {
+      flex-shrink: 0;
+    }
+
+    &--visible-icon .user-cars__unit-sign {
+      display: inline-block;
+      position: absolute;
+      right: rem(12);
+      top: 50%;
+      translate: 0 -50%;
+      flex-shrink: 0;
+      fill: transparent;
+      stroke: var(--color-dark);
+    }
+  }
+}
+
+@include mobile-media {
+  .user-cars {
+    &__heading {
+      flex-direction: column;
+      align-items: start;
+
+      &-button {
+        align-self: end;
+      }
+    }
+    /* --------- */
+    &__search {
+      &-input {
+        padding-block: rem(2);
+        font-size: rem(15);
+        line-height: 1.4;
+
+        &::placeholder {
+          white-space: wrap;
+          translate: 0 -10px;
+        }
+      }
+    }
+    /* --------- */
+  }
+}
+@include mobile-medium-media {
+  .user-cars {
+    max-width: unset;
+    padding-block: rem(25) rem(20);
+
+    &__heading {
+      gap: rem(16);
+      margin-bottom: rem(21);
+
+      &-button {
+        max-width: rem(400);
+        align-self: center;
+        min-height: rem(42);
+      }
+    }
+    /* --------- */
+    &__search {
+      &-input {
+        min-height: rem(45);
+      }
+    }
+  }
+}
+/* ============================== */
+/* ========END user-cars ======== */
+/* ============================== */

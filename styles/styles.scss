@@ -14,9 +14,13 @@
 //blocks
 @use "blocks/header/header";
 @use "blocks/fast-entry/fast-entry";
+@use "blocks/fast-action/fast-action";
 @use "blocks/phone-entry/phone-entry";
 @use "blocks/verification/verification";
 @use "blocks/select-svc/select-svc";
 @use "blocks/track-list/track-list";
 @use "blocks/user-info/user-info";
 @use "blocks/user-info/user-promocode";
+@use "blocks/user-cars/user-cars";
+@use "blocks/user-request/user-request";
+@use "blocks/select-document/select-document";

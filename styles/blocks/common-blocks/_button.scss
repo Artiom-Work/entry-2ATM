@@ -43,6 +43,11 @@
     fill: currentColor;
   }
 
+  &--small-h {
+    min-height: var(--button-height-small);
+    padding-block: rem(5);
+  }
+
   &--medium-h {
     min-height: var(--button-height-medium);
   }
@@ -57,18 +62,12 @@
     background-color: var(--color-gray-300);
     pointer-events: none;
   }
-  // &--light {
-  //   font-size: rem(13);
-  //   line-height: 1.69;
-  //   background-color: var(--color-light);
-  //   color: var(--text-color-dark-medium);
-  //   border: rem(1) solid currentColor;
 
-  //   &-accent {
-  //     color: var(--color-accent);
-  //     background-color: var(--color-light);
-  //   }
-  // }
+  &--light-accent {
+    background-color: var(--color-light);
+    color: var(--color-accent-600);
+    outline: var(--border-current);
+  }
 }
 
 @include mobile-medium-media {

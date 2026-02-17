@@ -23,6 +23,7 @@
   border: none;
   outline: none;
   box-shadow: 0 0 0 rem(1) var(--inputBorderColorDefault);
+  width: 100%;
 
   &::placeholder {
     color: var(--inputTextColorPlaceholder);
@@ -52,6 +53,34 @@
 
     &:focus {
       box-shadow: 0 0 0 rem(1) var(--inputBorderColorFocus);
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+    width: 100%;
+
+    input {
+      padding-right: rem(42);
+    }
+  }
+
+  &__icon {
+    @include square(rem(24));
+
+    position: absolute;
+    right: rem(12);
+    top: 50%;
+    translate: 0 -50%;
+    fill: transparent;
+    stroke: var(--color-dark);
+
+    @include hover {
+      scale: 1.05;
+    }
+
+    @include active {
+      stroke: var(--color-gray-500);
     }
   }
 
@@ -89,5 +118,90 @@
   &--small-h {
     min-height: var(--inputMinHeightSmall);
     padding: rem(7) rem(12);
+  }
+}
+
+.checkbox {
+  @include flex-center(true);
+  width: rem(20) !important;
+  height: rem(20) !important;
+  flex-shrink: 0;
+  border: var(--border);
+  border-radius: rem(2);
+  background-color: var(--color-light);
+  will-change: transform;
+  transition-duration: var(--transition-duration) !important;
+
+  &::before {
+    @include abs-center;
+    @include square(rem(44));
+
+    content: "";
+  }
+
+  &__icon {
+    width: rem(13);
+    height: rem(10);
+
+    flex-shrink: 0;
+    fill: transparent;
+    stroke: transparent;
+  }
+
+  &:has(input:checked) {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+
+    .checkbox__icon {
+      stroke: var(--color-light);
+    }
+  }
+
+  &:has(input:disabled) {
+    background-color: var(--color-gray-300);
+    border-color: var(--color-gray-300);
+    pointer-events: none;
+  }
+
+  @include hover {
+    scale: 1.03;
+  }
+}
+
+.ratio {
+  @include square(rem(16));
+  @include flex-center(true);
+
+  position: relative;
+  flex-shrink: 0;
+  border: var(--border);
+  border-radius: 100%;
+  background-color: var(--color-light);
+  transition-duration: var(--transition-duration);
+
+  &::after {
+    content: "";
+    width: 50%;
+    height: 50%;
+    background-color: inherit;
+    border-radius: inherit;
+  }
+
+  &:has(input:checked) {
+    &::after {
+      background-color: var(--color-accent);
+    }
+  }
+
+  &:has(input:checked:disabled) {
+    &::after {
+      background-color: var(--color-gray-500);
+    }
+  }
+
+  &:has(input:disabled) {
+    background-color: var(--color-gray-300);
+    border-color: var(--color-gray-300);
+    pointer-events: none;
   }
 }

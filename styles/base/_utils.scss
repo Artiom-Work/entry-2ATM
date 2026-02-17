@@ -7,6 +7,7 @@
 }
 
 .page-content {
+  width: 100%;
   display: grid;
   grid-template-columns: minmax(min-content, #{rem(573)}) auto;
   gap: rem(20);
@@ -81,6 +82,18 @@
 .hide-element {
   display: none !important;
 }
+// @include mobile-media {
+//   .page-content--mobile-evol {
+//     grid-template-columns: 1fr;
+//     flex-grow: 1;
+//     padding-inline: unset;
+//     width: 100%;
+
+//     &__left {
+//       flex-grow: 1;
+//     }
+//   }
+// }
 
 @include mobile-medium-media {
   .page-content {
@@ -89,8 +102,11 @@
     padding-inline: unset;
     width: 100%;
 
-    &__left {
-      flex-grow: 1;
+    &__button {
+      align-self: end;
+      justify-self: center;
+      margin-bottom: rem(20);
+      width: calc(100% - var(--container-padding-x) * 2) !important;
     }
   }
 }

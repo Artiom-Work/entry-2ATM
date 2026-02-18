@@ -1,0 +1,70 @@
+@use "../../healpers" as *;
+@use "car-edit-form";
+/* Block for modal window. Editting user car data / edit-car */
+.edit-car {
+  background-color: var(--color-light);
+  padding: rem(20);
+  border-radius: var(--border-radius-small);
+  max-width: rem(573);
+  width: 100%;
+
+  &__head {
+    @include flex-space-between;
+
+    gap: rem(20);
+  }
+
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: 1.5;
+    margin-bottom: rem(20);
+  }
+
+  &__close-button-wrapper {
+    position: relative;
+    top: rem(3);
+    align-self: baseline;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20);
+    background-color: var(--color-gray-50);
+    padding: rem(10);
+    border-radius: var(--border-radius-small);
+    margin-bottom: rem(20);
+
+    .select-document__card-name {
+      font-family: var(--second-family);
+      line-height: 1.5;
+      padding: 0;
+    }
+
+    .select-document__card-icon {
+      fill: var(--color-dark);
+    }
+    .select-document__card-text {
+      color: var(--text-color-dark-secondary);
+      line-height: 1.5;
+    }
+    .select-document__card-desc {
+      max-width: rem(267);
+    }
+  }
+}
+@include mobile-medium-media {
+  .edit-car {
+    max-width: rem(420);
+    margin-inline: var(--container-padding-x);
+
+    &__info {
+      flex-direction: column;
+    }
+  }
+}
+/*  ======================  */
+/*  =====END edit-car=====  */
+/*  ======================  */

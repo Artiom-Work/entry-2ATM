@@ -28,6 +28,7 @@
   // --color-white-opacity-35: #ffffffa8;
   // --color-black-opacity-48: #3332327a;
   --color-black-opacity-80: #00000033;
+  --color-black-red-opacity-50: #2f2f2f80;
   --color-red-opcity-15: #3b060526;
   --color-red-opcity-40: #3b060566;
   --color-blue: #2c94ea;
@@ -36,7 +37,6 @@
   --color-red-bright: #fb0000;
   --color-green: #139128;
   --color-green-light: #31ba49;
-
   // ================ //
   --color-light: #ffffff;
   --color-dark: #000000;
@@ -53,6 +53,8 @@
   --color-error: var(--color-red);
   --color-success: var(--color-green);
 
+  --color-overlay-dark-medium: var(--color-black-red-opacity-50);
+
   --color-border: var(--color-gray-900);
   --color-border-medium: var(--color-gray-700);
   --color-border-light: var(--color-gray-350);
@@ -61,6 +63,7 @@
 
   --border: #{rem(1)} solid var(--color-border);
   --border-current: #{rem(1)} solid currentColor;
+  --border-transparent: #{rem(1)} solid transparent;
   --border-accent: #{rem(1)} solid var(--color-accent);
   --border-light: #{rem(1)} solid var(--color-border-light);
   --border-extra-light: #{rem(0.8)} solid var(--color-border-extra-light);

@@ -193,6 +193,7 @@ svg * {
   --color-gray-75: #f3eded;
   --color-gray-50: #f8f8f8;
   --color-black-opacity-80: #00000033;
+  --color-black-red-opacity-50: #2f2f2f80;
   --color-red-opcity-15: #3b060526;
   --color-red-opcity-40: #3b060566;
   --color-blue: #2c94ea;
@@ -212,6 +213,7 @@ svg * {
   --color-accent-dark: var(--color-accent-600);
   --color-error: var(--color-red);
   --color-success: var(--color-green);
+  --color-overlay-dark-medium: var(--color-black-red-opacity-50);
   --color-border: var(--color-gray-900);
   --color-border-medium: var(--color-gray-700);
   --color-border-light: var(--color-gray-350);
@@ -219,6 +221,7 @@ svg * {
   --color-border-active: var(--color-accent);
   --border: 0.0625rem solid var(--color-border);
   --border-current: 0.0625rem solid currentColor;
+  --border-transparent: 0.0625rem solid transparent;
   --border-accent: 0.0625rem solid var(--color-accent);
   --border-light: 0.0625rem solid var(--color-border-light);
   --border-extra-light: 0.05rem solid var(--color-border-extra-light);
@@ -474,6 +477,22 @@ button[aria-label]::before {
     box-shadow: 0 0 10rem 1rem var(--color-black-opacity-80);
   }
 }
+@keyframes scale-up {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}
+@keyframes scale-off {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
 @keyframes show-modal {
   0% {
     scale: 0.75;
@@ -599,7 +618,7 @@ button[aria-label]::before {
   --verifInputBorderColorFocus: var(--text-color-dark);
   --inputBorderColorError: var(--color-error);
   --inputBorderColorFiled: var(--text-color-dark);
-  --inputTextColorPlaceholder: var(--text-color-medium);
+  --inputTextColorPlaceholder: var(--text-color-dark-medium);
   --inputTextColorDisabled: var(--text-color-medium);
   --inputTextColorFiled: var(--text-color-dark);
   --inputBgColorDisabled: var(--color-gray-300);
@@ -784,6 +803,66 @@ button[aria-label]::before {
   pointer-events: none;
 }
 
+.switcher {
+  --pathSwitcherColorDefault: var(--color-gray-300);
+  --pathSwitcherColorActive: var(--color-accent-dark);
+  --switcherUnitColorDefault: var(--color-light);
+  --switcherUnitSize: 1.125rem;
+  position: relative;
+  display: inline-block;
+  width: 2.5rem;
+  height: 1.375rem;
+}
+.switcher::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  content: "";
+}
+.switcher input:checked ~ .switcher__path {
+  background-color: var(--pathSwitcherColorActive);
+}
+.switcher input:checked ~ .switcher__unit {
+  left: calc(100% - 0.125rem - var(--switcherUnitSize));
+}
+.switcher:has(input:disabled) {
+  pointer-events: none;
+  cursor: default;
+  filter: opacity(0.5);
+}
+@media (any-hover: hover) {
+  .switcher:hover .switcher__unit {
+    filter: brightness(95%);
+  }
+}
+@media (any-hover: hover) and (any-hover: none) {
+  .switcher:active .switcher__unit {
+    filter: brightness(95%);
+  }
+}
+.switcher__path {
+  position: absolute;
+  inset: 0;
+  background-color: var(--pathSwitcherColorDefault);
+  border-radius: 0.9375rem;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: ease-in-out;
+}
+.switcher__unit {
+  width: var(--switcherUnitSize);
+  height: var(--switcherUnitSize);
+  position: absolute;
+  top: 50%;
+  left: 0.125rem;
+  transform: translateY(-50%);
+  background-color: var(--switcherUnitColorDefault);
+  border-radius: 100%;
+  transition-duration: var(--transition-duration) !important;
+}
+
 /* General styles for all sections */
 .section {
   background-color: var(--color-gray-50);
@@ -918,6 +997,228 @@ button[aria-label]::before {
 /*  ==============================  */
 /*  =========END header===========  */
 /*  ==============================  */
+/* Base of modals block(dialog)  */
+.modal:modal {
+  transition-duration: 1s !important;
+  background-color: var(--color-overlay-dark-medium);
+  max-width: 100%;
+  max-height: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: show-modal;
+  animation-duration: var(--transition-duration);
+}
+.modal__close-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: default;
+}
+.modal__close-overlay-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+}
+.modal__close-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: inherit;
+  height: inherit;
+  position: relative;
+  will-change: transform;
+  transition-duration: var(--transition-duration) !important;
+}
+.modal__close-button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  content: "";
+}
+.modal__close-button-wrapper {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.modal__close-button-icon {
+  width: inherit;
+  height: inherit;
+  fill: var(--color-dark);
+}
+@media (any-hover: hover) {
+  .modal__close-button:hover {
+    opacity: 0.6;
+  }
+}
+@media (any-hover: hover) and (any-hover: none) {
+  .modal__close-button:active {
+    opacity: 0.6;
+  }
+}
+.modal__close-button:active {
+  scale: 0.95;
+}
+.modal__inner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.modal__content {
+  position: relative;
+  z-index: 2;
+}
+
+/*  ============================  */
+/*  =====END Base of modals=====  */
+/*  ============================  */
+/* car-edit-form. Form for block edit-car(modal window) */
+.car-edit-form {
+  width: 100%;
+}
+.car-edit-form__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.car-edit-form__field-label {
+  max-width: 14.75rem;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.car-edit-form__field--switcher {
+  justify-content: start;
+  margin-bottom: 2.5rem;
+}
+.car-edit-form__input {
+  max-width: 17.3125rem;
+}
+.car-edit-form__text {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--text-color-dark-secondary);
+}
+.car-edit-form__buttons-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+.car-edit-form__button {
+  width: 100%;
+}
+
+@media (width <= 43.74875rem) {
+  .car-edit-form__field {
+    align-items: start;
+    gap: 0.625rem;
+  }
+  .car-edit-form__field:not(.car-edit-form__field--switcher) {
+    flex-direction: column;
+  }
+  .car-edit-form__field-label {
+    max-width: unset;
+    width: auto;
+  }
+  .car-edit-form__field--switcher {
+    margin-bottom: 1.25rem;
+  }
+  .car-edit-form__switcher {
+    margin-left: auto;
+  }
+  .car-edit-form__input {
+    max-width: unset;
+  }
+  .car-edit-form__buttons-group {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+}
+/*  =====END car-edit-form=====  */
+/* Block for modal window. Editting user car data / edit-car */
+.edit-car {
+  background-color: var(--color-light);
+  padding: 1.25rem;
+  border-radius: var(--border-radius-small);
+  max-width: 35.8125rem;
+  width: 100%;
+}
+.edit-car__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+.edit-car__title {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.edit-car__close-button-wrapper {
+  position: relative;
+  top: 0.1875rem;
+  align-self: baseline;
+}
+.edit-car__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  background-color: var(--color-gray-50);
+  padding: 0.625rem;
+  border-radius: var(--border-radius-small);
+  margin-bottom: 1.25rem;
+}
+.edit-car__info .select-document__card-name {
+  font-family: var(--second-family);
+  line-height: 1.5;
+  padding: 0;
+}
+.edit-car__info .select-document__card-icon {
+  fill: var(--color-dark);
+}
+.edit-car__info .select-document__card-text {
+  color: var(--text-color-dark-secondary);
+  line-height: 1.5;
+}
+.edit-car__info .select-document__card-desc {
+  max-width: 16.6875rem;
+}
+
+@media (width <= 43.74875rem) {
+  .edit-car {
+    max-width: 26.25rem;
+    margin-inline: var(--container-padding-x);
+  }
+  .edit-car__info {
+    flex-direction: column;
+  }
+}
+/*  ======================  */
+/*  =====END edit-car=====  */
+/*  ======================  */
 /* Styles from section fast-entry */
 .fast-entry {
   max-width: 33.5625rem;
@@ -2026,7 +2327,8 @@ button[aria-label]::before {
   display: flex;
   flex-direction: column;
   row-gap: 0.625rem;
-  min-width: 17.875rem;
+  max-width: 18.5rem;
+  width: 100%;
 }
 .select-document__card-text {
   position: relative;
@@ -2040,7 +2342,8 @@ button[aria-label]::before {
   fill: var(--color-gray-300);
   position: absolute;
   left: 0;
-  top: 0;
+  top: 50%;
+  translate: 0 -50%;
 }
 .select-document__card-buttons button:last-child {
   position: relative;

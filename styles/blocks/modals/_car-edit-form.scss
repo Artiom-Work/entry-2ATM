@@ -1,0 +1,79 @@
+@use "../../healpers" as *;
+/* car-edit-form. Form for block edit-car(modal window) */
+.car-edit-form {
+  width: 100%;
+
+  &__field {
+    @include flex-space-between;
+
+    gap: rem(20);
+    margin-bottom: rem(20);
+
+    &-label {
+      max-width: rem(236);
+      width: 100%;
+      font-size: rem(16);
+      line-height: 1.4;
+    }
+
+    &--switcher {
+      justify-content: start;
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__input {
+    max-width: rem(277);
+  }
+
+  &__text {
+    font-size: rem(14);
+    line-height: 1.4;
+    color: var(--text-color-dark-secondary);
+  }
+
+  &__buttons-group {
+    @include flex-space-between;
+    gap: rem(20);
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
+
+@include mobile-medium-media {
+  .car-edit-form {
+    &__field {
+      align-items: start;
+      gap: rem(10);
+
+      &:not(.car-edit-form__field--switcher) {
+        flex-direction: column;
+      }
+
+      &-label {
+        max-width: unset;
+        width: auto;
+      }
+
+      &--switcher {
+        margin-bottom: rem(20);
+      }
+    }
+
+    &__switcher {
+      margin-left: auto;
+    }
+
+    &__input {
+      max-width: unset;
+    }
+
+    &__buttons-group {
+      flex-direction: column;
+      gap: rem(10);
+    }
+  }
+}
+/*  =====END car-edit-form=====  */

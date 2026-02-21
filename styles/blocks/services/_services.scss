@@ -1,0 +1,126 @@
+@use "../../healpers" as *;
+@use "service-action";
+/* Section services . accordion */
+.services {
+  padding-inline: var(--container-padding-x);
+  background-color: var(--section-bg-color);
+  padding-block: rem(7) rem(20);
+
+  &__title {
+    @include fluid-text(18, 16);
+
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: rem(25);
+  }
+}
+
+.services-accordion {
+  --serviceUnitMaxHeight: #{rem(3000)};
+  /* 	Значение этой переменно нужно увеличивать, если вдруг будет очень много карточек услуг. */
+  &__element {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+
+    &-switcher {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+
+      &:checked
+        + .services-accordion__content
+        .services-accordion__heading
+        .services-accordion__heading-icon {
+        rotate: 180deg;
+      }
+
+      &:checked + .services-accordion__content .services-accordion__unit {
+        max-height: var(--serviceUnitMaxHeight);
+      }
+
+      &:checked
+        + .services-accordion__content
+        .services-accordion__unit
+        .services-accordion__unit-list {
+        visibility: visible;
+        animation: none;
+      }
+    }
+
+    &:has(input:disabled) {
+      .services-accordion__heading-button {
+        pointer-events: none;
+        background-color: var(--color-gray-300);
+        color: var(--color-gray-500);
+
+        svg {
+          stroke: var(--color-gray-500);
+        }
+      }
+    }
+  }
+
+  &__heading {
+    &-button {
+      @include flex-space-between;
+
+      padding: rem(10);
+      border-radius: var(--border-radius-small);
+      background-color: var(--color-light);
+      font-weight: 600;
+      font-size: rem(18);
+      line-height: 1.2;
+      transition-duration: var(--transition-duration);
+      outline: var(--border-transparent);
+
+      @include hover {
+        outline: var(--border-accent);
+      }
+
+      @include active {
+        filter: brightness(95%);
+      }
+    }
+
+    &-icon {
+      @include square(rem(24));
+
+      flex-shrink: 0;
+      stroke: var(--color-dark);
+      fill: transparent;
+    }
+  }
+
+  &__unit {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height var(--transition-duration)
+      cubic-bezier(0.4, 0, 0.2, 1);
+
+    &-list {
+      visibility: hidden;
+      animation: hide-unit var(--transition-duration) forwards;
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(10);
+      background-color: var(--section-bg-color);
+      padding-block: rem(10);
+    }
+  }
+}
+
+@include mobile-medium-media {
+  .services {
+    padding-block: rem(3) rem(20);
+
+    &__title {
+      line-height: 1.4;
+      margin-bottom: rem(15);
+    }
+  }
+}
+/*  ===================================  */
+/*  =======END section services========  */
+/*  ===================================  */

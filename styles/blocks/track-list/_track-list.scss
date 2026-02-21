@@ -12,7 +12,7 @@
   row-gap: rem(20);
   min-width: rem(230);
   padding: rem(10) rem(20) rem(20);
-  background-color: var(--color-gray-50);
+  background-color: var(--section-bg-color);
 
   &__item {
     color: var(--trackDefaultTextColor);
@@ -37,7 +37,75 @@
         fill: var(--trackActiveIconColor);
       }
     }
+
+    &--align-top {
+      .track-list__item-head {
+        align-items: start;
+      }
+
+      .track-list__service {
+        align-items: start;
+      }
+    }
   }
+
+  &__item-body {
+    padding-top: rem(4);
+    padding-inline: rem(22) 0;
+  }
+  /* =============== */
+  &__set-action {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+    margin-bottom: rem(10);
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: rem(4);
+
+    &-text {
+      font-size: rem(13);
+      line-height: 1.2;
+    }
+
+    &-price {
+      @include flex-space-between;
+
+      font-weight: 600;
+      font-size: rem(16);
+      line-height: 1.2;
+    }
+
+    &-total {
+      font-size: rem(18);
+      color: var(--color-success);
+    }
+  }
+
+  &__action-result {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(10);
+
+    &-text {
+      @include flex-space-between;
+
+      font-weight: 600;
+      font-size: rem(14);
+      line-height: 1.2;
+      color: var(--text-color-dark-secondary);
+
+      &--small {
+        font-size: rem(13);
+      }
+    }
+  }
+
+  /* =============== */
 
   &__service {
     @include reset-button;

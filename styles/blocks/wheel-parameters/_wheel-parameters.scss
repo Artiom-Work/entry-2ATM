@@ -1,0 +1,127 @@
+@use "../../healpers" as *;
+
+/* Section wheel-parameters */
+.wheel-parameters {
+  padding-inline: var(--container-padding-x);
+  background-color: var(--section-bg-color);
+  padding-block: rem(12) rem(20);
+
+  &__title {
+    @include fluid-text(18, 16);
+
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: fluid(25, 12);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(20, 10);
+  }
+
+  &__buttons-group {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+  }
+
+  &__buttons-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(10);
+  }
+
+  &__button {
+    @include flex-center(true);
+
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-small);
+    padding: rem(15);
+    height: 100%;
+    width: 100%;
+    outline: var(--border-transparent);
+    will-change: transform;
+
+    @include hover {
+      outline: var(--border-accent);
+      filter: brightness(98%);
+    }
+
+    @include active {
+      scale: 0.98;
+      filter: brightness(93%);
+    }
+
+    &:has(input:checked) {
+      outline: var(--border-accent);
+    }
+
+    &:has(input:disabled) {
+      pointer-events: none;
+      color: var(--color-gray-500);
+      background-color: var(--color-gray-300);
+      outline: var(--border-transparent);
+
+      svg {
+        stroke: var(--color-gray-500);
+      }
+    }
+
+    &--has-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(10);
+      padding: rem(10);
+    }
+
+    &-box {
+      @include flex-center(true);
+
+      min-height: rem(56);
+      width: 100%;
+    }
+
+    &-icon {
+      @include square(rem(24));
+
+      flex-shrink: 0;
+      fill: transparent;
+      stroke: var(--color-dark);
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: rem(16);
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: rem(20);
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@include mobile-medium-media {
+  .wheel-parameters {
+    &__title {
+      line-height: 1.4;
+    }
+  }
+}
+
+@include mobile-s-media {
+  .wheel-parameters {
+    &__buttons-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+/* ========================== */
+/* ===END wheel-parameters=== */
+/* ========================== */

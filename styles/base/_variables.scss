@@ -47,8 +47,9 @@
   --text-color-dark-medium: var(--color-gray-500);
 
   --color-accent: var(--color-accent-500);
-  --color-accent-light: var(--color-accent-opacity-50);
   --color-accent-dark: var(--color-accent-600);
+  --color-accent-light: var(--color-accent-opacity-50);
+  --color-accent-medium: var(--color-accent-600);
 
   --color-error: var(--color-red);
   --color-success: var(--color-green);
@@ -65,6 +66,7 @@
   --border-current: #{rem(1)} solid currentColor;
   --border-transparent: #{rem(1)} solid transparent;
   --border-accent: #{rem(1)} solid var(--color-accent);
+  --border-accent-medium: #{rem(1)} solid var(--color-accent-medium);
   --border-light: #{rem(1)} solid var(--color-border-light);
   --border-extra-light: #{rem(0.8)} solid var(--color-border-extra-light);
 
@@ -83,6 +85,8 @@
 
   --container-width: #{rem(863)};
   --container-padding-x: #{rem(20)};
+
+  --section-bg-color: var(--color-gray-50);
 
   --button-height-small: #{rem(34)};
   --button-height-medium: #{rem(40)};

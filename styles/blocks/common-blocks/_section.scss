@@ -1,7 +1,7 @@
 @use "../../healpers" as *;
 /* General styles for all sections */
 .section {
-  background-color: var(--color-gray-50);
+  background-color: var(--section-bg-color);
   border-radius: var(--border-radius-medium);
   padding-block: rem(20);
 

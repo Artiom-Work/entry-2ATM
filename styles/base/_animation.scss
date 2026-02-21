@@ -34,5 +34,15 @@
   }
 }
 
+@keyframes hide-unit {
+  0%,
+  1% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    display: none;
+  }
+}
 /*  ===================================  */
 /*  ===================================  */

@@ -11,6 +11,21 @@
   display: grid;
   grid-template-columns: minmax(min-content, #{rem(573)}) auto;
   gap: rem(20);
+
+  &__buttons {
+    @include flex-center;
+
+    gap: fluid(20, 10);
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: 100%;
+    max-width: rem(462);
+    margin-bottom: rem(20);
+
+    button {
+      width: 100%;
+    }
+  }
 }
 
 .flex-y-container {
@@ -22,6 +37,10 @@
 
 .hidden {
   display: none !important;
+}
+
+.letters-nowrap {
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -90,11 +109,26 @@
     padding-inline: unset;
     width: 100%;
 
-    &__button {
+    &__button,
+    &__buttons {
       align-self: end;
       justify-self: center;
-      margin-bottom: rem(20);
+      margin-bottom: var(--container-padding-x);
       width: calc(100% - var(--container-padding-x) * 2) !important;
+    }
+  }
+}
+
+@include mobile-s-media {
+  .page-content {
+    &__buttons {
+      flex-direction: column;
+      gap: rem(10);
+
+      button {
+        margin-bottom: unset;
+        width: 100% !important;
+      }
     }
   }
 }

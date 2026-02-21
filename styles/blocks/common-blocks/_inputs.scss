@@ -266,3 +266,108 @@
     transition-duration: var(--transition-duration) !important;
   }
 }
+
+.counter {
+  position: relative;
+  max-width: rem(100);
+  width: 100%;
+  height: var(--button-height-small);
+  padding: rem(7) rem(36);
+  color: var(--color-accent-medium);
+
+  flex-shrink: 0;
+
+  &:has(input:disabled) {
+    color: var(--color-gray-500);
+    pointer-events: none;
+    opacity: 0.5;
+
+    svg {
+      fill: var(--color-gray-300);
+    }
+  }
+
+  &__input {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    appearance: textfield;
+    width: 3ch;
+    color: currentColor;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: 1.5;
+    text-align: center;
+    order: 2;
+    letter-spacing: var(--letter-spacing);
+    height: inherit;
+    caret-color: transparent;
+    cursor: default;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &__button {
+    @include reset-button;
+    @include flex-center(true);
+    @include square(rem(24));
+
+    position: absolute;
+    top: 50%;
+    inset-inline: rem(5);
+    inset-block: 50%;
+    translate: 0 -50%;
+    color: currentColor;
+    will-change: transform;
+    transition-duration: var(--transition-duration) !important;
+
+    &--right {
+      inset-inline: calc(100% - #{rem(5)} - rem(24));
+    }
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: "";
+    }
+
+    @include hover {
+      filter: brightness(95%);
+    }
+
+    @include active {
+      filter: brightness(90%);
+      scale: 0.97;
+    }
+    &-icon {
+      @include square(rem(24));
+
+      stroke: currentColor;
+      fill: var(--color-light);
+    }
+  }
+}
+
+@include tablet-media {
+  .counter {
+    max-width: rem(140);
+
+    &__input {
+      width: 7ch;
+    }
+    &__button {
+      inset: rem(16);
+
+      &--right {
+        inset-inline: calc(100% - #{rem(16)} - rem(24));
+      }
+    }
+  }
+}

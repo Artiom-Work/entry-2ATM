@@ -381,6 +381,7 @@ svg * {
 @media (width <= 43.74875rem) {
   .page-content {
     grid-template-columns: 1fr;
+    column-gap: 0;
     flex-grow: 1;
     padding-inline: unset;
     width: 100%;
@@ -415,22 +416,22 @@ body {
   color: var(--text-color-dark);
   background-color: var(--color-light);
 }
-body:has(#basket-switch:checked) {
+body:has(#basketSwitch:checked) {
   overflow: hidden;
 }
-body:has(#basket-switch:checked) .basket-switcher-icon-close {
+body:has(#basketSwitch:checked) .basket-switcher-icon-close {
   display: block;
 }
-body:has(#basket-switch:checked) .basket-switcher-icon,
-body:has(#basket-switch:checked) .basket-switcher-indicator {
+body:has(#basketSwitch:checked) .basket-switcher-icon,
+body:has(#basketSwitch:checked) .basket-switcher-indicator {
   display: none;
 }
-body:has(#basket-switch:checked) .basket-wrapper {
+body:has(#basketSwitch:checked) .basket-wrapper {
   visibility: visible;
   transform: translateY(0%);
 }
 
-#basket-switch[type=checkbox] {
+#basketSwitch[type=checkbox] {
   display: none;
 }
 
@@ -924,11 +925,14 @@ button[aria-label]::before {
 }
 
 .counter {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.4375rem;
   max-width: 6.25rem;
   width: 100%;
   height: var(--button-height-small);
-  padding: 0.4375rem 2.25rem;
+  padding: 0.3125rem;
   color: var(--color-accent-medium);
   flex-shrink: 0;
 }
@@ -954,11 +958,11 @@ button[aria-label]::before {
   font-size: 1rem;
   line-height: 1.5;
   text-align: center;
-  order: 2;
   letter-spacing: var(--letter-spacing);
   height: inherit;
   caret-color: transparent;
   cursor: default;
+  flex-shrink: 0;
 }
 .counter__input::-webkit-inner-spin-button, .counter__input::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -972,11 +976,7 @@ button[aria-label]::before {
   align-items: center;
   width: 1.5rem;
   height: 1.5rem;
-  position: absolute;
-  top: 50%;
-  inset-inline: 0.3125rem;
-  inset-block: 50%;
-  translate: 0 -50%;
+  flex-shrink: 0;
   color: currentColor;
   will-change: transform;
   transition-duration: var(--transition-duration) !important;
@@ -1012,20 +1012,16 @@ button[aria-label]::before {
   height: 1.5rem;
   stroke: currentColor;
   fill: var(--color-light);
+  flex-shrink: 0;
 }
 
 @media (width <= 63.99875rem) {
   .counter {
     max-width: 8.75rem;
+    padding: 0.6875rem 1.125rem;
   }
   .counter__input {
-    width: 7ch;
-  }
-  .counter__button {
-    inset: 1rem;
-  }
-  .counter__button--right {
-    inset-inline: calc(100% - 1rem - 1.5rem);
+    width: 5.5ch;
   }
 }
 /* General styles for all sections */
@@ -1137,7 +1133,7 @@ button[aria-label]::before {
   width: 100%;
   height: 100%;
   z-index: 10;
-  transition-duration: var(--transition-duration);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(-624.9375rem);
   visibility: hidden;
 }
@@ -1190,6 +1186,7 @@ button[aria-label]::before {
   font-size: 1.125rem;
   color: var(--color-success);
 }
+
 /*  ==============================  */
 /*  =========END Basket===========  */
 /*  ==============================  */
@@ -2896,6 +2893,10 @@ button[aria-label]::before {
   .service-action__button {
     min-height: var(--button-height-medium);
     max-width: 28.75rem;
+    width: 100%;
+  }
+  .service-action__counter {
+    margin-inline: auto;
   }
 }
 @media (width <= 43.74875rem) {

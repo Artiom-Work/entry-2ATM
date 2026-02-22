@@ -109,6 +109,7 @@
 @include mobile-medium-media {
   .page-content {
     grid-template-columns: 1fr;
+    column-gap: 0;
     flex-grow: 1;
     padding-inline: unset;
     width: 100%;

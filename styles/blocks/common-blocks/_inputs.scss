@@ -268,11 +268,13 @@
 }
 
 .counter {
-  position: relative;
+  @include flex-center;
+
+  column-gap: rem(7);
   max-width: rem(100);
   width: 100%;
   height: var(--button-height-small);
-  padding: rem(7) rem(36);
+  padding: rem(5);
   color: var(--color-accent-medium);
 
   flex-shrink: 0;
@@ -301,11 +303,11 @@
     font-size: rem(16);
     line-height: 1.5;
     text-align: center;
-    order: 2;
     letter-spacing: var(--letter-spacing);
     height: inherit;
     caret-color: transparent;
     cursor: default;
+    flex-shrink: 0;
 
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
@@ -318,11 +320,7 @@
     @include flex-center(true);
     @include square(rem(24));
 
-    position: absolute;
-    top: 50%;
-    inset-inline: rem(5);
-    inset-block: 50%;
-    translate: 0 -50%;
+    flex-shrink: 0;
     color: currentColor;
     will-change: transform;
     transition-duration: var(--transition-duration) !important;
@@ -346,11 +344,13 @@
       filter: brightness(90%);
       scale: 0.97;
     }
+
     &-icon {
       @include square(rem(24));
 
       stroke: currentColor;
       fill: var(--color-light);
+      flex-shrink: 0;
     }
   }
 }
@@ -358,16 +358,10 @@
 @include tablet-media {
   .counter {
     max-width: rem(140);
+    padding: rem(11) rem(18);
 
     &__input {
-      width: 7ch;
-    }
-    &__button {
-      inset: rem(16);
-
-      &--right {
-        inset-inline: calc(100% - #{rem(16)} - rem(24));
-      }
+      width: 5.5ch;
     }
   }
 }

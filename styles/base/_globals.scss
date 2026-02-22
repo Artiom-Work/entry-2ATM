@@ -11,7 +11,7 @@ body {
   color: var(--text-color-dark);
   background-color: var(--color-light);
 
-  &:has(#basket-switch:checked) {
+  &:has(#basketSwitch:checked) {
     overflow: hidden;
 
     .basket-switcher-icon-close {
@@ -30,7 +30,7 @@ body {
   }
 }
 
-#basket-switch[type="checkbox"] {
+#basketSwitch[type="checkbox"] {
   display: none;
 }
 

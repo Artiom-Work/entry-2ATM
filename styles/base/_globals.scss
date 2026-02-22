@@ -11,9 +11,27 @@ body {
   color: var(--text-color-dark);
   background-color: var(--color-light);
 
-  &.is-lock {
+  &:has(#basket-switch:checked) {
     overflow: hidden;
+
+    .basket-switcher-icon-close {
+      display: block;
+    }
+
+    .basket-switcher-icon,
+    .basket-switcher-indicator {
+      display: none;
+    }
+
+    .basket-wrapper {
+      visibility: visible;
+      transform: translateY(0%);
+    }
   }
+}
+
+#basket-switch[type="checkbox"] {
+  display: none;
 }
 
 main {

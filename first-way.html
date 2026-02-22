@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header relative">
 		<div class="header__content container">
 			<a class="logo" href="./index.html" aria-label="Логотип 2ATM">
 				<picture>
@@ -27,24 +27,248 @@
 			</a>
 		</div>
 
-		<div class="header__mobile-menu mobile-menu visible-mobile-medium">
-			<input id="menu-switch" type="checkbox">
-			<label class="mobile-menu__switcher" for="menu-switch">
-				<svg class="mobile-menu__switcher-icon" width="24" height="24" viewBox="0 0 24 24">
+		<div class="visible-mobile-medium">
+			<input id="basket-switch" type="checkbox">
+			<label class="basket-switcher" for="basket-switch">
+				<svg class="basket-switcher-icon" width="24" height="24" viewBox="0 0 24 24">
 					<use xlink:href="./images/icons/sprite-icons.svg#basket-icon"></use>
 				</svg>
 
-				<svg class="mobile-menu__switcher-icon-close" width="24" height="24" viewBox="0 0 24 24">
+				<svg class="basket-switcher-icon-close" width="24" height="24" viewBox="0 0 24 24">
 					<use xlink:href="./images/icons/sprite-icons.svg#close-icon"></use>
 				</svg>
 
-				<span class="mobile-menu__basket-indicator hidden"></span>
+				<span class="basket-switcher-indicator hidden"></span>
 			</label>
+		</div>
 
-			<div class="mobile-menu__wrapper">
-				<nav class="mobile-menu__box">
+		<div class="basket visible-mobile-medium">
+			<div class="basket-wrapper">
+				<div class="basket-box">
+					<h2 class="basket-box__title">Корзина</h2>
 
-				</nav>
+					<ul class="basket-box__list">
+						<li>
+							<article class="service-action">
+								<div class="service-action__info">
+									<h3 class="service-action__name">
+										Комплекс работ по&nbsp; сезонной смене резины <span>R17</span>
+									</h3>
+
+									<div class="service-action__description">
+										<p>
+											В&nbsp;комплекс работ входит снятие и&nbsp;установка колес на&nbsp;автомобиль, чистка
+											от&nbsp;грязи, замена шины с&nbsp;применением монтажной пасты и&nbsp;балансировка.
+										</p>
+									</div>
+
+									<a class="service-action__link" href="#!">Подробнее</a>
+
+									<div class="service-action__text">
+										<p>
+											Продолжительность: <span class="letters-nowrap">28 мин</span> . Гарантия: <span
+												class="letters-nowrap">14 дней</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="service-action__dynamic">
+									<div>
+										<span class="service-action__price letters-nowrap">5000 ₽</span>
+										<span class="service-action__price-old letters-nowrap">6000 ₽ </span>
+
+										<p class="service-action__discount">
+											Скидка по&nbsp;карте клиента -1000&nbsp;руб&nbsp;(10%)
+										</p>
+									</div>
+
+									<div class="service-action__dynamic-ux">
+										<label class="service-action__counter counter" for="basket-unit-counter-1">
+											<span class="visually-hidden">Счётчик количества услуг</span>
+
+											<button class="counter__button" type="button" onclick="this.nextElementSibling.stepDown()"
+												title="Меньше">
+												<span class="visually-hidden">Кнопка для уменьшения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-minus-icon"></use>
+												</svg>
+											</button>
+
+											<input class="counter__input" id="basket-unit-counter-1" type="number" value="1" min="1"
+												form="tire-fitting-services-actions" readonly>
+
+											<button class="counter__button counter__button--right" type="button"
+												onclick="this.previousElementSibling.stepUp()" title="Ещё такую">
+												<span class="visually-hidden">Кнопка для увеличения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-plus-icon"></use>
+												</svg></button>
+										</label>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li>
+							<article class="service-action">
+								<div class="service-action__info">
+									<h3 class="service-action__name">
+										Комплекс работ по&nbsp; сезонной смене резины <span>R17</span>
+									</h3>
+
+									<div class="service-action__description">
+										<p>
+											В&nbsp;комплекс работ входит снятие и&nbsp;установка колес на&nbsp;автомобиль, чистка
+											от&nbsp;грязи, замена шины с&nbsp;применением монтажной пасты и&nbsp;балансировка.
+										</p>
+									</div>
+
+									<a class="service-action__link" href="#!">Подробнее</a>
+
+									<div class="service-action__text">
+										<p>
+											Продолжительность: <span class="letters-nowrap">28 мин</span> . Гарантия: <span
+												class="letters-nowrap">14 дней</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="service-action__dynamic">
+									<div>
+										<span class="service-action__price letters-nowrap">5000 ₽</span>
+										<span class="service-action__price-old letters-nowrap">6000 ₽ </span>
+
+										<p class="service-action__discount">
+											Скидка по&nbsp;карте клиента -1000&nbsp;руб&nbsp;(10%)
+										</p>
+									</div>
+
+									<div class="service-action__dynamic-ux">
+										<label class="service-action__counter counter" for="basket-unit-counter-2">
+											<span class="visually-hidden">Счётчик количества услуг</span>
+
+											<button class="counter__button" type="button" onclick="this.nextElementSibling.stepDown()"
+												title="Меньше">
+												<span class="visually-hidden">Кнопка для уменьшения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-minus-icon"></use>
+												</svg>
+											</button>
+
+											<input class="counter__input" id="basket-unit-counter-2" type="number" value="1" min="1"
+												form="tire-fitting-services-actions" readonly>
+
+											<button class="counter__button counter__button--right" type="button"
+												onclick="this.previousElementSibling.stepUp()" title="Ещё такую">
+												<span class="visually-hidden">Кнопка для увеличения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-plus-icon"></use>
+												</svg></button>
+										</label>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li>
+							<article class="service-action">
+								<div class="service-action__info">
+									<h3 class="service-action__name">
+										Комплекс работ по&nbsp; сезонной смене резины <span>R17</span>
+									</h3>
+
+									<div class="service-action__description">
+										<p>
+											В&nbsp;комплекс работ входит снятие и&nbsp;установка колес на&nbsp;автомобиль, чистка
+											от&nbsp;грязи, замена шины с&nbsp;применением монтажной пасты и&nbsp;балансировка.
+										</p>
+									</div>
+
+									<a class="service-action__link" href="#!">Подробнее</a>
+
+									<div class="service-action__text">
+										<p>
+											Продолжительность: <span class="letters-nowrap">28 мин</span> . Гарантия: <span
+												class="letters-nowrap">14 дней</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="service-action__dynamic">
+									<div>
+										<span class="service-action__price letters-nowrap">5000 ₽</span>
+										<span class="service-action__price-old letters-nowrap">6000 ₽ </span>
+
+										<p class="service-action__discount">
+											Скидка по&nbsp;карте клиента -1000&nbsp;руб&nbsp;(10%)
+										</p>
+									</div>
+
+									<div class="service-action__dynamic-ux">
+										<label class="service-action__counter counter" for="basket-unit-counter-3">
+											<span class="visually-hidden">Счётчик количества услуг</span>
+
+											<button class="counter__button" type="button" onclick="this.nextElementSibling.stepDown()"
+												title="Меньше">
+												<span class="visually-hidden">Кнопка для уменьшения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-minus-icon"></use>
+												</svg>
+											</button>
+
+											<input class="counter__input" id="basket-unit-counter-3" type="number" value="1" min="1"
+												form="tire-fitting-services-actions" readonly>
+
+											<button class="counter__button counter__button--right" type="button"
+												onclick="this.previousElementSibling.stepUp()" title="Ещё такую">
+												<span class="visually-hidden">Кнопка для увеличения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-plus-icon"></use>
+												</svg></button>
+										</label>
+									</div>
+								</div>
+							</article>
+						</li>
+					</ul>
+
+					<div class="basket-box__info">
+						<p class="basket-box__info-item">
+							<span>Общая продолжительность</span>
+							<span class="letters-nowrap">32 мин.</span>
+						</p>
+
+						<p class="basket-box__info-item">
+							<span>Итого</span>
+							<span class="letters-nowrap">5890 ₽</span>
+						</p>
+
+						<p class="basket-box__info-item basket-box__info-item--text-gray">
+							<span>Программа лояльности 10%</span>
+							<span class="letters-nowrap">-589 ₽</span>
+						</p>
+
+						<p class="basket-box__info-item">
+							<span>Итоговая цена:</span>
+							<span class="letters-nowrap basket-box__info-total">5006,5 ₽</span>
+						</p>
+					</div>
+
+
+					<button class="button button--big-h" type="button">Закрыть</button>
+				</div>
 			</div>
 		</div>
 
@@ -2590,6 +2814,11 @@
 			</div>
 		</div>
 	</main>
+
+	<!-- <div class="basket visible-mobile-medium">
+
+	</div> -->
+
 
 	<dialog class="modal" id="editCarData">
 		<form class="modal__close-overlay-wrapper" method="dialog">

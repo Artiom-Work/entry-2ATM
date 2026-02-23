@@ -76,5 +76,87 @@
   }
 }
 
+.button-switcher {
+  /* For map switcher ( last-way page) */
+  display: block;
+  position: relative;
+  max-width: rem(148);
+  border-radius: var(--border-radius-medium);
+  min-height: var(--button-height-small);
+  background-color: var(--color-gray-300);
+  will-change: transform;
+  transition-duration: var(--transition-duration);
+
+  &__path {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  &__path-text {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    padding: rem(7.5) rem(10);
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: 1.2;
+    color: var(--text-color-dark-secondary);
+    transition-duration: var(--transition-duration);
+
+    &:first-child {
+      color: var(--color-accent-medium);
+    }
+  }
+
+  &__unit {
+    position: absolute;
+    height: 100%;
+    outline: var(--border-accent-medium);
+    border-radius: inherit;
+    width: 55%;
+    inset: 0;
+    background-color: var(--color-light);
+    transition-duration: var(--transition-duration);
+  }
+
+  &:has(input:checked) {
+    .button-switcher__path {
+      &-text:first-child {
+        color: var(--text-color-dark-secondary);
+      }
+
+      &-text:last-child {
+        color: var(--color-accent-medium);
+      }
+    }
+    .button-switcher__unit {
+      inset-inline: 100%;
+      translate: -100% 0;
+      width: 48%;
+    }
+  }
+
+  @include hover {
+    .button-switcher__unit {
+      filter: brightness(95%);
+    }
+  }
+}
+
+@include tablet-media {
+  .button-switcher {
+    &__unit {
+      width: 50%;
+    }
+
+    &:has(input:checked) {
+      .button-switcher__unit {
+        width: 50%;
+      }
+    }
+  }
+}
 /*  ===================================  */
 /*  ===================================  */

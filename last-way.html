@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
+	<!-- <meta name="description" content=""> -->
+	<title>2ATM | Выбор время и места услуг</title>
+	<link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+	<header class="header relative">
+		<div class="header__content container">
+			<a class="logo" href="./index.html" aria-label="Логотип 2ATM">
+				<picture>
+					<source srcset="./images/logo/logo-short.svg" media="(max-width: 699px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
+					<img class="logo__image" src="./images/logo/logo-short.svg" width="42" height="43" alt="Логотип 2ATM">
+				</picture>
+			</a>
+		</div>
+
+		<div class="visible-mobile-medium">
+			<input id="basketSwitch" type="checkbox">
+			<label class="basket-switcher" for="basketSwitch">
+				<svg class="basket-switcher-icon" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="./images/icons/sprite-icons.svg#basket-icon"></use>
+				</svg>
+
+				<svg class="basket-switcher-icon-close" width="24" height="24" viewBox="0 0 24 24">
+					<use xlink:href="./images/icons/sprite-icons.svg#close-icon"></use>
+				</svg>
+
+				<span class="basket-switcher-indicator hidden"></span>
+			</label>
+		</div>
+
+		<div class="basket visible-mobile-medium">
+			<div class="basket-wrapper">
+				<div class="basket-box">
+					<h2 class="basket-box__title">Корзина</h2>
+
+					<ul class="basket-box__list">
+						<li>
+							<article class="service-action">
+								<div class="service-action__info">
+									<h3 class="service-action__name">
+										Комплекс работ по&nbsp; сезонной смене резины <span>R17</span>
+									</h3>
+
+									<div class="service-action__description">
+										<p>
+											В&nbsp;комплекс работ входит снятие и&nbsp;установка колес на&nbsp;автомобиль, чистка
+											от&nbsp;грязи, замена шины с&nbsp;применением монтажной пасты и&nbsp;балансировка.
+										</p>
+									</div>
+
+									<a class="service-action__link" href="#!">Подробнее</a>
+
+									<div class="service-action__text">
+										<p>
+											Продолжительность: <span class="letters-nowrap">28 мин</span> . Гарантия: <span
+												class="letters-nowrap">14 дней</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="service-action__dynamic">
+									<div>
+										<span class="service-action__price letters-nowrap">5000 ₽</span>
+										<span class="service-action__price-old letters-nowrap">6000 ₽ </span>
+
+										<p class="service-action__discount">
+											Скидка по&nbsp;карте клиента -1000&nbsp;руб&nbsp;(10%)
+										</p>
+									</div>
+
+									<div class="service-action__dynamic-ux">
+										<div class="service-action__counter counter">
+											<label class="visually-hidden" for="basket-unit-counter-1">Счётчик количества услуг</label>
+
+											<button class="counter__button" type="button" onclick="this.nextElementSibling.stepDown()"
+												title="Меньше">
+												<span class="visually-hidden">Кнопка для уменьшения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-minus-icon"></use>
+												</svg>
+											</button>
+
+											<input class="counter__input" id="basket-unit-counter-1" type="number" value="1" min="1"
+												form="tire-fitting-services-actions" readonly>
+
+											<button class="counter__button" type="button" onclick="this.previousElementSibling.stepUp()"
+												title="Ещё такую">
+												<span class="visually-hidden">Кнопка для увеличения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-plus-icon"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li>
+							<article class="service-action">
+								<div class="service-action__info">
+									<h3 class="service-action__name">
+										Комплекс работ по&nbsp; сезонной смене резины <span>R17</span>
+									</h3>
+
+									<div class="service-action__description">
+										<p>
+											В&nbsp;комплекс работ входит снятие и&nbsp;установка колес на&nbsp;автомобиль, чистка
+											от&nbsp;грязи, замена шины с&nbsp;применением монтажной пасты и&nbsp;балансировка.
+										</p>
+									</div>
+
+									<a class="service-action__link" href="#!">Подробнее</a>
+
+									<div class="service-action__text">
+										<p>
+											Продолжительность: <span class="letters-nowrap">28 мин</span> . Гарантия: <span
+												class="letters-nowrap">14 дней</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="service-action__dynamic">
+									<div>
+										<span class="service-action__price letters-nowrap">5000 ₽</span>
+										<span class="service-action__price-old letters-nowrap">6000 ₽ </span>
+
+										<p class="service-action__discount">
+											Скидка по&nbsp;карте клиента -1000&nbsp;руб&nbsp;(10%)
+										</p>
+									</div>
+
+									<div class="service-action__dynamic-ux">
+										<div class="service-action__counter counter">
+											<label class="visually-hidden" for="basket-unit-counter-2">Счётчик количества услуг</label>
+
+											<button class="counter__button" type="button" onclick="this.nextElementSibling.stepDown()"
+												title="Меньше">
+												<span class="visually-hidden">Кнопка для уменьшения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-minus-icon"></use>
+												</svg>
+											</button>
+
+											<input class="counter__input" id="basket-unit-counter-2" type="number" value="1" min="1"
+												form="tire-fitting-services-actions" readonly>
+
+											<button class="counter__button" type="button" onclick="this.previousElementSibling.stepUp()"
+												title="Ещё такую">
+												<span class="visually-hidden">Кнопка для увеличения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-plus-icon"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li>
+							<article class="service-action">
+								<div class="service-action__info">
+									<h3 class="service-action__name">
+										Комплекс работ по&nbsp; сезонной смене резины <span>R17</span>
+									</h3>
+
+									<div class="service-action__description">
+										<p>
+											В&nbsp;комплекс работ входит снятие и&nbsp;установка колес на&nbsp;автомобиль, чистка
+											от&nbsp;грязи, замена шины с&nbsp;применением монтажной пасты и&nbsp;балансировка.
+										</p>
+									</div>
+
+									<a class="service-action__link" href="#!">Подробнее</a>
+
+									<div class="service-action__text">
+										<p>
+											Продолжительность: <span class="letters-nowrap">28 мин</span> . Гарантия: <span
+												class="letters-nowrap">14 дней</span>
+										</p>
+									</div>
+								</div>
+
+								<div class="service-action__dynamic">
+									<div>
+										<span class="service-action__price letters-nowrap">5000 ₽</span>
+										<span class="service-action__price-old letters-nowrap">6000 ₽ </span>
+
+										<p class="service-action__discount">
+											Скидка по&nbsp;карте клиента -1000&nbsp;руб&nbsp;(10%)
+										</p>
+									</div>
+
+									<div class="service-action__dynamic-ux">
+										<div class="service-action__counter counter">
+											<label class="visually-hidden" for="basket-unit-counter-3">Счётчик количества услуг</label>
+
+											<button class="counter__button" type="button" onclick="this.nextElementSibling.stepDown()"
+												title="Меньше">
+												<span class="visually-hidden">Кнопка для уменьшения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-minus-icon"></use>
+												</svg>
+											</button>
+
+											<input class="counter__input" id="basket-unit-counter-3" type="number" value="1" min="1"
+												form="tire-fitting-services-actions" readonly>
+
+											<button class="counter__button" type="button" onclick="this.previousElementSibling.stepUp()"
+												title="Ещё такую">
+												<span class="visually-hidden">Кнопка для увеличения количества товаров или
+													услуг</span>
+
+												<svg class="counter__button-icon" width="24" height="24" viewBox="0 0 24 24">
+													<use xlink:href="./images/icons/sprite-icons.svg#square-plus-icon"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</article>
+						</li>
+					</ul>
+
+					<div class="basket-box__info">
+						<p class="basket-box__info-item">
+							<span>Общая продолжительность</span>
+							<span class="letters-nowrap">32 мин.</span>
+						</p>
+
+						<p class="basket-box__info-item">
+							<span>Итого</span>
+							<span class="letters-nowrap">5890 ₽</span>
+						</p>
+
+						<p class="basket-box__info-item basket-box__info-item--text-gray">
+							<span>Программа лояльности 10%</span>
+							<span class="letters-nowrap">-589 ₽</span>
+						</p>
+
+						<p class="basket-box__info-item">
+							<span>Итоговая цена:</span>
+							<span class="letters-nowrap basket-box__info-total">5006,5 ₽</span>
+						</p>
+					</div>
+
+					<button class="button button--big-h" type="button" onclick="basketSwitch.checked = false">Закрыть</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="user-info visible-mobile-medium">
+			<div class="user-info__head">
+				<div class="user-info__name">
+					<svg class="user-info__icon" width="18" height="18" viewBox="0 0 18 18">
+						<use xlink:href="./images/icons/sprite-icons.svg#user-icon"></use>
+					</svg>
+
+					<div class="user-info__name-text">
+						<span>Ольга</span>
+						<span>+7 999*****67</span>
+					</div>
+				</div>
+
+
+				<span class="user-info__reduct">
+					-10%
+				</span>
+			</div>
+
+			<div class="user-info__body">
+				<form class="user-promocode hidden">
+					<div class="user-promocode__field user-promocode__field--active-color">
+						<label class="user-promocode__label" for="user-promocode-1">
+							<svg class="user-promocode__icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
+							</svg>
+
+							<span>Промокод</span>
+						</label>
+
+						<input class="user-promocode__input input input--small-h" type="text" name="user-promocode"
+							id="user-promocode-1" placeholder="Введите промокод">
+					</div>
+
+					<button class="user-promocode__button" type="button" aria-label="Кнопка проверки промокода">
+						<svg class="user-promocode__button-icon" width="24" height="24" viewBox="0 0 24 24">
+							<use xlink:href="./images/icons/sprite-icons.svg#bird-icon"></use>
+						</svg>
+					</button>
+				</form>
+
+				<div class="track-list__item track-list__item--active-color track-list__item--header">
+					<div class="track-list__item-head">
+						<button class="track-list__service" type="button">
+							<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
+							</svg>
+
+							<span class="track-list__service-description">
+								<span class="track-list__service-name">ХОДОВАЯ</span>
+							</span>
+						</button>
+
+						<button class="track-list__service-button" type="button" aria-label="Кнопка удаления" title="Удалить">
+							<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+				<div class="fast-action visible-mobile-medium">
+					<ul class="fast-action__list">
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									Шиномонтаж
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									Volkswagen Tiguan
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									<span>R17</span> | <span>литые</span>
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<svg class="fast-action__button-sign" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#svc-calendar-icon"></use>
+								</svg>
+
+								<span class="fast-action__button-text">
+									<time class="letters-nowrap" datetime="2025-10-13T14:00">13.10.2025 14:00</time>
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<svg class="fast-action__button-sign" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#svc-house-icon"></use>
+								</svg>
+
+								<span class="fast-action__button-text">
+									<address>ул. Савушкина, д. 116 лит. А</address>
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									Привезем шины по договору <span>№096770</span>
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="flex-y-container">
+		<h1 class="visually-hidden">Выбор время и места услуг</h1>
+
+		<div class="page-content container">
+			<div class="page-content__left">
+				<section class="select-workshop section" aria-labelledby="select-workshop-title">
+					<h2 class="select-workshop__title section__title" id="select-workshop-title">
+						Выберите мастерскую
+					</h2>
+
+					<div class="select-workshop__header">
+						<button class="select-workshop__action" type="button">
+							<svg class="select-workshop__action-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#pin-icon"></use>
+							</svg>
+
+							<span class="select-workshop__action-text">Определить геопозицию</span>
+							<span class="select-workshop__action-text-light">(отсортируем мастерские по&nbsp;расстоянию)</span>
+						</button>
+
+						<label class="select-workshop__button-switcher button-switcher" for="workshops-map-switcher"
+							title="Вкл/выкл карту">
+							<input class="visually-hidden" type="checkbox" id="workshops-map-switcher" name="workshops-map-switcher">
+							<span class="button-switcher__path">
+								<span class="button-switcher__path-text">Список</span>
+								<span class="button-switcher__path-text">Карта</span>
+							</span>
+
+							<span class="button-switcher__unit"></span>
+						</label>
+					</div>
+
+					<div class="select-workshop__map-block map-block">
+						<img class="map-block__iframe" src="./images/maps/workshops-map.webp" width="533" height="297" alt="Карта"
+							loading="lazy">
+					</div>
+
+					<form class="select-workshop__body gray-auto-scroll-y">
+						<ul class="select-workshop__list">
+							<li>
+								<article class="select-workshop__unit">
+									<label class="select-workshop__button" for="workshop-1">
+										<input class="visually-hidden" type="radio" id="workshop-1" name="workshop" value="workshop-1">
+									</label>
+
+									<div class="select-workshop__content">
+										<h3 class="select-workshop__address">
+											<address>
+												ул. Савушкина, д.&nbsp;116&nbsp;лит.&nbsp;А
+											</address>
+										</h3>
+
+										<p class="select-workshop__state">
+											<span>Сегодня:</span>
+											<span data-workshop-workload="few-seats">Мало&nbsp;мест</span>
+										</p>
+
+										<div class="select-workshop__rating">
+											<svg class="select-workshop__rating-icon" width="18" height="18" viewBox="0 0 18 18">
+												<use xlink:href="./images/icons/sprite-icons.svg#yandex-icon"></use>
+											</svg>
+
+											<span class="select-workshop__rating-text letters-nowrap">
+												<span>5</span> • <span>563</span>
+											</span>
+										</div>
+									</div>
+								</article>
+							</li>
+
+							<li>
+								<article class="select-workshop__unit">
+									<label class="select-workshop__button" for="workshop-2">
+										<input class="visually-hidden" type="radio" id="workshop-2" name="workshop" value="workshop-2">
+									</label>
+
+									<div class="select-workshop__content">
+										<h3 class="select-workshop__address">
+											<address>
+												ул. Савушкина, д.&nbsp;116&nbsp;лит.&nbsp;А
+											</address>
+										</h3>
+
+										<p class="select-workshop__state">
+											<span>Сегодня:</span>
+											<span data-workshop-workload="few-seats">Мало&nbsp;мест</span>
+										</p>
+
+										<div class="select-workshop__rating">
+											<svg class="select-workshop__rating-icon" width="18" height="18" viewBox="0 0 18 18">
+												<use xlink:href="./images/icons/sprite-icons.svg#yandex-icon"></use>
+											</svg>
+
+											<span class="select-workshop__rating-text letters-nowrap">
+												<span>5</span> • <span>563</span>
+											</span>
+										</div>
+									</div>
+								</article>
+							</li>
+
+							<li>
+								<article class="select-workshop__unit">
+									<label class="select-workshop__button" for="workshop-3">
+										<input class="visually-hidden" type="radio" id="workshop-3" name="workshop" value="workshop-3">
+									</label>
+
+									<div class="select-workshop__content">
+										<h3 class="select-workshop__address">
+											<address>
+												ул. Савушкина, д.&nbsp;116&nbsp;лит.&nbsp;А
+											</address>
+										</h3>
+
+										<p class="select-workshop__state">
+											<span>Сегодня:</span>
+											<span data-workshop-workload="few-seats">Мало&nbsp;мест</span>
+										</p>
+
+										<div class="select-workshop__rating">
+											<svg class="select-workshop__rating-icon" width="18" height="18" viewBox="0 0 18 18">
+												<use xlink:href="./images/icons/sprite-icons.svg#yandex-icon"></use>
+											</svg>
+
+											<span class="select-workshop__rating-text letters-nowrap">
+												<span>5</span> • <span>563</span>
+											</span>
+										</div>
+									</div>
+								</article>
+							</li>
+
+							<li>
+								<article class="select-workshop__unit">
+									<label class="select-workshop__button" for="workshop-4">
+										<input class="visually-hidden" type="radio" id="workshop-4" name="workshop" value="workshop-4">
+									</label>
+
+									<div class="select-workshop__content">
+										<h3 class="select-workshop__address">
+											<address>
+												ул. Савушкина, д.&nbsp;116&nbsp;лит.&nbsp;А
+											</address>
+										</h3>
+
+										<p class="select-workshop__state">
+											<span>Сегодня:</span>
+											<span data-workshop-workload="freely">Свободно</span>
+										</p>
+
+										<div class="select-workshop__rating">
+											<svg class="select-workshop__rating-icon" width="18" height="18" viewBox="0 0 18 18">
+												<use xlink:href="./images/icons/sprite-icons.svg#yandex-icon"></use>
+											</svg>
+
+											<span class="select-workshop__rating-text letters-nowrap">
+												<span>5</span> • <span>563</span>
+											</span>
+										</div>
+									</div>
+								</article>
+							</li>
+
+							<li>
+								<article class="select-workshop__unit">
+									<label class="select-workshop__button" for="workshop-5">
+										<input class="visually-hidden" type="radio" id="workshop-5" name="workshop" value="workshop-5">
+									</label>
+
+									<div class="select-workshop__content">
+										<h3 class="select-workshop__address">
+											<address>
+												ул. Савушкина, д.&nbsp;116&nbsp;лит.&nbsp;А
+											</address>
+										</h3>
+
+										<p class="select-workshop__state">
+											<span>Сегодня:</span>
+											<span data-workshop-workload="few-seats">Мало&nbsp;мест</span>
+										</p>
+
+										<div class="select-workshop__rating">
+											<svg class="select-workshop__rating-icon" width="18" height="18" viewBox="0 0 18 18">
+												<use xlink:href="./images/icons/sprite-icons.svg#yandex-icon"></use>
+											</svg>
+
+											<span class="select-workshop__rating-text letters-nowrap">
+												<span>5</span> • <span>563</span>
+											</span>
+										</div>
+									</div>
+								</article>
+							</li>
+						</ul>
+					</form>
+				</section>
+			</div>
+
+			<div class="page-content__right hidden-mobile-medium">
+				<section class="svc-track" aria-labelledby="svc-track-title">
+					<h2 class="visually-hidden" id="svc-track-title">Путь услуг пользователя в 2АТМ</h2>
+
+					<div class="user-info">
+						<header class="user-info__head">
+							<div class="user-info__name">
+								<svg class="user-info__icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#user-icon"></use>
+								</svg>
+
+								<div class="user-info__name-text">
+									<span>Ольга</span>
+									<span>+7 999*****67</span>
+								</div>
+							</div>
+
+
+							<span class="user-info__reduct">
+								-10%
+							</span>
+						</header>
+
+						<div>
+							<form class="user-promocode hidden">
+								<div class="user-promocode__field user-promocode__field--active-color">
+									<label class="user-promocode__label" for="user-promocode">
+										<svg class="user-promocode__icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
+										</svg>
+
+										<span>Промокод</span>
+									</label>
+
+									<input class="user-promocode__input input input--small-h" type="text" name="user-promocode"
+										id="user-promocode" placeholder="Введите промокод">
+								</div>
+
+								<button class="user-promocode__button" type="button" aria-label="Кнопка проверки промокода"
+									title="Проверить">
+									<svg class="user-promocode__button-icon" width="24" height="24" viewBox="0 0 24 24">
+										<use xlink:href="./images/icons/sprite-icons.svg#bird-icon"></use>
+									</svg>
+								</button>
+							</form>
+
+							<div class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<button class="track-list__service">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
+										</svg>
+
+										<span class="track-list__service-description">
+											<span class="track-list__service-name">ХОДОВАЯ</span>
+										</span>
+									</button>
+
+									<button class="track-list__service-button" type="button" aria-label="Кнопка удаления" title="Удалить">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
+										</svg>
+									</button>
+								</header>
+							</div>
+						</div>
+					</div>
+
+					<nav class="hidden-mobile-medium">
+						<ul class="track-list">
+							<li class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-screw-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Шиномонтаж</span>
+										</div>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования"
+										title="Редактировать">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-car-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Volkswagen Tiguan</span>
+											<span class="track-list__service-text">A123AA123</span>
+										</div>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования"
+										title="Редактировать">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-wheel-house-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Привезем ваши шины по договору <span>№889787</span></span>
+										</div>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования"
+										title="Редактировать">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--active-color track-list__item--align-top">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-wheel-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">R17 | литые</span>
+											<span class="track-list__service-name">рамный автомобиль/ высокий профиль - нет</span>
+										</div>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования"
+										title="Редактировать">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-spanner-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Услуги</span>
+										</div>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования"
+										title="Редактировать">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+
+								<div class="track-list__item-body">
+									<ul class="track-list__set-action">
+										<li class="track-list__action">
+											<div class="track-list__action-text">
+												<p>
+													Комплекс работ по&nbsp;сезонной смене резины R17
+												</p>
+											</div>
+
+											<div class="track-list__action-price">
+												<span>5000 ₽</span>
+
+												<button class="track-list__service-button" type="button" aria-label="Кнопка удаления"
+													title="Удалить">
+													<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+														<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
+													</svg>
+												</button>
+											</div>
+										</li>
+
+										<li class="track-list__action">
+											<div class="track-list__action-text">
+												<p>
+													Снятие и&nbsp;установка колеса R17
+												</p>
+											</div>
+
+											<div class="track-list__action-price">
+												<span>420 ₽</span>
+
+												<button class="track-list__service-button" type="button" aria-label="Кнопка удаления"
+													title="Удалить">
+													<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+														<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
+													</svg>
+												</button>
+											</div>
+										</li>
+
+										<li class="track-list__action">
+											<div class="track-list__action-text">
+												<p>
+													Демонтаж и&nbsp;монтаж шины R17
+												</p>
+											</div>
+
+											<div class="track-list__action-price">
+												<span>420 ₽</span>
+
+												<button class="track-list__service-button" type="button" aria-label="Кнопка удаления"
+													title="Удалить">
+													<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+														<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
+													</svg>
+												</button>
+											</div>
+										</li>
+									</ul>
+
+									<ul class="track-list__action-result">
+										<li class="track-list__action-price">
+											<span>Итого</span>
+											<span class="letters-nowrap">5890 ₽</span>
+										</li>
+
+										<li class="track-list__action-result-text">
+											<span>Программа лояльности 10%</span>
+											<span class="letters-nowrap">-589 ₽</span>
+										</li>
+
+										<li class="track-list__action-result-text">
+											<span>Промокод<br>применен</span>
+											<span class="letters-nowrap">-589 ₽</span>
+										</li>
+
+										<li class="track-list__action-price">
+											<span>Итоговая цена:</span>
+											<span class="track-list__action-total">5006,5 ₽</span>
+										</li>
+
+										<li class="track-list__action-result-text track-list__action-result-text--small">
+											<span>Общая продолжительность</span>
+											<span class="letters-nowrap">32 мин.</span>
+										</li>
+									</ul>
+								</div>
+							</li>
+
+							<li class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-house-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Мастерская</span>
+										</div>
+									</a>
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования"
+										title="Редактировать">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+
+							<li class="track-list__item track-list__item--active-color">
+								<header class="track-list__item-head">
+									<a class="track-list__service" href="#!">
+										<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#svc-calendar-icon"></use>
+										</svg>
+
+										<div class="track-list__service-description">
+											<span class="track-list__service-name">Дата и&nbsp;время</span>
+										</div>
+									</a>
+
+									<button class="track-list__service-button" type="button" aria-label="кнопка редактирования"
+										title="Редактировать">
+										<svg class="track-list__service-button-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#icon-pen"></use>
+										</svg>
+									</button>
+								</header>
+							</li>
+						</ul>
+					</nav>
+				</section>
+			</div>
+
+			<div class="page-content__buttons">
+				<button class="page-content__button button button--light-accent button--big-h" type="button"
+					title="Предыдущий шаг">Назад</button>
+
+				<button class="page-content__button button button--big-h" type="button" title="Следующий шаг"
+					disabled>Далее</button>
+			</div>
+		</div>
+	</main>
+
+	<dialog class="modal" id="editCarData">
+		<form class="modal__close-overlay-wrapper" method="dialog">
+			<button class="modal__close-overlay" type="submit">
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+		</form>
+
+		<div class="modal__inner">
+			<section class="edit-car modal__content" aria-labelledby="edit-car-title">
+				<h3 class="visually-hidden">Редактирование данных автомобиля пользователя</h3>
+
+				<header class="edit-car__head">
+					<h4 class="edit-car__title" id="edit-car-title">
+						Volkswagen Tiguan
+					</h4>
+
+					<form class="edit-car__close-button-wrapper modal__close-button-wrapper" method="dialog">
+						<button class="modal__close-button" type="submit">
+							<span class="visually-hidden">Закрыть модальное окно</span>
+
+							<svg class="modal__close-button-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
+							</svg>
+						</button>
+					</form>
+				</header>
+
+				<article class="edit-car__info">
+					<h4 class="select-document__card-name">
+						<span>Договор хранения&nbsp;№<span>096770</span></span>
+					</h4>
+
+					<div class="select-document__card-desc">
+						<p class="select-document__card-text">
+							<svg class="select-document__card-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#car-icon"></use>
+							</svg>
+
+							<span>
+								<span>Chery </span>
+								<span>[C328OM198]</span>
+							</span>
+						</p>
+
+						<p class="select-document__card-text">
+							<svg class="select-document__card-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#calendar-icon"></use>
+							</svg>
+
+							<time datetime="2025-10-14">c
+								<span>14.10.2025</span>
+								<span>(7 месяцев)</span>
+							</time>
+						</p>
+
+						<p class="select-document__card-text">
+							<svg class="select-document__card-icon" width="18" height="18" viewBox="0 0 18 18">
+								<use xlink:href="./images/icons/sprite-icons.svg#wheel-icon"></use>
+							</svg>
+
+							<span>
+								<span>Cooper</span>&nbsp;-
+								<span> 235/50 R17 </span>
+								<span>(летняя)</span>
+								<span>4</span>
+								<span>&nbsp;шт</span>
+							</span>
+						</p>
+					</div>
+				</article>
+
+				<form class="car-edit-form" id="car-edit-form">
+					<div class="car-edit-form__field">
+						<label class="car-edit-form__field-label" for="registration-plate">
+							Госномер&nbsp;а/м
+						</label>
+
+						<input class="car-edit-form__input input" type="text" id="registration-plate" name="registration-plate"
+							placeholder="Введите госномер" required>
+					</div>
+
+					<div class="car-edit-form__field">
+						<label class="car-edit-form__field-label" for="user-comment">
+							<span>Комментарий</span><br>
+							<span class="car-edit-form__text">(необязательное поле)</span>
+						</label>
+
+						<input class="car-edit-form__input input" type="text" id="user-comment" name="user-comment"
+							placeholder="Введите комментарий">
+					</div>
+
+					<div class="car-edit-form__field car-edit-form__field--switcher">
+						<p class="car-edit-form__field-label">
+							Рамный автомобиль
+						</p>
+
+						<label class="car-edit-form__switcher switcher" for="user-car-frame" title="Нет, не рамный">
+							<input class="visually-hidden" type="checkbox" id="user-car-frame" name="user-car-frame">
+							<span class="switcher__path"></span>
+							<span class="switcher__unit"></span>
+
+						</label>
+
+						<span class="car-edit-form__text">нет</span>
+
+					</div>
+
+					<div class="car-edit-form__buttons-group">
+						<button class="car-edit-form__button button button--light-accent" type="button">Удалить автомобиль</button>
+
+						<button class="car-edit-form__button button" type="submit">Сохранить изменения</button>
+					</div>
+				</form>
+			</section>
+		</div>
+
+	</dialog>
+</body>
+
+</html>

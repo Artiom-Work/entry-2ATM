@@ -11,6 +11,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
 	<!-- <meta name="description" content=""> -->
 	<title>2ATM | Выбор время и места услуг</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./styles/styles.css">
 </head>
 
@@ -465,7 +466,7 @@
 							loading="lazy">
 					</div>
 
-					<form class="select-workshop__body gray-auto-scroll-y">
+					<form class="select-workshop__body gray-auto-scroll-y" id="workshops-list">
 						<ul class="select-workshop__list">
 							<li>
 								<article class="select-workshop__unit">
@@ -623,6 +624,120 @@
 							</li>
 						</ul>
 					</form>
+				</section>
+
+				<section class="select-datetime section" aria-labelledby="select-datetime-title">
+					<h2 class="select-datetime__title section__title" id="select-datetime-title">
+						Выберите дату и&nbsp;время
+					</h2>
+
+					<div class="select-datetime__subtitle">
+						<p>
+							Выберите мастерскую, чтобы выбрать дату и&nbsp;время
+						</p>
+					</div>
+
+					<section class="select-datetime__roll" aria-labelledby="datetime-roll-title">
+						<h3 class="visually-hidden" id="datetime-roll-title">Лента выбора даты для записи в мастерскую 2АТМ</h3>
+
+						<div class="datetime-roll swiper">
+							<ul class="swiper-wrapper">
+								<li class="datetime-roll__unit swiper-slide">
+									<label class="datetime-roll__button" for="today">
+										<input class="visually-hidden" type="radio" id="today" name="datetime-roll" value="today"
+											form="workshops-list" checked>
+									</label>
+
+									<div class="datetime-roll__unit-content">
+										<h4 class="datetime-roll__unit-title">Сегодня</h4>
+
+										<time class="datetime-roll__unit-time letters-nowrap" datetime="2025-10-12">12. окт</time>
+
+										<span class="datetime-roll__unit-text letters-nowrap" data-time-workload="few-seats">Мало
+											мест</span>
+									</div>
+								</li>
+
+								<li class="datetime-roll__unit swiper-slide">
+									<label class="datetime-roll__button" for="today-after">
+										<input class="visually-hidden" type="radio" id="today-after" name="datetime-roll"
+											value="today-after" form="workshops-list">
+									</label>
+
+									<div class="datetime-roll__unit-content">
+										<h4 class="datetime-roll__unit-title">Завтра</h4>
+
+										<time class="datetime-roll__unit-time letters-nowrap" datetime="2025-10-13">13. окт</time>
+
+										<span class="datetime-roll__unit-text letters-nowrap" data-time-workload="fill">Заполняется</span>
+									</div>
+								</li>
+
+								<li class="datetime-roll__unit swiper-slide">
+									<label class="datetime-roll__button" for="today-after-1">
+										<input class="visually-hidden" type="radio" id="today-after-1" name="datetime-roll"
+											value="today-after-1" form="workshops-list">
+									</label>
+
+									<div class="datetime-roll__unit-content">
+										<h4 class="datetime-roll__unit-title">ср</h4>
+
+										<time class="datetime-roll__unit-time letters-nowrap" datetime="2025-10-14">14. окт</time>
+
+										<span class="datetime-roll__unit-text letters-nowrap" data-time-workload="filled">Нет мест</span>
+									</div>
+								</li>
+
+								<li class="datetime-roll__unit swiper-slide">
+									<label class="datetime-roll__button" for="today-after-2">
+										<input class="visually-hidden" type="radio" id="today-after-2" name="datetime-roll"
+											value="today-after-2" form="workshops-list">
+									</label>
+
+									<div class="datetime-roll__unit-content">
+										<h4 class="datetime-roll__unit-title">чт</h4>
+
+										<time class="datetime-roll__unit-time letters-nowrap" datetime="2025-10-15">15. окт</time>
+
+										<span class="datetime-roll__unit-text letters-nowrap" data-time-workload="free">Свободно</span>
+									</div>
+								</li>
+
+								<li class="datetime-roll__unit swiper-slide">
+									<label class="datetime-roll__button" for="today-after-3">
+										<input class="visually-hidden" type="radio" id="today-after-3" name="datetime-roll"
+											value="today-after-3" form="workshops-list">
+									</label>
+
+									<div class="datetime-roll__unit-content">
+										<h4 class="datetime-roll__unit-title">пт</h4>
+
+										<time class="datetime-roll__unit-time letters-nowrap" datetime="2025-10-16">16. окт</time>
+
+										<span class="datetime-roll__unit-text letters-nowrap" data-time-workload="free">Свободно</span>
+									</div>
+								</li>
+
+								<li class="datetime-roll__unit datetime-roll__unit--calendar swiper-slide">
+									<label class="datetime-roll__button" for="date-time-calendar">
+										<input class="visually-hidden" type="datetime-local" id="date-time-calendar" name="datetime-roll"
+											form="workshops-list" onclick="this.showPicker()">
+									</label>
+
+
+
+									<div class="datetime-roll__unit-content">
+										<svg class="datetime-roll__unit-icon" width="18" height="18" viewBox="0 0 18 18">
+											<use xlink:href="./images/icons/sprite-icons.svg#empty-calendar-icon"></use>
+										</svg>
+
+										<span class="datetime-roll__unit-time">календарь</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+
 				</section>
 			</div>
 
@@ -880,7 +995,7 @@
 
 										<li class="track-list__action-price">
 											<span>Итоговая цена:</span>
-											<span class="track-list__action-total">5006,5 ₽</span>
+											<span class="track-list__action-total letters-nowrap">5006,5 ₽</span>
 										</li>
 
 										<li class="track-list__action-result-text track-list__action-result-text--small">
@@ -1063,6 +1178,17 @@
 		</div>
 
 	</dialog>
+
+	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+
+	<script>
+		const datetimeSlider = new Swiper(".datetime-roll", {
+			slidesPerView: "auto",
+			spaceBetween: 7,
+			mousewheel: true,
+			keyboard: true,
+		});
+	</script>
 </body>
 
 </html>

@@ -1,0 +1,42 @@
+@use "../../healpers" as *;
+@use "datetime-roll";
+@use "datetime-harmonic";
+
+/* Section select-datetime */
+.select-datetime {
+  padding-inline: var(--container-padding-x);
+  margin-bottom: fluid(20, 10);
+
+  &__title {
+    padding-block: rem(6);
+  }
+
+  &__subtitle {
+    display: none;
+    font-size: fluid(16, 14);
+    line-height: 1.4;
+    color: var(--text-color-dark-secondary);
+
+    &:last-child {
+      display: block;
+    }
+  }
+
+  &__roll:not(:last-child) {
+    margin-bottom: rem(20);
+  }
+}
+
+@include mobile-medium-media {
+  .select-datetime {
+    &__title {
+      padding-block: rem(4);
+    }
+
+    &__select-datetime {
+    }
+  }
+}
+/*  ====================================  */
+/*  =========END select-datetime========  */
+/*  ====================================  */

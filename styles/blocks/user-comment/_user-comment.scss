@@ -1,0 +1,46 @@
+@use "../../healpers" as *;
+
+/* Section user-comment */
+.user-comment {
+  padding-inline: var(--container-padding-x);
+
+  &__title {
+    padding-block: rem(6);
+  }
+
+  &__field {
+    height: rem(80);
+  }
+
+  &__input {
+    padding: rem(8) rem(12);
+    height: 100%;
+    resize: none;
+
+    &::placeholder {
+      font-size: rem(16);
+      line-height: 1.2;
+    }
+  }
+}
+
+@include tablet-media {
+  .user-comment {
+    padding-block: rem(15) rem(20);
+
+    &__title {
+      padding-block: unset;
+      margin-bottom: rem(15);
+    }
+
+    &__input {
+      &::placeholder {
+        font-size: rem(15);
+        line-height: 1.4;
+      }
+    }
+  }
+}
+/*  =================================  */
+/*  =========END user-comment========  */
+/*  =================================  */

@@ -432,7 +432,7 @@
 	<main class="flex-y-container">
 		<h1 class="visually-hidden">Выбор время и места услуг</h1>
 
-		<div class="page-content container">
+		<div class="page-content page-content--grow-full container">
 			<div class="page-content__left">
 				<section class="select-workshop section" aria-labelledby="select-workshop-title">
 					<h2 class="select-workshop__title section__title" id="select-workshop-title">
@@ -471,7 +471,7 @@
 							<li>
 								<article class="select-workshop__unit">
 									<label class="select-workshop__button" for="workshop-1">
-										<input class="visually-hidden" type="radio" id="workshop-1" name="workshop" value="workshop-1">
+										<input class="visually-hidden" type="radio" id="workshop-1" name="workshop-name" value="workshop-1">
 									</label>
 
 									<div class="select-workshop__content">
@@ -502,7 +502,7 @@
 							<li>
 								<article class="select-workshop__unit">
 									<label class="select-workshop__button" for="workshop-2">
-										<input class="visually-hidden" type="radio" id="workshop-2" name="workshop" value="workshop-2">
+										<input class="visually-hidden" type="radio" id="workshop-2" name="workshop-name" value="workshop-2">
 									</label>
 
 									<div class="select-workshop__content">
@@ -533,7 +533,7 @@
 							<li>
 								<article class="select-workshop__unit">
 									<label class="select-workshop__button" for="workshop-3">
-										<input class="visually-hidden" type="radio" id="workshop-3" name="workshop" value="workshop-3">
+										<input class="visually-hidden" type="radio" id="workshop-3" name="workshop-name" value="workshop-3">
 									</label>
 
 									<div class="select-workshop__content">
@@ -564,7 +564,7 @@
 							<li>
 								<article class="select-workshop__unit">
 									<label class="select-workshop__button" for="workshop-4">
-										<input class="visually-hidden" type="radio" id="workshop-4" name="workshop" value="workshop-4">
+										<input class="visually-hidden" type="radio" id="workshop-4" name="workshop-name" value="workshop-4">
 									</label>
 
 									<div class="select-workshop__content">
@@ -595,7 +595,7 @@
 							<li>
 								<article class="select-workshop__unit">
 									<label class="select-workshop__button" for="workshop-5">
-										<input class="visually-hidden" type="radio" id="workshop-5" name="workshop" value="workshop-5">
+										<input class="visually-hidden" type="radio" id="workshop-5" name="workshop-name" value="workshop-5">
 									</label>
 
 									<div class="select-workshop__content">
@@ -738,6 +738,695 @@
 						</div>
 					</section>
 
+					<section class="select-datetime__timepick" aria-labelledby="timepick-title">
+						<h3 class="visually-hidden" id="timepick-title">Выбор времени записи на услуги 2АТМ</h3>
+
+						<ul class="timepick" id="timepick-accordion" aria-labelledby="timepick-accordion">
+							<li class="timepick__element">
+								<input class="timepick__element-switcher" type="checkbox" id="accordion-element-1">
+
+								<div class="timepick__content">
+									<div class="timepick__heading">
+										<label class="timepick__heading-button" for="accordion-element-1">
+											<svg class="timepick__heading-sing hidden-mobile-s" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="./images/icons/sprite-icons.svg#moon-icon"></use>
+											</svg>
+
+											<span>
+												<span class="letters-nowrap">
+													<span class="timepick__heading-name">Ночь</span>
+													<time class="timepick__heading-time" datetime="00:00/PT5H30M"> (00:00 - 05:30)</time>
+												</span>
+												<br class="visible-mobile-s">
+												<span class="timepick__heading-workload" data-time-workload="free">Свободно</span>
+											</span>
+
+											<svg class="timepick__heading-icon" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="./images/icons/sprite-icons.svg#dropdown-bird-icon"></use>
+											</svg>
+										</label>
+									</div>
+
+									<div class="timepick__unit">
+										<h4 class="visually-hidden">Выбор времени для записы на услугу 2АТМ в ночное время</h4>
+										<!--Обёртку-форму можно убрать при необходимости , каждую плашку привезал к форме со списком мастерских -->
+										<form id="timepick-svc-night">
+											<ul class="timepick__unit-list">
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0000">
+														<input class="visually-hidden" type="radio" id="time-0000" name="night-timepick"
+															value="time-0000" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="00:00">00:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0030">
+														<input class="visually-hidden" type="radio" id="time-0030" name="night-timepick"
+															value="time-0030" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="00:30">00:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0100">
+														<input class="visually-hidden" type="radio" id="time-0100" name="night-timepick"
+															value="time-0100" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="01:00">01:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0130">
+														<input class="visually-hidden" type="radio" id="time-0130" name="night-timepick"
+															value="time-0130" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="01:30">01:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0200">
+														<input class="visually-hidden" type="radio" id="time-0200" name="night-timepick"
+															value="time-0200" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="02:00">02:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0230">
+														<input class="visually-hidden" type="radio" id="time-0230" name="night-timepick"
+															value="time-0230" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="02:30">02:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0300">
+														<input class="visually-hidden" type="radio" id="time-0300" name="night-timepick"
+															value="time-0300" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="03:00">03:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0330">
+														<input class="visually-hidden" type="radio" id="time-0330" name="night-timepick"
+															value="time-0330" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="03:30">03:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0400">
+														<input class="visually-hidden" type="radio" id="time-0400" name="night-timepick"
+															value="time-0400" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="04:00">04:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0430">
+														<input class="visually-hidden" type="radio" id="time-0430" name="night-timepick"
+															value="time-0430" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="04:30">04:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0500">
+														<input class="visually-hidden" type="radio" id="time-0500" name="night-timepick"
+															value="time-0500" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="05:00">05:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0530">
+														<input class="visually-hidden" type="radio" id="time-0530" name="night-timepick"
+															value="time-0530" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="05:30">05:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+											</ul>
+										</form>
+									</div>
+								</div>
+							</li>
+
+							<li class="timepick__element">
+								<input class="timepick__element-switcher" type="checkbox" id="accordion-element-2">
+
+								<div class="timepick__content">
+									<div class="timepick__heading">
+										<label class="timepick__heading-button" for="accordion-element-2">
+											<svg class="timepick__heading-sing hidden-mobile-s" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="./images/icons/sprite-icons.svg#cloud-sun-icon"></use>
+											</svg>
+
+											<span>
+												<span class="letters-nowrap">
+													<span class="timepick__heading-name">Утро</span>
+													<time class="timepick__heading-time" datetime="06:00/PT5H30M"> (06:00 - 11:30)</time>
+												</span>
+												<br class="visible-mobile-s">
+												<span class="timepick__heading-workload" data-time-workload="fill">Заполняется</span>
+											</span>
+
+											<svg class="timepick__heading-icon" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="./images/icons/sprite-icons.svg#dropdown-bird-icon"></use>
+											</svg>
+										</label>
+									</div>
+
+									<div class="timepick__unit">
+										<h4 class="visually-hidden">Выбор времени для записы на услугу 2АТМ в утреннее время</h4>
+										<!--Обёртку-форму можно убрать при необходимости , каждую плашку привезал к форме со списком мастерских -->
+										<form id="timepick-svc-morning">
+											<ul class="timepick__unit-list">
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0600">
+														<input class="visually-hidden" type="radio" id="time-0600" name="morning-timepick"
+															value="time-0600" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="06:00">06:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0630">
+														<input class="visually-hidden" type="radio" id="time-0630" name="morning-timepick"
+															value="time-0630" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="06:30">06:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0700">
+														<input class="visually-hidden" type="radio" id="time-0700" name="morning-timepick"
+															value="time-0700" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="07:00">07:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0730">
+														<input class="visually-hidden" type="radio" id="time-0730" name="morning-timepick"
+															value="time-0730" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="07:30">07:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0800">
+														<input class="visually-hidden" type="radio" id="time-0800" name="morning-timepick"
+															value="time-0800" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="08:00">08:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0830">
+														<input class="visually-hidden" type="radio" id="time-0830" name="morning-timepick"
+															value="time-0830" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="08:30">08:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0900">
+														<input class="visually-hidden" type="radio" id="time-0900" name="morning-timepick"
+															value="time-0900" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="09:00">09:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-0930">
+														<input class="visually-hidden" type="radio" id="time-0930" name="morning-timepick"
+															value="time-0930" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="09:30">09:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1000">
+														<input class="visually-hidden" type="radio" id="time-1000" name="morning-timepick"
+															value="time-1000" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="10:00">10:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1030">
+														<input class="visually-hidden" type="radio" id="time-1030" name="morning-timepick"
+															value="time-1030" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="10:30">10:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1100">
+														<input class="visually-hidden" type="radio" id="time-1100" name="morning-timepick"
+															value="time-1100" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="11:00">11:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1130">
+														<input class="visually-hidden" type="radio" id="time-1130" name="morning-timepick"
+															value="time-1130" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="11:30">11:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+											</ul>
+										</form>
+									</div>
+								</div>
+							</li>
+
+							<li class="timepick__element">
+								<input class="timepick__element-switcher" type="checkbox" id="accordion-element-3" checked>
+
+								<div class="timepick__content">
+									<div class="timepick__heading">
+										<label class="timepick__heading-button" for="accordion-element-3">
+											<svg class="timepick__heading-sing hidden-mobile-s" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="./images/icons/sprite-icons.svg#sun-icon"></use>
+											</svg>
+
+											<span>
+												<span class="letters-nowrap">
+													<span class="timepick__heading-name">День</span>
+													<time class="timepick__heading-time" datetime="12:00/PT5H30M"> (12:00 - 17:30)</time>
+												</span>
+
+												<br class="visible-mobile-s">
+
+												<span class="timepick__heading-workload" data-time-workload="few-seats">Мало мест</span>
+											</span>
+
+											<svg class="timepick__heading-icon" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="./images/icons/sprite-icons.svg#dropdown-bird-icon"></use>
+											</svg>
+										</label>
+									</div>
+
+									<div class="timepick__unit">
+										<h4 class="visually-hidden">Выбор времени для записы на услугу 2АТМ в дневное время</h4>
+
+										<!--Обёртку-форму можно убрать при необходимости , каждую плашку привезал к форме со списком мастерских -->
+										<form id="timepick-svc-day">
+											<ul class="timepick__unit-list">
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1200">
+														<input class="visually-hidden" type="radio" id="time-1200" name="day-timepick"
+															value="time-1200" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="12:00">12:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1230">
+														<input class="visually-hidden" type="radio" id="time-1230" name="day-timepick"
+															value="time-1230" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="12:30">12:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1300">
+														<input class="visually-hidden" type="radio" id="time-1300" name="day-timepick"
+															value="time-1300" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="13:00">13:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1330">
+														<input class="visually-hidden" type="radio" id="time-1330" name="day-timepick"
+															value="time-1330" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="13:30">13:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1400">
+														<input class="visually-hidden" type="radio" id="time-1400" name="day-timepick"
+															value="time-1400" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="14:00">14:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1430">
+														<input class="visually-hidden" type="radio" id="time-1430" name="day-timepick"
+															value="time-1430" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="14:30">14:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1500">
+														<input class="visually-hidden" type="radio" id="time-1500" name="day-timepick"
+															value="time-1500" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="15:00">15:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1530">
+														<input class="visually-hidden" type="radio" id="time-1530" name="day-timepick"
+															value="time-1530" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="15:30">15:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1600">
+														<input class="visually-hidden" type="radio" id="time-1600" name="day-timepick"
+															value="time-1600" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="16:00">16:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1630">
+														<input class="visually-hidden" type="radio" id="time-1630" name="day-timepick"
+															value="time-1630" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="16:30">16:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1700">
+														<input class="visually-hidden" type="radio" id="time-1700" name="day-timepick"
+															value="time-1700" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="17:00">17:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1730">
+														<input class="visually-hidden" type="radio" id="time-1730" name="day-timepick"
+															value="time-1730" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="17:30">17:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+											</ul>
+										</form>
+									</div>
+								</div>
+							</li>
+
+							<li class="timepick__element">
+								<input class="timepick__element-switcher" type="checkbox" id="accordion-element-4">
+
+								<div class="timepick__content">
+									<div class="timepick__heading">
+										<label class="timepick__heading-button" for="accordion-element-4">
+											<svg class="timepick__heading-sing hidden-mobile-s" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="./images/icons/sprite-icons.svg#cloud-moon-icon"></use>
+											</svg>
+
+											<span>
+												<span class="letters-nowrap">
+													<span class="timepick__heading-name">Вечер</span>
+													<time class="timepick__heading-time" datetime="18:00/PT5H30M"> (18:00 - 23:30)</time>
+												</span>
+												<br class="visible-mobile-s">
+												<span class="timepick__heading-workload" data-time-workload="few-seats">Мало мест</span>
+											</span>
+
+											<svg class="timepick__heading-icon" width="24" height="24" viewBox="0 0 24 24">
+												<use xlink:href="./images/icons/sprite-icons.svg#dropdown-bird-icon"></use>
+											</svg>
+										</label>
+									</div>
+
+									<div class="timepick__unit">
+										<h4 class="visually-hidden">Выбор времени для записы на услугу 2АТМ в вечернее время</h4>
+										<!--Обёртку-форму можно убрать при необходимости , каждую плашку привезал к форме со списком мастерских -->
+										<form id="timepick-svc-evening">
+											<ul class="timepick__unit-list">
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1800">
+														<input class="visually-hidden" type="radio" id="time-1800" name="evening-timepick"
+															value="time-1800" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="18:00">18:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1830">
+														<input class="visually-hidden" type="radio" id="time-1830" name="evening-timepick"
+															value="time-1830" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="18:30">18:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1900">
+														<input class="visually-hidden" type="radio" id="time-1900" name="evening-timepick"
+															value="time-1900" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="19:00">19:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-1930">
+														<input class="visually-hidden" type="radio" id="time-1930" name="evening-timepick"
+															value="time-1930" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="19:30">19:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-2000">
+														<input class="visually-hidden" type="radio" id="time-2000" name="evening-timepick"
+															value="time-2000" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="20:00">20:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-2030">
+														<input class="visually-hidden" type="radio" id="time-2030" name="evening-timepick"
+															value="time-2030" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="20:30">20:30</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-2100">
+														<input class="visually-hidden" type="radio" id="time-2100" name="evening-timepick"
+															value="time-2100" form="workshops-list" disabled>
+													</label>
+
+													<time class="timepick__el-time" datetime="21:00">21:00</time>
+
+													<span class="timepick__el-discount"></span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-2130">
+														<input class="visually-hidden" type="radio" id="time-2130" name="evening-timepick"
+															value="time-2130" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="21:30">21:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-2200">
+														<input class="visually-hidden" type="radio" id="time-2200" name="evening-timepick"
+															value="time-2200" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="22:00">22:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-2230">
+														<input class="visually-hidden" type="radio" id="time-2230" name="evening-timepick"
+															value="time-2230" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="22:30">22:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-2300">
+														<input class="visually-hidden" type="radio" id="time-2300" name="evening-timepick"
+															value="time-2300" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="23:00">23:00</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+
+												<li class="timepick__el">
+													<label class="timepick__el-button" for="time-2330">
+														<input class="visually-hidden" type="radio" id="time-2330" name="evening-timepick"
+															value="time-2330" form="workshops-list">
+													</label>
+
+													<time class="timepick__el-time" datetime="23:30">23:30</time>
+
+													<span class="timepick__el-discount">-5%</span>
+												</li>
+											</ul>
+										</form>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section class="user-comment section" aria-labelledby="user-comment-title">
+					<h2 class="user-comment__title section__title" id="user-comment-title">
+						Добавьте комментарий (необязательно)
+					</h2>
+
+					<div class="user-comment__field">
+						<label class="visually-hidden" for="user-comment">Комментарий от пользователя к заказу услуги в 2АТМ</label>
+
+						<textarea class="user-comment__input input" id="user-comment" name="user-comment"
+							placeholder="Поясните детали заказа, если это важно для выполнения услуги"></textarea>
+					</div>
 				</section>
 			</div>
 
@@ -1051,13 +1740,32 @@
 				</section>
 			</div>
 
-			<div class="page-content__buttons">
-				<button class="page-content__button button button--light-accent button--big-h" type="button"
-					title="Предыдущий шаг">Назад</button>
+			<section class="page-content__privacy-policy privacy-policy" aria-labelledby="privacy-policy-title">
+				<h2 class="visually-hidden" id="privacy-policy-title">Согласие на обработку персональных ханных при записи на
+					услуги в 2 АТМ</h2>
 
-				<button class="page-content__button button button--big-h" type="button" title="Следующий шаг"
-					disabled>Далее</button>
-			</div>
+				<form class="privacy-policy__container">
+					<label class="checkbox" for="policy-agreed" title="Согласна / согласен">
+						<input class="visually-hidden" type="checkbox" id="policy-agreed" name="policy-agreed">
+
+						<svg class="checkbox__icon" width="13" height="10" viewBox="0 0 13 10">
+							<use xlink:href="./images/icons/sprite-icons.svg#checkbox-bird-icon"></use>
+						</svg>
+					</label>
+
+					<div class="privacy-policy__text">
+						<p>
+							Я даю <a class="privacy-policy__text-link" href="#!">Cогласие</a> на обработку персональных данных.
+							<a class="privacy-policy__text-link" href="#!">Ознакомиться с политикой конфиденциальности</a>
+						</p>
+					</div>
+
+					<!-- Если нужно , то сменить <a> можно заменить на <button type="submit"> стили не полетят -->
+					<a class="privacy-policy__button button button--big-h disabled" type="submit">
+						Записаться
+					</a>
+				</form>
+			</section>
 		</div>
 	</main>
 

@@ -2,11 +2,6 @@
 
 /* Section datetime-roll */
 .datetime-roll {
-  --workloadColorFree: var(--color-success);
-  --workloadColorFill: var(--color-orange);
-  --workloadColorFewSeats: var(--color-red-bright);
-  --workloadColorFilled: var(--text-color-dark-secondary);
-
   min-height: rem(73);
   max-width: rem(533);
   width: fluid(533, 500);
@@ -125,5 +120,4 @@
     width: 100%;
   }
 }
-
 /*  ===================  */

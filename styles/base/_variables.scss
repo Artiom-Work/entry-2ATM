@@ -28,6 +28,7 @@
   // --color-white-opacity-35: #ffffffa8;
   // --color-black-opacity-48: #3332327a;
   --color-black-opacity-80: #00000033;
+  --color-gray-opacity-50: #e9e9f180;
   --color-black-red-opacity-50: #2f2f2f80;
   --color-red-opcity-15: #3b060526;
   --color-red-opcity-40: #3b060566;
@@ -102,6 +103,11 @@
   --trackMediumIconColor: var(--color-accent-light);
   --trackActiveTextColor: var(--text-color-dark);
   --trackDefaultTextColor: var(--text-color-dark-medium);
+
+  --workloadColorFree: var(--color-success);
+  --workloadColorFill: var(--color-orange);
+  --workloadColorFewSeats: var(--color-red-bright);
+  --workloadColorFilled: var(--text-color-dark-secondary);
 }
 /*  ===================================  */
 /*  ===================================  */

@@ -11,6 +11,18 @@
     }
   }
 
+  &:has(input[name="workshop-name"]:checked) {
+    /* 	Если вдруг блоки будут на страницу приходить прям компонентом с сервера вместе со структурой тогда тут удалить */
+    & ~ .select-datetime .select-datetime__roll,
+    & ~ .select-datetime .select-datetime__timepick {
+      display: block;
+    }
+
+    & ~ .select-datetime .select-datetime__subtitle {
+      display: none;
+    }
+  }
+
   &__title {
     padding-block: rem(6);
   }

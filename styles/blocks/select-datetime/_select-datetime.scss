@@ -1,6 +1,6 @@
 @use "../../healpers" as *;
 @use "datetime-roll";
-@use "datetime-harmonic";
+@use "timepick";
 
 /* Section select-datetime */
 .select-datetime {
@@ -12,18 +12,19 @@
   }
 
   &__subtitle {
-    display: none;
     font-size: fluid(16, 14);
     line-height: 1.4;
     color: var(--text-color-dark-secondary);
-
-    &:last-child {
-      display: block;
-    }
   }
 
   &__roll:not(:last-child) {
     margin-bottom: rem(20);
+  }
+
+  &__roll,
+  &__timepick {
+    /* 	Если вдруг блоки будут на страницу приходить прям компонентом с сервера вместе со структурой тогда тут удалить */
+    display: none;
   }
 }
 

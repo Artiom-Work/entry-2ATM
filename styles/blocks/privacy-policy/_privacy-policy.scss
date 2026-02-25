@@ -1,0 +1,62 @@
+@use "../../healpers" as *;
+
+/* Section privacy-policy */
+
+.privacy-policy {
+  padding-block: rem(12);
+  box-shadow: rem(-1) 0 rem(20) 0 var(--color-gray-opacity-50);
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  padding-inline: var(--container-padding-x);
+  margin-left: calc(var(--container-padding-x) * -1);
+  margin-right: calc(var(--container-padding-x) * -1);
+
+  &:has(input[id="policy-agreed"]:checked) {
+    .privacy-policy__button {
+      pointer-events: all;
+      background-color: var(--color-success);
+      color: var(--color-light);
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: rem(20) auto;
+    align-items: center;
+    row-gap: rem(10);
+    column-gap: rem(20);
+  }
+
+  &__text {
+    font-family: var(--second-family);
+    font-size: rem(16);
+    line-height: 1.5;
+    color: var(--text-color-dark-secondary);
+
+    &-link {
+      display: inline;
+      color: var(--color-accent-dark);
+    }
+  }
+
+  &__button {
+    width: 100%;
+    grid-column: 1/3;
+  }
+}
+
+@include mobile-medium-media {
+  .privacy-policy {
+    padding-block: rem(7) rem(20);
+    margin-left: unset;
+    margin-right: unset;
+
+    &__text {
+      font-family: var(--font-family);
+      font-size: rem(15);
+      line-height: 1.4;
+    }
+  }
+}
+/*  ===================================  */
+/*  =========END privacy-policy========  */
+/*  ===================================  */

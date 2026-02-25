@@ -83,15 +83,19 @@
 
     &:has(input[id="sms-code"]:checked) {
       & ~ button[data-get-user-code-button],
+      & ~ a[data-get-user-code-button],
       & ~ div[data-get-user-code-text] {
-        display: block;
+        display: inline-flex;
+        align-items: center;
       }
     }
 
     &:has(input[id="call-code"]:checked) {
       & ~ button[data-get-user-call-back-button],
+      & ~ a[data-get-user-call-back-button],
       & ~ div[data-get-user-call-back-text] {
-        display: block;
+        display: inline-flex;
+        align-items: center;
       }
     }
   }
@@ -105,7 +109,8 @@
 
   &__button {
     display: none;
-
+    text-align: center;
+    line-height: 1.5;
     min-height: var(--button-height-big);
 
     &:disabled {

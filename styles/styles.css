@@ -289,7 +289,8 @@ svg * {
   max-width: 28.875rem;
   margin-bottom: 1.25rem;
 }
-.page-content__buttons button {
+.page-content__buttons button,
+.page-content__buttons a {
   width: 100%;
 }
 .page-content__privacy-policy {
@@ -1516,6 +1517,57 @@ button[aria-label]::before {
 /*  ======================  */
 /*  =====END edit-car=====  */
 /*  ======================  */
+/* Block for modal window. users-prompt */
+.users-prompt {
+  max-width: 40.3125rem;
+  border-radius: var(--border-radius-medium);
+  padding: 1.25rem;
+  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.users-prompt__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  fill: var(--color-accent);
+  margin-bottom: 1.25rem;
+}
+.users-prompt__title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  margin-bottom: 0.625rem;
+}
+.users-prompt__text {
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.users-prompt__action-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+.users-prompt__button, .users-prompt__button-close, .users-prompt__button-close-wrapper {
+  width: 100%;
+  white-space: nowrap;
+}
+
+@media (width <= 43.74875rem) {
+  .users-prompt {
+    max-width: 21.25rem;
+  }
+  .users-prompt__action-group {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+}
+/*  ==========================  */
+/*  =====END users-prompt=====  */
+/*  ==========================  */
 /* Styles from section fast-entry */
 .fast-entry {
   max-width: 33.5625rem;
@@ -1695,11 +1747,13 @@ button[aria-label]::before {
   will-change: transform;
   scale: 0.99;
 }
-.entry-form__ratio:has(input[id=sms-code]:checked) ~ button[data-get-user-code-button], .entry-form__ratio:has(input[id=sms-code]:checked) ~ div[data-get-user-code-text] {
-  display: block;
+.entry-form__ratio:has(input[id=sms-code]:checked) ~ button[data-get-user-code-button], .entry-form__ratio:has(input[id=sms-code]:checked) ~ a[data-get-user-code-button], .entry-form__ratio:has(input[id=sms-code]:checked) ~ div[data-get-user-code-text] {
+  display: inline-flex;
+  align-items: center;
 }
-.entry-form__ratio:has(input[id=call-code]:checked) ~ button[data-get-user-call-back-button], .entry-form__ratio:has(input[id=call-code]:checked) ~ div[data-get-user-call-back-text] {
-  display: block;
+.entry-form__ratio:has(input[id=call-code]:checked) ~ button[data-get-user-call-back-button], .entry-form__ratio:has(input[id=call-code]:checked) ~ a[data-get-user-call-back-button], .entry-form__ratio:has(input[id=call-code]:checked) ~ div[data-get-user-call-back-text] {
+  display: inline-flex;
+  align-items: center;
 }
 .entry-form__text {
   font-size: 0.875rem;
@@ -1709,6 +1763,8 @@ button[aria-label]::before {
 }
 .entry-form__button {
   display: none;
+  text-align: center;
+  line-height: 1.5;
   min-height: var(--button-height-big);
 }
 .entry-form__button:disabled {

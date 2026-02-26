@@ -4,7 +4,15 @@
 .services {
   padding-inline: var(--container-padding-x);
   background-color: var(--section-bg-color);
-  padding-block: rem(7) rem(20);
+  padding-block: rem(20);
+
+  &--small-padding-top {
+    padding-block: rem(7) rem(20);
+  }
+
+  &--round {
+    border-radius: var(--border-radius-medium);
+  }
 
   &__title {
     @include fluid-text(18, 16);
@@ -12,6 +20,10 @@
     line-height: 1.2;
     font-weight: 600;
     margin-bottom: rem(25);
+  }
+
+  &__quick-choice {
+    margin-bottom: rem(10);
   }
 }
 

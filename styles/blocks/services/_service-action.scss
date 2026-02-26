@@ -29,15 +29,51 @@
     font-size: rem(14);
     line-height: 1.4;
     color: var(--text-color-dark-secondary);
+    max-height: rem(1000);
+    overflow-y: hidden;
+    visibility: visible;
+    opacity: 1;
+    transition: max-height var(--transition-duration) ease,
+      opacity var(--transition-duration) ease-out;
+
+    &.hidden-text {
+      max-height: 0;
+      opacity: 0;
+
+      & + .service-action__info-switch {
+        span:first-child {
+          display: none;
+        }
+        span:last-child {
+          display: inline-block;
+        }
+      }
+    }
   }
 
-  &__link {
+  &__info-switch {
+    @include reset-button;
+
     align-self: start;
     color: var(--color-accent);
     font-weight: 600;
     font-size: rem(16);
     line-height: 1.2;
     transition-duration: var(--transition-duration) !important;
+
+    span:last-child {
+      display: none;
+    }
+
+    @include hover {
+      filter: opacity(0.6);
+    }
+
+    @include active {
+      filter: opacity(0.4);
+      will-change: transform;
+      scale: 0.98;
+    }
   }
 
   &__text {

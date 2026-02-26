@@ -1,0 +1,152 @@
+@use "../../healpers" as *;
+
+/* Section quick-choice */
+
+.quick-choice {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: rem(14);
+    row-gap: rem(10);
+  }
+
+  &__card {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: rem(10);
+    padding: rem(10) rem(10) rem(7);
+    background-color: var(--color-light);
+    border: var(--border-light);
+    border-radius: var(--border-radius-small);
+    transition-duration: var(--transition-duration) !important;
+    will-change: transform;
+
+    &:has(input:checked) {
+      border: var(--border-accent);
+    }
+
+    &:has(input:disabled) {
+      background-color: var(--color-gray-300);
+      color: var(--text-color-dark-medium);
+      pointer-events: none;
+
+      svg {
+        fill: var(--text-color-dark-medium);
+      }
+    }
+
+    @include hover {
+      filter: brightness(98%);
+
+      svg {
+        scale: 1.1;
+      }
+    }
+
+    @include active {
+      filter: brightness(93%);
+      scale: 0.99;
+      border: var(--border-transparent);
+    }
+
+    &-button {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    &-icon {
+      @include square(rem(24));
+
+      margin-inline: auto;
+      fill: var(--color-gray-800);
+      transition-duration: var(--transition-duration) !important;
+    }
+
+    &-desc {
+      font-size: rem(12);
+    }
+
+    &-price {
+      font-size: rem(14);
+    }
+
+    &-desc,
+    &-price {
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+    }
+  }
+}
+
+@include tablet-media {
+  .quick-choice {
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+
+      li {
+        grid-column: span 2;
+      }
+
+      li:last-child,
+      li:nth-last-child(2) {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+@include mobile-media {
+  .quick-choice {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        grid-column: span 1;
+      }
+
+      li:last-child,
+      li:nth-last-child(2) {
+        grid-column: span 1;
+      }
+    }
+  }
+}
+@include mobile-medium-media {
+  .quick-choice {
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+
+      li {
+        grid-column: span 2;
+      }
+
+      li:last-child,
+      li:nth-last-child(2) {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+@include mobile-s-media {
+  .quick-choice {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+
+      li {
+        grid-column: span 1;
+      }
+
+      li:last-child,
+      li:nth-last-child(2) {
+        grid-column: span 1;
+      }
+    }
+  }
+}
+/* ====================== */
+/* ===END quick-choice=== */
+/* ====================== */

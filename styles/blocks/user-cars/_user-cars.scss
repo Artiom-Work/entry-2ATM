@@ -25,6 +25,22 @@
     font-weight: 600;
   }
 
+  &__note {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(20);
+
+    &-image {
+      @include square(rem(58));
+
+      flex-shrink: 0;
+    }
+
+    &-text {
+      font-size: rem(14);
+      line-height: 1.4;
+    }
+  }
   /* --------- */
   &__search {
     @include flex-space-between;
@@ -196,6 +212,15 @@
       &-input {
         min-height: rem(45);
       }
+    }
+  }
+}
+@include mobile-s-media {
+  .user-cars {
+    &__note {
+      flex-direction: column;
+      row-gap: rem(10);
+      text-align: center;
     }
   }
 }

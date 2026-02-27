@@ -13,6 +13,9 @@
   background-color: var(--color-light);
   margin-bottom: fluid(20, 10);
 
+  &--not-m-buttom {
+    margin-bottom: fluid(20, 0);
+  }
   &__content {
     @include flex-space-between;
 

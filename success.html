@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
+	<meta name="description"
+		content="Спасибо за выбор автосервиса 2ATM! Ваша запись подтверждена. В личном кабинете вы сможете управлять визитом и отслеживать историю обращений. До встречи!">
+	<title>2ATM | Запись успешно создана</title>
+	<link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+	<header class="header header--not-m-buttom relative">
+		<div class="header__content container-medium">
+			<a class="logo" href="./index.html" aria-label="Логотип 2ATM">
+				<picture>
+					<source srcset="./images/logo/logo-short.svg" media="(max-width: 699px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
+					<img class="logo__image" src="./images/logo/logo-short.svg" width="42" height="43" alt="Логотип 2ATM">
+				</picture>
+			</a>
+		</div>
+	</header>
+
+	<main>
+		<h1 class="visually-hidden">Запись на услуги 2АТМ успешно создана</h1>
+
+		<section class="success section" aria-labelledby="success-title">
+			<svg class="success__main-icon" width="24" height="24" viewBox="0 0 24 24">
+				<use xlink:href="./images/icons/sprite-icons.svg#circle-bird-icon"></use>
+			</svg>
+
+			<h2 class="success__title" id="success-title">
+				Запись успешно создана
+			</h2>
+
+			<div class="success__subtitle">
+				<p>
+					Вы можете изменить или отменить вашу запись в <a class="success__subtitle-link" href="#!">Личном кабинете</a>
+				</p>
+			</div>
+
+			<section class="success__result entry-result" aria-labelledby="user-order-description">
+				<h3 class="visually-hidden" id="user-order-description">Список заказанных услуг и итоговые цены пользователя
+					2АТМ</h3>
+				<!-- Я решил немного упростить структуру и стили для итогового чека пользователя . Не знаю правильно ли и удобно ли это будет когда вы будете это внедрять. Если что , можно использовать track-list убрав несколько ненужных в данном случае тегов, типо ссылок ,кнопок ,лишних технических обёрток-контейнеров. Прошу прощения за неудобство...-->
+
+				<ul class="entry-result__info">
+					<li class="entry-result__info-item">
+						<svg class="entry-result__info-icon" width="18" height="18" viewBox="0 0 18 18">
+							<use xlink:href="./images/icons/sprite-icons.svg#svc-car-icon"></use>
+						</svg>
+
+						<div class="entry-result__info-desc">
+							<span>Volkswagen Tiguan</span>
+							<span class="entry-result__info-desc-small">A123AA123</span>
+						</div>
+					</li>
+
+					<li class="entry-result__info-item">
+						<svg class="entry-result__info-icon" width="18" height="18" viewBox="0 0 18 18">
+							<use xlink:href="./images/icons/sprite-icons.svg#svc-house-icon"></use>
+						</svg>
+
+						<div class="entry-result__info-desc">
+							<address>ул. Савушкина, д.&nbsp;116&nbsp;лит.&nbsp;А</address>
+						</div>
+					</li>
+
+					<li class="entry-result__info-item">
+						<svg class="entry-result__info-icon" width="18" height="18" viewBox="0 0 18 18">
+							<use xlink:href="./images/icons/sprite-icons.svg#svc-calendar-icon"></use>
+						</svg>
+
+						<div class="entry-result__info-desc">
+							<time datetime="2025-10-13T16:30">13.10.2025 16:30</time>
+						</div>
+					</li>
+
+					<li class="entry-result__info-item">
+						<svg class="entry-result__info-icon" width="18" height="18" viewBox="0 0 18 18">
+							<use xlink:href="./images/icons/sprite-icons.svg#svc-wheel-house-icon"></use>
+						</svg>
+
+						<div class="entry-result__info-desc">
+							<span>Привезем ваши шины по&nbsp;договору <span>№889787</span></span>
+						</div>
+					</li>
+
+					<li class="entry-result__info-item entry-result__info-item--press-up hidden-mobile-medium">
+						<svg class="entry-result__info-icon" width="18" height="18" viewBox="0 0 18 18">
+							<use xlink:href="./images/icons/sprite-icons.svg#svc-wheel-icon"></use>
+						</svg>
+
+						<div class="entry-result__info-desc">
+							<span class="letters-nowrap">R17 | литые</span>
+							<span>рамный автомобиль/ высокий профиль&nbsp;-&nbsp;нет</span>
+						</div>
+					</li>
+
+					<li class="entry-result__info-item visible-mobile-medium" data-short-result-svc-note>
+						<svg class="entry-result__info-icon" width="18" height="18" viewBox="0 0 18 18">
+							<use xlink:href="./images/icons/sprite-icons.svg#svc-spanner-icon"></use>
+						</svg>
+
+						<div class="entry-result__info-desc">
+							<p>Услуги и&nbsp;стоимость будут уточнены на кассе.</p>
+							<p class="entry-result__info-desc-small">
+								Вы&nbsp;записаны на&nbsp;30&nbsp;минут. Этого достаточно для сезонной смены резины или небольшого
+								ремонта. Время обслуживания может быть увеличено, если вам нужны работы, которые занимают больше
+								времени.
+							</p>
+
+						</div>
+					</li>
+
+					<li class="entry-result__info-item visible-mobile-medium">
+						<div class="entry-result__info-desc-green">
+							<p>
+								К заказу будет применена скидка «<span>Вне пика</span>» <span>5%</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="entry-result__check hidden-mobile-medium">
+					<li class="entry-result__info-item">
+						<svg class="entry-result__info-icon" width="18" height="18" viewBox="0 0 18 18">
+							<use xlink:href="./images/icons/sprite-icons.svg#svc-spanner-icon"></use>
+						</svg>
+
+						<div class="entry-result__info-desc">
+							<span>Услуги</span>
+						</div>
+					</li>
+
+					<li class="entry-result__check-item">
+						<span>Комплекс работ по&nbsp;сезонной смене резины R17</span>
+						<span class="entry-result__check-price letters-nowrap">5000 ₽</span>
+					</li>
+
+					<li class="entry-result__check-item">
+						<span>Снятие и&nbsp;установка колеса R17</span>
+						<span class="entry-result__check-price letters-nowrap">420 ₽</span>
+					</li>
+
+					<li class="entry-result__check-item">
+						<span>Демонтаж и&nbsp;монтаж шины R17</span>
+						<span class="entry-result__check-price letters-nowrap">420 ₽</span>
+					</li>
+
+
+					<li class="entry-result__check-item entry-result__check-price">
+						<span>Итого</span>
+						<span class="letters-nowrap">5890 ₽</span>
+					</li>
+
+					<li class="entry-result__check-item entry-result__check-item--light-text">
+						<span>Программа лояльности 10%</span>
+						<span class="letters-nowrap">-589 ₽</span>
+					</li>
+
+					<li class="entry-result__check-item entry-result__check-item--light-text">
+						<span>Промокод применен</span>
+						<span class="letters-nowrap">-589 ₽</span>
+					</li>
+
+					<li class="entry-result__check-item entry-result__check-item--light-text">
+						<span>Скидка «<span>Вне пика</span>» <span>5%</span></span>
+						<span class="letters-nowrap">-589 ₽</span>
+					</li>
+
+					<li class="entry-result__check-item">
+						<span class="entry-result__check-price">Итоговая цена:</span>
+						<span class="entry-result__check-total letters-nowrap">5006,5 ₽</span>
+					</li>
+
+					<li class="entry-result__check-item entry-result__check-item--light-text">
+						<span>Общая продолжительность</span>
+						<span class="letters-nowrap">32 мин.</span>
+					</li>
+				</ul>
+			</section>
+
+			<div class="success__notice">
+				<svg class="success__notice-icon" width="18" height="18" viewBox="0 0 18 18">
+					<use xlink:href="./images/icons/sprite-icons.svg#circle-coned-bird-icon"></use>
+				</svg>
+
+				<p>
+					Сообщение с&nbsp;подтверждением было отправлено на&nbsp;ваш номер в Telegram-бот или СМ
+				</p>
+			</div>
+
+			<div class="success__notice">
+				<svg class="success__notice-icon" width="18" height="18" viewBox="0 0 18 18">
+					<use xlink:href="./images/icons/sprite-icons.svg#circle-coned-bird-icon"></use>
+				</svg>
+
+				<p>
+					Пожалуйста, приезжайте за&nbsp;10&nbsp;минут до&nbsp;назначенного времени
+				</p>
+			</div>
+
+			<nav class="success__buttons">
+				<a class="success__button button button--light-accent letters-nowrap" href="#!">Схема проезда</a>
+
+				<a class="success__button button button--light" href="#!" aria-label="Кнопка 2ГИС" title="Просмотреть в 2ГИС">
+					<img class="button__image" src="./images/icons/two-gis-text-icon.svg" width="93" height="26" alt="2ГИС">
+				</a>
+
+				<a class="success__button button button--light" href="#!" aria-label="Кнопка яндекс карты"
+					title="Просмотреть в яндекс картах">
+					<img class="button__image hidden-mobile-medium" src="./images/icons/yandex-map-icon.svg" width="158"
+						height="26" alt="2ГИС">
+
+					<img class="button__image visible-mobile-medium" src="./images/icons/yandex-map-icon-short.svg" width="93"
+						height="26" alt="2ГИС">
+				</a>
+
+				<a class="success__button success__button--wide button button--light-accent" href="./select-services.html">Новая
+					запись</a>
+			</nav>
+		</section>
+	</main>
+
+</body>
+
+</html>

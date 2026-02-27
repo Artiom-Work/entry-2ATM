@@ -60,7 +60,17 @@
   &.disabled {
     color: var(--text-color-dark-medium);
     background-color: var(--color-gray-300);
+    outline: var(--border-light);
     pointer-events: none;
+
+    .button__image {
+      opacity: 0.4;
+    }
+  }
+
+  &--light {
+    background-color: var(--color-light);
+    outline: var(--border-light);
   }
 
   &--light-accent {

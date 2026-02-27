@@ -1,0 +1,121 @@
+@use "../../healpers" as *;
+
+/* section entry-result */
+.entry-result {
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-medium);
+  padding-block: fluid(23, 10);
+  padding-inline: fluid(20, 10);
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    margin-bottom: rem(20);
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+
+      p {
+        margin-bottom: 0;
+      }
+
+      &--press-up {
+        align-items: start;
+      }
+    }
+
+    &-icon {
+      @include square(rem(18));
+
+      flex-shrink: 0;
+      fill: var(--trackActiveIconColor);
+    }
+
+    &-desc {
+      &:has(> :nth-child(2)) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      & > span,
+      & > time {
+        display: block;
+      }
+
+      * {
+        font-style: normal;
+        font-size: rem(13);
+        line-height: 1.2;
+      }
+
+      &-small {
+        font-size: rem(12);
+        line-height: 1.16667;
+        color: var(--text-color-dark-medium);
+      }
+
+      &-green {
+        font-size: rem(14);
+        line-height: 1.1;
+        text-align: center;
+        width: 100%;
+        align-self: center;
+        color: var(--color-success);
+      }
+    }
+  }
+
+  &__check {
+    & > :first-child {
+      margin-bottom: rem(4);
+    }
+
+    & > :not(:first-child):not(:last-child) {
+      margin-bottom: rem(10);
+    }
+
+    &-item {
+      @include flex-space-between;
+
+      column-gap: rem(10);
+      padding-left: rem(22);
+      font-size: rem(13);
+      line-height: 1.2;
+
+      &--light-text {
+        font-weight: 600;
+        font-size: rem(14);
+        color: var(--text-color-dark-medium);
+      }
+    }
+
+    &-price {
+      font-weight: 600;
+      font-size: rem(16);
+    }
+
+    &-total {
+      font-weight: 600;
+      font-size: rem(18);
+      color: var(--color-success);
+    }
+  }
+}
+
+@include mobile-s-media {
+  .entry-result {
+    &__info {
+      &:has(li[data-short-result-svc-note]) {
+        margin-bottom: rem(0);
+      }
+    }
+  }
+}
+/* ==================== */

@@ -2,6 +2,16 @@
 /* Functional selectors ( utils file ) */
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+}
+
+.container-medium {
+  max-width: calc(
+    var(--container-width-medium) + var(--container-padding-x) * 2
+  );
+}
+
+.container,
+.container-medium {
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }

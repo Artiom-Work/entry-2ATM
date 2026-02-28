@@ -87,6 +87,23 @@
     margin-bottom: rem(4);
   }
 
+  &__empty {
+    &-text {
+      font-weight: 700;
+      font-size: rem(18);
+      line-height: 1.4;
+      text-align: center;
+      margin-bottom: rem(20);
+    }
+
+    &-image {
+      width: rem(320);
+      height: rem(320);
+      margin-inline: auto;
+      margin-bottom: rem(20);
+    }
+  }
+
   &__list {
     & > :not(:last-child) {
       margin-bottom: rem(10);

@@ -176,7 +176,7 @@ svg * {
 :root {
   --color-accent-50: #fefdfd;
   --color-accent-200: #f2e5e1;
-  --color-accent-opacity-50: #fe4e0280;
+  --color-accent-light: #feb59d;
   --color-accent-500: #fe4f02;
   --color-accent-600: #dc4401;
   --color-gray-900: #161312;
@@ -215,7 +215,6 @@ svg * {
   --text-color-dark-medium: var(--color-gray-500);
   --color-accent: var(--color-accent-500);
   --color-accent-dark: var(--color-accent-600);
-  --color-accent-light: var(--color-accent-opacity-50);
   --color-accent-medium: var(--color-accent-600);
   --color-error: var(--color-red);
   --color-success: var(--color-green);
@@ -1283,6 +1282,19 @@ button[aria-label]::before {
   line-height: 1.4;
   margin-bottom: 0.25rem;
 }
+.basket-box__empty-text {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+.basket-box__empty-image {
+  width: 20rem;
+  height: 20rem;
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+}
 .basket-box__list > :not(:last-child) {
   margin-bottom: 0.625rem;
 }
@@ -2078,9 +2090,23 @@ button[aria-label]::before {
   min-width: 14.375rem;
   padding: 0.625rem 1.25rem 1.25rem;
   background-color: var(--section-bg-color);
+  will-change: transform;
+  transition-duration: var(--transition-duration) !important;
+}
+.track-list .track-list__item {
+  position: relative;
+}
+.track-list .track-list__item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 0.125rem;
+  height: calc(100% + 1.25rem);
+  background-color: currentColor;
+  left: 0.5rem;
 }
 .track-list__item {
-  color: var(--trackDefaultTextColor);
+  color: var(--trackDefaultIconColor);
 }
 .track-list__item-head {
   display: flex;
@@ -2088,11 +2114,19 @@ button[aria-label]::before {
   align-items: center;
   gap: 0.625rem;
   will-change: transform;
+  color: var(--trackDefaultTextColor);
+}
+.track-list__item--medium-color {
+  color: var(--trackMediumIconColor);
 }
 .track-list__item--medium-color .track-list__service-icon {
   fill: var(--trackMediumIconColor);
 }
 .track-list__item--active-color {
+  color: var(--trackActiveIconColor);
+}
+.track-list__item--active-color .track-list__item-head,
+.track-list__item--active-color .track-list__item-body {
   color: var(--trackActiveTextColor);
 }
 .track-list__item--active-color .track-list__service-icon {
@@ -2170,17 +2204,20 @@ button[aria-label]::before {
 }
 @media (any-hover: hover) {
   .track-list__service:hover {
-    filter: opacity(0.6);
+    filter: opacity(1);
+    filter: brightness(90%);
+    scale: 1.01;
   }
 }
 @media (any-hover: hover) and (any-hover: none) {
   .track-list__service:active {
-    filter: opacity(0.6);
+    filter: opacity(1);
+    filter: brightness(90%);
+    scale: 1.01;
   }
 }
 .track-list__service:active {
-  filter: opacity(0.4);
-  will-change: transform;
+  filter: opacity(1);
   scale: 0.98;
 }
 .track-list__service-icon {
@@ -2188,6 +2225,8 @@ button[aria-label]::before {
   height: 1.125rem;
   flex-shrink: 0;
   fill: var(--trackDefaultIconColor);
+  position: relative;
+  z-index: 1;
 }
 .track-list__service-description {
   display: flex;

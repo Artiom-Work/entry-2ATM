@@ -13,25 +13,49 @@
   min-width: rem(230);
   padding: rem(10) rem(20) rem(20);
   background-color: var(--section-bg-color);
+  will-change: transform;
+  transition-duration: var(--transition-duration) !important;
+
+  & .track-list__item {
+    position: relative;
+
+    &:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      width: rem(2);
+      height: calc(100% + #{rem(20)});
+      background-color: currentColor;
+      left: rem(8);
+    }
+  }
 
   &__item {
-    color: var(--trackDefaultTextColor);
+    color: var(--trackDefaultIconColor);
 
     &-head {
       @include flex-space-between;
 
       gap: rem(10);
       will-change: transform;
+      color: var(--trackDefaultTextColor);
     }
 
     &--medium-color {
+      color: var(--trackMediumIconColor);
+
       .track-list__service-icon {
         fill: var(--trackMediumIconColor);
       }
     }
 
     &--active-color {
-      color: var(--trackActiveTextColor);
+      color: var(--trackActiveIconColor);
+
+      .track-list__item-head,
+      .track-list__item-body {
+        color: var(--trackActiveTextColor);
+      }
 
       .track-list__service-icon {
         fill: var(--trackActiveIconColor);
@@ -117,12 +141,13 @@
     transition-duration: var(--transition-duration) !important;
 
     @include hover {
-      filter: opacity(0.6);
+      filter: opacity(1);
+      filter: brightness(90%);
+      scale: 1.01;
     }
 
     @include active {
-      filter: opacity(0.4);
-      will-change: transform;
+      filter: opacity(1);
       scale: 0.98;
     }
 
@@ -131,6 +156,8 @@
 
       flex-shrink: 0;
       fill: var(--trackDefaultIconColor);
+      position: relative;
+      z-index: 1;
     }
 
     &-description {

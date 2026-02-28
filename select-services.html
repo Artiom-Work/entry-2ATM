@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header relative">
 		<div class="header__content container">
 			<a class="logo" href="./index.html" aria-label="Логотип 2ATM">
 				<picture>
@@ -28,24 +28,37 @@
 			</a>
 		</div>
 
-		<div class="header__mobile-menu mobile-menu visible-mobile-medium">
-			<input id="menu-switch" type="checkbox">
-			<label class="mobile-menu__switcher" for="menu-switch">
-				<svg class="mobile-menu__switcher-icon" width="24" height="24" viewBox="0 0 24 24">
+		<div class="visible-mobile-medium">
+			<input id="basketSwitch" type="checkbox">
+			<label class="basket-switcher" for="basketSwitch">
+				<svg class="basket-switcher-icon" width="24" height="24" viewBox="0 0 24 24">
 					<use xlink:href="./images/icons/sprite-icons.svg#basket-icon"></use>
 				</svg>
 
-				<svg class="mobile-menu__switcher-icon-close" width="24" height="24" viewBox="0 0 24 24">
+				<svg class="basket-switcher-icon-close" width="24" height="24" viewBox="0 0 24 24">
 					<use xlink:href="./images/icons/sprite-icons.svg#close-icon"></use>
 				</svg>
 
-				<span class="mobile-menu__basket-indicator hidden"></span>
+				<span class="basket-switcher-indicator hidden"></span>
 			</label>
+		</div>
 
-			<div class="mobile-menu__wrapper">
-				<nav class="mobile-menu__box">
+		<div class="basket visible-mobile-medium">
+			<div class="basket-wrapper">
+				<div class="basket-box">
+					<h2 class="basket-box__title">Корзина</h2>
 
-				</nav>
+					<div class="basket-box__empty">
+						<img class="basket-box__empty-image" src="./images/icons/cute-rodot-phone-big.webp" width="320" height="320"
+							alt="Счастливый робот с телефоном" loading="lazy">
+
+						<h3 class="basket-box__empty-text">
+							У вас нет выбранных услуг.
+						</h3>
+					</div>
+
+					<button class="button button--big-h" type="button" onclick="basketSwitch.checked = false">Закрыть</button>
+				</div>
 			</div>
 		</div>
 
@@ -68,8 +81,8 @@
 				</span>
 			</div>
 
-			<div>
-				<form class="user-promocode">
+			<div class="user-info__body">
+				<form class="user-promocode hidden">
 					<div class="user-promocode__field user-promocode__field--active-color">
 						<label class="user-promocode__label" for="user-promocode-1">
 							<svg class="user-promocode__icon" width="18" height="18" viewBox="0 0 18 18">
@@ -90,17 +103,16 @@
 					</button>
 				</form>
 
-				<!-- Если пользователь ввёл промокод на блок с полем ввода убирается -->
-				<div class="track-list__item track-list__item--active-color hidden">
-					<header class="track-list__item-head">
+				<div class="track-list__item track-list__item--active-color track-list__item--header">
+					<div class="track-list__item-head">
 						<button class="track-list__service" type="button">
 							<svg class="track-list__service-icon" width="18" height="18" viewBox="0 0 18 18">
 								<use xlink:href="./images/icons/sprite-icons.svg#svc-discount-icon"></use>
 							</svg>
 
-							<div class="track-list__service-description">
+							<span class="track-list__service-description">
 								<span class="track-list__service-name">ХОДОВАЯ</span>
-							</div>
+							</span>
 						</button>
 
 						<button class="track-list__service-button" type="button" aria-label="Кнопка удаления" title="Удалить">
@@ -108,7 +120,64 @@
 								<use xlink:href="./images/icons/sprite-icons.svg#icon-cross"></use>
 							</svg>
 						</button>
-					</header>
+					</div>
+				</div>
+
+				<div class="fast-action visible-mobile-medium">
+					<ul class="fast-action__list">
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									Шиномонтаж
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									Volkswagen Tiguan
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									<span>R17</span> | <span>литые</span>
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+						<li>
+							<button class="fast-action__button" type="button" aria-label="редактировать услугу"
+								title="Редактировать услугу">
+								<span class="fast-action__button-text">
+									Привезем шины по договору <span>№096770</span>
+								</span>
+
+								<svg class="fast-action__button-icon" width="18" height="18" viewBox="0 0 18 18">
+									<use xlink:href="./images/icons/sprite-icons.svg#icon-pencil"></use>
+								</svg>
+							</button>
+						</li>
+
+					</ul>
 				</div>
 			</div>
 		</div>

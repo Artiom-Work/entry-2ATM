@@ -15,3 +15,9 @@
 3. [Страница выбора услуг](https://artiom-work.github.io/entry-2ATM/select-services.html)
 
 4. [Страница первого пути создания записи (шиномонтаж)](https://artiom-work.github.io/entry-2ATM/first-way.html)
+
+5. [Страница первого пути создания записи (мойка)](https://artiom-work.github.io/entry-2ATM/wash-way.html)
+
+6. [Страница последнего пути создания записи. Выбор места и времени услуг](https://artiom-work.github.io/entry-2ATM/last-way.html)
+
+7. [Страница с итоговым чеком выбранных услуг](https://artiom-work.github.io/entry-2ATM/success.html)
